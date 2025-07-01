@@ -6,12 +6,17 @@ import Stripe from "stripe";
 const app = express();
 const stripe = new Stripe("sk_test_dein_stripe_secret_key", { apiVersion: "2022-11-15" });
 
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT; // <-- Kein Fallback!
 
 app.use(cors());
 app.use(express.json());
 
 const BOOKINGS_FILE = "./bookings.json";
+
+// 🧪 Test-Route hinzufügen
+app.get("/", (req, res) => {
+  res.send("API läuft");
+});
 
 function loadBookings() {
   if (!fs.existsSync(BOOKINGS_FILE)) return [];
@@ -36,7 +41,6 @@ app.post("/bookings", (req, res) => {
 
   const bookings = loadBookings();
 
-  // Check overlap
   const isOverlap = bookings.some(b => !(to <= b.from || from >= b.to));
   if (isOverlap) return res.status(409).json({ error: "Period already booked" });
 
@@ -46,7 +50,7 @@ app.post("/bookings", (req, res) => {
   res.status(201).json({ message: "Booking saved" });
 });
 
-// Create Stripe checkout session
+// Stripe Checkout Session
 app.post("/create-checkout-session", async (req, res) => {
   const { checkin, checkout, guests } = req.body;
 
@@ -57,17 +61,16 @@ app.post("/create-checkout-session", async (req, res) => {
       line_items: [{
         price_data: {
           currency: "usd",
-          product_data: {
-            name: "Olymp Spa Booking",
-          },
-          unit_amount: 15000, // $150.00 Beispielpreis
+          product_data: { name: "Olymp Spa Booking" },
+          unit_amount: 15000,
         },
         quantity: 1,
       }],
       success_url: "https://www.olympspa.com/success.html",
       cancel_url: "https://www.olympspa.com/cancel.html",
-      metadata: { checkin, checkout, guests }
+      metadata: { checkin, checkout, guests },
     });
+
     res.json({ id: session.id });
   } catch (error) {
     console.error("Stripe Error:", error);
@@ -75,4 +78,5 @@ app.post("/create-checkout-session", async (req, res) => {
   }
 });
 
+// Server starten
 app.listen(PORT, () => console.log(`Server läuft auf Port ${PORT}`));
