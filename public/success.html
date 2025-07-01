@@ -1,2 +1,33 @@
 <!DOCTYPE html>
-<html><body><h2>✅ Buchung erfolgreich!</h2></body></html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Reserva Concluída</title>
+</head>
+<body>
+  <h1>✅ Sua reserva foi registrada!</h1>
+  <p>Obrigado por reservar conosco. Em instantes você será redirecionado...</p>
+
+  <script>
+    // Link zum Backend (Render)
+    const API_URL = "https://olympspa-official-site-mobil.onrender.com";
+
+    // Hole aktuelle Buchungen und speichere sie im localStorage
+    fetch(`${API_URL}/bookings`)
+      .then(res => res.json())
+      .then(bookings => {
+        localStorage.setItem("bookedDates", JSON.stringify(bookings));
+        console.log("📅 Buchungen aktualisiert nach Erfolg:", bookings);
+
+        // Automatisch zur Startseite leiten
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 3000); // 3 Sekunden warten
+      })
+      .catch(err => {
+        console.error("❌ Fehler beim Laden der Buchungen:", err);
+        alert("Problema ao carregar dados. Por favor, atualize a página.");
+      });
+  </script>
+</body>
+</html>

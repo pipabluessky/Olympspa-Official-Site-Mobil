@@ -1796,7 +1796,17 @@ display: flex;
     }
 
     const blocked = await loadBlockedDates();
-
+const stored = localStorage.getItem("bookedDates");
+if (stored) {
+  try {
+    const parsed = JSON.parse(stored);
+    blocked.push(...parsed.map(b => ({ from: b.from, to: b.to })));
+    console.log("✅ Zusätzliche geblockte Daten aus localStorage geladen.");
+    localStorage.removeItem("bookedDates");
+  } catch (e) {
+    console.error("❌ Fehler beim Lesen der lokalen Buchungen:", e);
+  }
+}
     // Flatpickr: Chegada
     fp = flatpickr(datepicker, {
       dateFormat: "d/m/Y",
@@ -2103,8 +2113,7 @@ window.toggleMenu = function() {
 }
 </script>
 <script>
-  const stripe = Stripe("pk_test_51Rehi44MlG2x5SrzqscwINvP2kFWwkXpqB8bEOOetzZTfYWXe3inXW9xBqARKL7RMg7rDK0PNbv8ilsMY0P9uNg100NNbMBixA");
-
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2022-11-15" });
   let fp, fpPartida;
 
   document.addEventListener("DOMContentLoaded", async () => {
