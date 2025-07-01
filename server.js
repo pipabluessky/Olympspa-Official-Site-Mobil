@@ -2,21 +2,21 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Stripe-Key via Environment-Variable
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const app = express();
 const PORT = process.env.PORT || 4242;
 const BOOKINGS_FILE = path.join(__dirname, 'bookings.json');
 
-// 🔐 CORS: Nur deine echte Domain erlauben
+// ✅ CORS erlauben (lokal + Produktion)
 app.use(cors({
-  origin: 'https://www.olympspa.ch', // <== ✏️ Hier ggf. deine Swizzonic-Domain anpassen
+  origin: ['https://www.olympspa.ch', 'http://localhost:3000']
 }));
 
 app.use(express.json());
-app.use(express.static('public')); // Für success.html etc.
+app.use(express.static('public')); // Für success.html usw.
 
-// 📥 POST: Neue Buchung speichern
+// 📥 POST /bookings – Neue Buchung speichern
 app.post('/bookings', (req, res) => {
   const { from, to, guests } = req.body;
 
@@ -44,6 +44,7 @@ app.post('/bookings', (req, res) => {
 
     bookings.push({ from, to, guests });
     fs.writeFileSync(BOOKINGS_FILE, JSON.stringify(bookings, null, 2));
+
     res.status(201).json({ message: "Buchung gespeichert" });
   } catch (err) {
     console.error('Fehler beim Speichern:', err);
@@ -51,7 +52,7 @@ app.post('/bookings', (req, res) => {
   }
 });
 
-// 📂 GET: Alle Buchungen auslesen
+// 📂 GET /bookings – Buchungen laden
 app.get('/bookings', (req, res) => {
   try {
     if (!fs.existsSync(BOOKINGS_FILE)) return res.json([]);
@@ -63,9 +64,13 @@ app.get('/bookings', (req, res) => {
   }
 });
 
-// 💳 POST: Stripe Checkout Session erstellen
+// 💳 POST /create-checkout-session – Stripe Checkout erstellen
 app.post('/create-checkout-session', async (req, res) => {
   const { checkin, checkout, guests } = req.body;
+
+  if (!checkin || !checkout || !guests) {
+    return res.status(400).json({ error: "Fehlende Daten für Stripe" });
+  }
 
   try {
     const session = await stripe.checkout.sessions.create({
@@ -78,12 +83,12 @@ app.post('/create-checkout-session', async (req, res) => {
             name: `Reserva (${guests} pessoa${guests > 1 ? 's' : ''})`,
             description: `Check-in: ${checkin}, Check-out: ${checkout}`
           },
-          unit_amount: 15000 // z. B. 150,00 R$
+          unit_amount: 15000 // z.B. 150,00 R$
         },
         quantity: 1
       }],
-      success_url: 'https://olympspa.onrender.com/success.html', // ✅ Neue Render-URL
-      cancel_url: 'https://olympspa.onrender.com/cancel.html'
+      success_url: 'https://olympspa-official-site-mobil.onrender.com/success.html',
+cancel_url: 'https://olympspa-official-site-mobil.onrender.com/cancel.html'
     });
 
     res.json({ id: session.id });

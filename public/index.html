@@ -1766,6 +1766,8 @@ display: flex;
 </div>
 
 <!-- Flatpickr + Stripe -->
+ <script>const API_BASE_URL = "https://olympspa-official-site-mobil.onrender.com";</script>
+ <script>fetch(`${API_BASE_URL}/bookings`)</script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="https://js.stripe.com/v3/"></script>
 <script>
@@ -1784,7 +1786,7 @@ display: flex;
     // Lade blockierte Daten vom Railway-Backend
     async function loadBlockedDates() {
       try {
-        const res = await fetch("https://olympspa.up.railway.app/bookings");
+        const res = await fetch(`${API_BASE_URL}/bookings`);
         const bookings = await res.json();
         return bookings.map(b => ({ from: b.from, to: b.to }));
       } catch (err) {
@@ -1854,11 +1856,11 @@ display: flex;
 
       try {
         // 1️⃣ Buchung speichern
-        const save = await fetch("https://olympspa.up.railway.app/bookings", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ from, to, guests })
-        });
+       const save = await fetch(`${API_BASE_URL}/bookings`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ from, to, guests })
+});
 
         if (save.status === 409) {
           alert("❌ Este período já está reservado.");
@@ -1873,11 +1875,11 @@ display: flex;
         fpPartida.set("disable", newBlocked);
 
         // 3️⃣ Stripe Checkout starten
-        const stripeRes = await fetch("https://olympspa.up.railway.app/bookings", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ checkin: checkinText, checkout: checkoutText, guests })
-        });
+const stripeRes = await fetch(`${API_BASE_URL}/create-checkout-session`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ checkin: checkinText, checkout: checkoutText, guests })
+});
 
         if (!stripeRes.ok) throw new Error("❌ Erro ao criar sessão Stripe.");
 
@@ -2114,7 +2116,7 @@ window.toggleMenu = function() {
     // Lade blockierte Daten vom Backend
     async function loadBlockedDates() {
       try {
-        const res = await fetch("https://olympspa.up.railway.app/bookings");
+        const res = await fetch(`${API_BASE_URL}/bookings`);
         const bookings = await res.json();
         // Umwandlung in Flatpickr-kompatible Form
         return bookings.map(b => ({ from: b.from, to: b.to }));
@@ -2185,11 +2187,11 @@ window.toggleMenu = function() {
 
       try {
         // 1️⃣ Buchung speichern
-        const save = await fetch("https://olympspa.up.railway.app/bookings", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ from, to, guests })
-        });
+       const save = await fetch(`${API_BASE_URL}/bookings`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ from, to, guests })
+});
 
         if (save.status === 409) {
           alert("❌ Este período já está reservado.");
@@ -2204,11 +2206,11 @@ window.toggleMenu = function() {
         fpPartida.set("disable", newBlocked);
 
         // 3️⃣ Stripe Checkout starten
-        const stripeRes = await fetch("https://olympspa.up.railway.app/bookings", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ checkin: checkinText, checkout: checkoutText, guests })
-        });
+      const stripeRes = await fetch(`${API_BASE_URL}/create-checkout-session`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ checkin: checkinText, checkout: checkoutText, guests })
+});
 
         if (!stripeRes.ok) throw new Error("❌ Erro ao criar sessão Stripe.");
 
