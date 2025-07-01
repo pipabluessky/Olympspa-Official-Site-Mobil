@@ -91,8 +91,8 @@ app.post('/create-checkout-session', async (req, res) => {
         },
         quantity: 1
       }],
-      success_url: 'https://olympspa-official-site-mobil.onrender.com/success.html',
-cancel_url: 'https://olympspa-official-site-mobil.onrender.com/cancel.html'
+      success_url: 'https://www.olympspa.com/success.html',
+cancel_url: 'https://www.olympspa.com/cancel.html'
     });
 
     res.json({ id: session.id });
