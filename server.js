@@ -10,7 +10,11 @@ const BOOKINGS_FILE = path.join(__dirname, 'bookings.json');
 
 // ✅ CORS erlauben (lokal + Produktion)
 app.use(cors({
-  origin: ['https://www.olympspa.com']
+  origin: [
+    'https://www.olympspa.com',
+    'https://olympspa-official-site-mobil.onrender.com',
+    'http://localhost:3000'
+  ]
 }));
 
 app.use(express.json());
