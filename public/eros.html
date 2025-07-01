@@ -1,0 +1,2498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Hotel ou Resort</title>
+  <meta name="description" content="Bem-vindo ao paraíso: conforto, natureza e bem-estar em um só lugar.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+#select-hospedes {
+    font-size: 1rem;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .chalescontainer{
+    width: 100%;
+    height: 500px;
+    background-image: url("images/menubilda.webp");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+
+ }
+
+
+.flex-container2{
+     height:270px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1rem;
+    background-color: white;
+    color:#1e6395;
+   padding-top: 12%;
+        }
+
+.titel{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: 600;
+    }
+
+
+.inhalt{
+    text-align: center;
+    width: 90%;
+   align-self: center;
+   }
+
+
+.slider-wrapper {
+  width: 80%;
+  height: 400px;
+  position: relative;
+  background-color: white;
+  margin: 0 auto;
+  
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: white
+}
+
+.slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.arrow {
+  
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  font-weight: 300;
+  color:#1e6395;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.arrow:hover {
+  color: #1d6fa5;
+}
+
+.arrow-left {
+  left: -6vw;  
+}
+
+.arrow-right {
+  right: -6vw;  
+}
+
+
+body {
+    background-color:white;
+}
+
+
+.harmonia{
+font-family: 'Montserrat', sans-serif;
+font-weight: 400;
+display: flex;
+flex-direction: column;
+height: 350px;
+padding-top:14%;
+padding-left:5%;
+
+}
+
+
+.h1{
+    font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+   font-size: 18px;
+   width: 100%;
+   height: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   margin-bottom: 13%;
+   margin-right: 20%,
+}
+
+.h2{
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    font-weight: 500;
+}
+
+
+
+
+
+ .knopf1, .knopf2, .knopf3 {
+      
+      background: #1e6395;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .texta, .textb, .textc {
+      margin-top: 20px;
+     font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      color:#1e6395;
+      display: none;
+      
+    }
+    .active {
+      display: block;
+    }
+
+    .knopf1{
+    background: none;
+    border: none;
+    color:#1e6395;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+    .knopf2{
+    background: none;
+    border: none;
+    color:#1e6395;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+    .knopf3{
+    background: none;
+    border: none;
+    color:#1e6395;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.knopf1.active,
+.knopf2.active,
+.knopf3.active {
+  text-decoration: underline;
+}
+
+
+.kolonne{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.r-knopf{
+    background-color: #1d6fa5;
+    color: white;
+     font-family: 'Montserrat', sans-serif;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    width:130px;
+    border: none;
+}
+
+.r-knopf{
+    margin-top: 2rem;
+}
+
+.adultos{
+    position: absolute;
+    margin-left: 65%;
+    margin-top: 30%;
+    width: 150px;
+    height:140px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    color: #1e6395;
+    font-size: 14px;
+
+}
+
+.vista{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.Vale{
+    font-weight: 500;
+}
+
+.dormi{
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+    font-size: ;
+}
+
+.meter{
+    font-weight: 500;
+}
+
+
+.deck{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.m40{
+    font-weight: 500;
+}
+
+
+.banheiro{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    font-weight: 400;
+    }
+
+.meter{
+    font-weight: 500;
+
+    }
+.slider-wrapper.ander {
+  width: 80%;
+  height: 400px;
+  position: relative;
+  background-color: white;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.slider-container{
+  background-color: white;
+}
+
+.dünne-linie {
+  height: 0.5px;
+  width: 100%;
+  background-color: #1d6fa5;
+  margin-bottom: 5%;
+}
+
+.texta {
+  text-wrap: balance;
+}
+
+
+.textb {
+  text-wrap: balance;
+}
+
+
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-toggle {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+  padding-left: 1rem;
+  padding-top: 0.3rem;
+  transition: color 0.3s;
+  margin-top: 1.2rem;
+  margin-right: 10rem;
+  
+}
+
+.lang-toggle:hover {
+  color: #144c73;
+  
+}
+
+.lang-toggle i {
+  color: white;
+  margin-right: 4rem;
+}
+
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: 120%;
+  margin-right: 30rem;
+  background-color: white;
+  border: 1px solid white !important;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 45px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+  border-radius: 5px;
+}
+
+.lang-menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white !important;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.lang-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+
+
+
+ #whatsapp-trigger {
+      position: absolute;
+      top: 55vh;  
+      left: 0;
+      width: 1px;
+      height: 1px;
+    }
+
+  
+    .whatsapp-icon {
+      position: fixed;
+      top: 55vh;
+      left: 2%;
+      width: 30px;
+      height: 30px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+
+
+    .whatsapp-icon.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+
+    .navbar {
+      background-color:transparent;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .hamburger {
+      font-size: 24px;
+      color:white;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      z-index: 1000;
+      width: 50px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 12px 16px;
+      color: #247ba0;
+      text-decoration: none;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.2s;
+      width: 50px;
+    }
+
+    .dropdown a:hover {
+      background-color: #e3f2fd;
+    }
+
+    .dropdown a:last-child {
+      border-bottom: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+.dropdown{
+width: 180px;
+white-space: nowrap;
+    }
+
+    .m{
+     background-color: white;
+
+          }
+
+
+.m {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 62px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  color: #1e6395;
+  z-index: 10; 
+}
+
+
+
+.phone{
+  margin-top: 5%;
+  margin-left: 40%;
+  margin-top: 2%;
+ }
+
+
+ .telefon-link{
+  margin-top: 4.5%;
+  color: white;
+  margin-top: 6%;
+  margin-left: 12%;
+ }
+
+
+.email-link{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+  color: white;
+  text-decoration: none;
+  margin-left: 3%;
+  margin-top: 2%;
+ }
+
+
+.flex-container{
+  height: 500px;
+  width:100%;
+   background-image: url("images/chalesweiss.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: sticky;
+   top: 0;
+  z-index: -1;     
+ }
+
+body{
+  background-color: white !important;
+ z-index: 400;
+ }
+
+body{
+  background-color: white !important;
+ z-index: 55500;
+ }
+
+.harmonia{
+  background-color: white;
+
+ }
+
+.slider-container-outer {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+
+ .telefon-link{
+  margin-top: 4.5%;
+  color: white;
+  margin-top: 6%;
+  margin-left: 16%;
+ }
+
+
+.email-link{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+  color: white;
+  text-decoration: none;
+  margin-left: 3%;
+  margin-top: 1%;
+ }
+
+
+
+
+
+.row{
+  width: 100%;
+  height:50px;
+display: flex;
+gap: 1rem;
+margin-left: 13%;
+ }
+
+.footerlogo1{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo2{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo4{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+
+.my-buttonb1{
+  font-family: 'Montserrat', sans-serif;
+  width: 60%;
+  align-items: center;
+  align-content: center;
+ text-decoration: none;
+ text-align: center;
+  }
+
+ 
+
+.btn-reserve{
+  margin-bottom: 10%;
+  position: absolute;
+  margin-left: 55%;
+  margin-top: 7%;
+  font-size: 10px;
+  color: white;
+  background-color: #1e6395;
+  padding-bottom: 4%;
+  padding-top: 4%;
+   padding-right: 5%;
+   padding-left: 5%;
+   border: none;
+}
+
+.restaurante{
+  width: 100%;
+  height: 530px;
+  background-color: #efeae8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.restaurante-bild{
+  width: 90%;
+  background-image: url("images/restaurant.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 450px;
+ align-self: center;
+}
+
+.descubra-btn{
+  width: 35%;
+  background-color: white;
+  color: #1e6395;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  margin-left: 32%;
+ margin-top: 90%;
+ padding-bottom: 2%;
+ padding-top: 2%;
+}
+
+
+.newsletter2{
+  height: 50px;
+ width: 100%;
+ background-color: white;
+display: flex;
+ flex-direction: row;
+ gap: 2rem;
+}
+.newsletter{
+  width: 100%;
+  height: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2%;
+  gap: 1rem;
+  background: white;
+  
+   }
+
+.newsbutton{
+ background-color: #1e6395;
+   color: white;
+  align-self: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  border: none;
+   font-family: 'Montserrat', sans-serif;
+   }
+
+.newsletterinfo{
+    width: 100%;
+  height: 100px;
+font-size: 9px;
+color: #1e6395;
+align-self: center;
+margin-right: 13%;
+padding-bottom: 11%;
+ }
+
+.newsletter-link{
+  background-color: #1e6395;
+   color: white;
+  align-self: center;
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border: none;
+   }
+
+
+.footer{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  font-size: 7px;
+  background-color: #efeae8;
+  justify-content: center;
+  gap: 1.7rem;
+     }
+
+
+ .content1{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+ }
+
+
+
+.content2{
+  font-weight: 400;
+  padding-top: 4%;
+ }
+
+
+
+.cont1{
+  font-weight: 400;
+  padding-top: 7%;
+ }
+
+.cont2{
+  font-weight: 400;
+  padding-top: 4%; 
+ }
+
+
+.con1{
+  font-weight: 400;
+  padding-top: 3%;
+  width: 40%;
+ }
+
+.whatsapplink2{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+  color: #1e6395;
+  text-decoration: none;
+ }
+
+.phone{
+  margin-top: 5%;
+  margin-left: 50%;
+  margin-top: 2%;
+ }
+
+
+ .telefon-link{
+  margin-top: 4.5%;
+  color: white !important;
+  margin-top: 6%;
+  margin-left: 16%;
+ }
+
+
+.email-link{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+  color:white !important;
+  text-decoration: none;
+  margin-left: 3%;
+  margin-top: 1%;
+ }
+
+
+
+
+
+
+.row{
+  width: 100%;
+  height:50px;
+display: flex;
+gap: 1rem;
+margin-left: 13%;
+ }
+
+.footerlogo1{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo2{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo4{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+
+.my-buttonb1{
+  font-family: 'Montserrat', sans-serif;
+  width: 60%;
+  align-items: center;
+  align-content: center;
+ text-decoration: none;
+ text-align: center;
+  }
+
+
+
+.restaurante{
+  width: 100%;
+  height: 530px;
+  background-color: #efeae8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.restaurante-bild{
+  width: 90%;
+  background-image: url("images/restaurant.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 450px;
+ align-self: center;
+}
+
+.descubra-btn{
+  width: 35%;
+  background-color: white;
+  color: #1e6395;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  margin-left: 32%;
+ margin-top: 90%;
+ padding-bottom: 2%;
+ padding-top: 2%;
+}
+
+.email-field {
+  background-color: transparent;
+  margin-left: 50%;
+  margin-top: 15%;
+  border: none;
+  color: #1e6395; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  border-bottom: 1px solid #1e6395; 
+  text-decoration: none;
+}
+
+.newsletterinfo{
+    width: 60%;
+  height: 100px;
+font-size: px;
+color: #1e6395;
+align-self: center;
+margin-left: 4rem;
+padding-bottom: 11%;
+ }
+
+
+.signup-button{
+  color: #1e6395;
+  border: solid #1e6395;
+  height: 20px;
+  text-decoration: none;
+  margin-left: 21%;
+  margin-top: 2.5%;
+  padding-bottom: 5%;
+  padding-top: 1%;
+  padding-left: 3%;
+  padding-right:3%;
+  background-color: #1e6395;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+
+}
+
+.instagram-icon {
+  margin-left: 84%;
+  margin-top: 50%;
+  position: absolute;
+ color: #1e6395;
+}
+
+.facebook-icon{
+  color: #1e6395;
+ margin-left: 91%;
+ margin-top: 50%;
+ position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.newsletter{
+  width: 100%;
+  height: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2%;
+  gap: 1rem;
+  background: white;
+  
+   }
+
+.newsbutton{
+ background-color: #1e6395;
+   color: white;
+  align-self: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  border: none;
+   font-family: 'Montserrat', sans-serif;
+   }
+
+.newsletterinfo{
+    width: 100%;
+  height: 100px;
+font-size: 9px;
+color: #1e6395;
+align-self: center;
+margin-right: 13%;
+padding-bottom: 11%;
+ }
+
+.newsletter-link{
+  background-color: #1e6395;
+   color: white;
+  align-self: center;
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border: none;
+   }
+
+
+
+
+.footer{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  font-size: 7px;
+  background-color: #efeae8;
+  justify-content: center;
+  gap: 1.7rem;
+     }
+
+
+ .content1{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+ }
+
+
+
+.content2{
+  font-weight: 400;
+  padding-top: 4%;
+ }
+
+
+
+.cont1{
+  font-weight: 400;
+  padding-top: 7%;
+ }
+
+.cont2{
+  font-weight: 400;
+  padding-top: 4%; 
+ }
+
+
+.con1{
+  font-weight: 400;
+  padding-top: 3%;
+  width: 40%;
+ }
+
+.whatsapplink2{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+  color: #1e6395;
+  text-decoration: none;
+ }
+
+.phone{
+  margin-top: 5%;
+  margin-left: 50%;
+  margin-top: 2%;
+ }
+
+
+ .telefon-link{
+  margin-top: 4.5%;
+  color: #1e6395;
+  margin-top: 6%;
+  margin-left: 16%;
+ }
+
+
+.email-link{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+  color: #1e6395 !important;
+  text-decoration: none;
+  margin-left: 3%;
+  margin-top: 1%;
+ }
+
+
+
+.logo-trans{
+  background-image: url("images/logo.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+width: 15%;
+height: 25%;
+margin-left: 43%;
+
+ }
+
+
+.row{
+  width: 100%;
+  height:50px;
+display: flex;
+gap: 1rem;
+margin-left: 13%;
+ }
+
+.footerlogo1{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo2{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo4{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+
+.my-buttonb1{
+  font-family: 'Montserrat', sans-serif;
+  width: 60%;
+  align-items: center;
+  align-content: center;
+ text-decoration: none;
+ text-align: center;
+  }
+
+
+.instagram-icon {
+  margin-left: 84%;
+  margin-top: 50%;
+  position: absolute;
+ color: #1e6395;
+}
+
+.facebook-icon{
+  color: #1e6395;
+ margin-left: 91%;
+ margin-top: 50%;
+ position: absolute;
+}
+
+
+.h1{
+  color: #1e6395;
+  font-family: 'Montserrat', sans-serif;
+
+  }
+
+
+.newsletter{
+  color: #1e6395;
+  }
+
+.newsletterinfo{
+  margin-right: 9rem;
+  white-space: nowrap;
+  }
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: 450px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.whiteframe{
+background-color: white;
+height: 360px;
+color: #1e6395;
+font-family: 'Montserrat', sans-serif;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+text-wrap: balance;
+padding-top:3%;
+}
+
+h1 {
+      font-size: 28px;
+     padding-top: 9%;
+    align-self: center;
+}
+
+p{
+    width:80%;
+    text-align: justify;
+    margin-left: 2.2rem;
+    font-size: 17px;
+    text-align:center;
+}
+
+
+.silverframe{
+    background-color: #efeae8;
+    height: 380px ;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.picture{
+    background-color: #12a31e;
+    height: 340px ;
+    width:410px;
+    align-self: center;
+    margin-top: 1.3rem;
+     background-image: url("images/chales-erstes.webp");
+    background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+}
+
+.m {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+
+.m.scrolled,
+.m:hover {
+  background-color: white;
+}
+
+
+.telefon-link i,
+.email-link i,
+.lang-toggle i,
+.hamburger i {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+
+.m.scrolled .telefon-link i,
+.m:hover .telefon-link i,
+.m.scrolled .email-link i,
+.m:hover .email-link i,
+.m.scrolled .lang-toggle i,
+.m:hover .lang-toggle i,
+.m.scrolled .hamburger i,
+.m:hover .hamburger i {
+  color:#1e6395;
+}
+
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  color:#1e6395;
+  font-size: 24px;
+  padding: 6px 10px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.slider-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+
+.logo {
+    margin-left:3.7rem;
+}
+
+
+.grid-16x16 {
+  display: grid;
+  grid-template-columns: repeat(16, 0.5fr);
+  grid-template-rows: repeat(8, 0.5fr);
+  gap: 2px; 
+  height: 190px;
+  width: 100%;
+  max-width: 100%;
+ background-color: #e3f2fd;
+ padding-bottom: 3%;
+
+}
+
+
+.grid-16x16 .cell {
+  background-color: white;
+  border: 1px solid #999;
+}
+
+.grid-item1{
+    grid-row: 2;
+    grid-column: 8;
+     color:#1e6395;
+     font-family: 'Montserrat', sans-serif;
+}
+
+.grid-item2{
+font-family: 'Montserrat', sans-serif;
+color:#1e6395;
+white-space: nowrap;
+grid-row:4;
+grid-column: 8;
+font-weight:500;
+}
+
+
+.grid-item3{
+font-family: 'Montserrat', sans-serif;
+color:#1e6395;
+white-space: nowrap;
+grid-row:2;
+grid-column: 10;
+color:#1e6395;
+}
+
+
+.grid-item4{
+font-family: 'Montserrat', sans-serif;
+color:#1e6395;
+white-space: nowrap;
+grid-row:3;
+grid-column: 10;
+color:#1e6395;
+font-weight: 500;
+}
+
+
+
+.grid-item6{
+font-family: 'Montserrat', sans-serif;
+color:#1e6395;
+white-space: nowrap;
+grid-row:3;
+grid-column: 9;
+color:#1e6395;
+}
+
+
+
+.linie {
+  grid-column: 8;     
+  grid-row: 5;                 
+  height: 1px;
+  background-color: #1e6395;     
+  align-self: center;         
+}
+
+.linie2{
+  grid-column: 10;     
+  grid-row: 4;                 
+  height: 1px;
+  background-color: #1e6395;     
+  align-self: center;         
+}
+
+
+.grid-item5{
+  grid-column: 8;     
+  grid-row: 6;                  
+  align-self: center;    
+  text-decoration:none; 
+  font-family: 'Montserrat', sans-serif;
+  color:#1e6395;   
+}
+
+
+.grid-item6{
+  grid-column: 8;     
+  grid-row: 8;                  
+  align-self: center;    
+  text-decoration:none; 
+  font-family: 'Montserrat', sans-serif;
+  color:#1e6395;  
+  font-weight: 500;
+}
+
+.grid-50x50 {
+      display: flex;
+      flex-direction: column;
+      height: 1000px;
+    }
+
+
+
+
+
+.whiteframe {
+  display:flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: flex-start;
+  letter-spacing: -1px;     
+  word-spacing:  -0.6px; 
+  
+    }
+
+
+
+.reservebereich{
+  width: 70%;
+  height: 60px;
+  background-color: #efeae8;
+  margin-top:-9%;
+   z-index: 30;
+   display: flex;
+   flex-direction: row;
+   margin-left: 18%;
+   padding-top: 1%;
+   background-color: #ffffff;
+   border: solid 0.2px black;
+   
+   color: #1e6395;
+    }
+
+.inhalt1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 10px;
+  gap: 0.4rem;
+  padding-top: 2%;
+  margin-left: 4%;
+  font-weight: 600;
+ }
+
+.Datum{
+  height: 20px;
+  font-size: 8px;
+  width: 60px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  text-align: start;
+  
+ }
+
+.inhalt2{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  margin-top: 1.7%;
+  font-weight: 600;
+  margin-left: 8%;
+   }
+
+
+
+.line{
+   
+  
+   }
+
+
+.Datum2{
+  height: 20px;
+  font-size: 8px;
+  width: 20px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  text-align: start;
+  margin-bottom: 14%;
+ }
+
+.line2{
+
+   }
+
+.inhalt3{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  gap: 0.45rem;
+  margin-top: 2%;
+  margin-left: 40%;
+  position: absolute;
+  font-weight: 600;
+
+    }
+
+.partida{
+  height: 20px;
+  font-size: 8px;
+  width: 60px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  text-align: start;
+  
+ }
+
+
+#select-hospedes {
+    font-size: 1rem;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .hospedes {
+    width: 90px;
+    margin-left: 10%
+  }
+
+.quantos {
+  width: 100px;
+  font-size: 1rem;
+  border: none;
+  background-color: transparent; 
+  color:#1e6395;
+  width: 50%;
+  font-size: 10px;
+  padding-bottom: 4%;
+  padding-top: 4%;
+  padding-left: 4%;
+  padding-right: 4%;
+  text-align: start;
+}
+
+.quantos::placeholder {
+  color:#1e6395;
+  opacity: 1; 
+  padding-bottom: 4%;
+}
+
+
+.btn-reserve{
+  margin-bottom: 10%;
+  position: absolute;
+  margin-left: 55%;
+  margin-top: 7%;
+  font-size: 10px;
+  color: white;
+  background-color: #1e6395;
+  padding-bottom: 4%;
+  padding-top: 4%;
+   padding-right: 5%;
+   padding-left: 5%;
+   border: none;
+}
+
+
+.newsletter{
+  align-self: center;
+  padding-left: 18%;
+}
+
+.newsletter2{
+  height: 50px;
+ width: 100%;
+ background-color: white;
+display: flex;
+ flex-direction: row;
+ gap: 2rem;
+}
+
+.email-field {
+  background-color: transparent;
+  margin-left: 50%;
+  margin-top: 15%;
+  border: none;
+  color: #1e6395; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  border-bottom: 1px solid #1e6395; 
+  text-decoration: none;
+}
+
+
+.email-field::placeholder {
+  color: #1e6395;        
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
+}
+
+
+.signup-button{
+  color: #1e6395;
+  border: solid #1e6395;
+  height: 20px;
+  text-decoration: none;
+  margin-left: 21%;
+  margin-top: 2.5%;
+  padding-bottom: 5%;
+  padding-top: 1%;
+  padding-left: 3%;
+  padding-right:3%;
+  background-color: #1e6395;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; 
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+.text{
+  margin-left: 3.5rem;
+  text-align: justify;
+}
+
+p{
+  text-align: justify;
+}
+
+h1{
+  margin-bottom: 6%;
+  margin-left:4%;
+}
+
+.flexrow{
+  display:flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+}
+
+.oquarto{
+  font-weight: 500;
+  font-size: large;
+  margin-top: 2rem;
+  margin-bottom:1rem;
+}
+
+.servicos{
+  font-weight: 500;
+  font-size: large;
+  margin-top: 1rem;
+  margin-bottom:1rem;
+}
+
+.entre{
+  font-weight: 500;
+  font-size: large;
+  margin-top: 1rem;
+  margin-bottom:1rem;
+}
+
+
+.caracter{
+  font-weight: 500;
+  font-size: large;
+  margin-top: 1rem;
+  margin-bottom:1rem;
+}
+
+.check{
+    font-weight: 500;
+  font-size: large;
+  margin-top: 1rem;
+  margin-bottom:1rem;
+}
+
+
+.whitebox{
+  height: 130px;
+  display: flex;
+  flex-direction:column;
+  color: #1d6fa5;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.internet{
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  margin-top: 4%;
+  margin-bottom:4%;
+  font-weight: 500;
+  font-size: large;
+}
+
+
+
+
+
+
+
+
+.card-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  padding: 10px;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.card {
+  flex: 0 0 80%;
+  max-width: 280px;
+  height: 700px;
+  scroll-snap-align: start;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap:1rem;
+}
+
+.card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px;
+  font-size: 1.1em;
+}
+
+.card p {
+  margin: 0 10px 10px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+
+h3{
+  color: #1e6395;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 9%;
+}
+
+p{
+  color: #1e6395 !important;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+   text-align: center;
+   text-align: justify;
+}
+
+
+</style>
+
+
+
+<body>
+  
+
+
+
+
+    
+
+<div id="whatsapp-trigger" style="display: inline-block; cursor: pointer;">
+  <img src="images/whatsappicon.webp" alt="WhatsApp Icon" class="whatsapp-icon" />
+</div>
+
+
+
+
+
+
+<header>
+  
+
+    <div class="m">
+       <div class="navbar">
+    <button class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+   
+  </div>
+
+  <div id="dropdownMenu" class="dropdown">
+    <a href="#seite1">Home</a>
+    <a href="#seite2">Nossa História</a>
+    <a href="#seite3">Chalés</a>
+    <a href="#seite4">Restaurante</a>
+    <a href="#seite5">Spa</a>
+    <a href="#seite6">Pacotes e Passeios</a>
+    <a href="#seite7">Experiências</a>
+    <a href="#seite8">Contato</a>
+  </div>
+      <img src="images/logo.webp" alt="Beschreibung des Bildes" class="logo" loading="lazy">
+      <a href="tel:+558488662244" class="telefon-link">
+  <i class="fas fa-phone"></i> 
+</a>
+<a href="mailto:beispiel@email.com" class="email-link">
+  <i class="fas fa-envelope"></i> 
+</a>
+      <div class="language-selector">
+  <button class="lang-toggle" onclick="toggleLangMenu()">
+    <i class="fas fa-globe"></i>
+  </button>
+  <ul class="lang-menu" id="langMenu">
+    <li><a href="#">PT</a></li>
+    <li><a href="index-en.html">EN</a></li>
+    <li><a href="index-es.html">ES</a></li>
+    <li><a href="index-fr.html">FR</a></li>
+  </ul>
+</div>
+</div>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+<div class="slider-container">
+  <button class="slider-btn prev" onclick="moveSlide(-1)">❮</button>
+  
+  <div class="slider">
+    <img src="images/c2.webp" alt="Bild 1">
+    <img src="images/c3.webp" alt="Bild 2">
+    <img src="images/c4.webp" alt="Bild 3">
+    <img src="images/c5.webp" alt="Bild 4">
+    <img src="images/c6.webp" alt="Bild 5">
+    <img src="images/c7.webp" alt="Bild 6">
+    <img src="images/c8.webp" alt="Bild 7">
+    <img src="images/c9.webp" alt="Bild 8">
+  </div>
+  
+  <button class="slider-btn next" onclick="moveSlide(1)">❯</button>
+</div>
+
+
+
+<div class="whiteframe">
+
+  <div class="reservebereich">
+
+  <div class="inhalt1">Chegada
+    <button class="Datum" id="calendar-btn">Selecionar data</button>
+    <input type="text" id="datepicker" class="visually-hidden">
+  </div>
+
+  <div style="width: 1px; height: 40px; background-color: #1e6395; margin-top: 2%;"></div>
+
+  <div class="inhalt2">Partida
+    <button class="partida" id="calendar-btn-partida">Selecionar data</button>
+    <input type="text" id="datepicker-partida" class="visually-hidden">
+  </div>
+
+  <div style="width: 1px; height: 40px; background-color: #1e6395; margin-top: 2%;"></div>
+
+  <div class="inhalt3">Hóspedes
+    <input type="text" placeholder="Quantos?" class="quantos">
+    <button class="btn-reserve">Reserve</button>
+  </div>
+
+</div>
+
+<script>
+  const datepicker = flatpickr("#datepicker", {
+    dateFormat: "d.m.Y",
+    allowInput: false,
+    onChange: (selectedDates, dateStr) => {
+      document.getElementById("calendar-btn").textContent = dateStr;
+    }
+  });
+
+  document.getElementById("calendar-btn").addEventListener("click", () => {
+    datepicker.open();
+  });
+
+  const partidaPicker = flatpickr("#datepicker-partida", {
+    dateFormat: "d.m.Y",
+    allowInput: false,
+    onChange: (selectedDates, dateStr) => {
+      document.getElementById("calendar-btn-partida").textContent = dateStr;
+    }
+  });
+
+  document.getElementById("calendar-btn-partida").addEventListener("click", () => {
+    partidaPicker.open();
+  });
+</script>
+  
+<div class="text">
+
+    <h1>
+     O aposento de Eros</h1>
+
+<p>Deixe-se seduzir pelo ambiente sensual e compartilhe sua intimidade com a pessoa que você ama. Falando nisso, mesmo os que viajam sozinhos não deveriam se sentir desanimados com Eros. Quem sabe, nesse lugar mágico, você venha a ser atingido pelas flechas do cupido?</p>
+
+</div>
+</div>
+
+<div class="grid-16x16">
+     <div class="grid-item1">Capacidade máxima:</div>
+     <div class="grid-item2">2 Adultos</div>
+     <div class="grid-item3">Vista:</div>
+     <div class="grid-item4">Panorama</div>
+     <div class="grid-item5">Tamanho Interno:</div>
+     <div class="grid-item6">27 m2</div>
+    <div class="linie"></div>
+    <div class="linie2"></div>
+    <div class="grid-item6"></div>
+
+</div>
+
+<div class="flexrow">
+        <div class="oquarto">
+       <div class="g1">O quarto</div>
+       </div>
+       <div class="g2">Roupões grossos de felpa</div>
+       <div class="g3">Chinelos</div>
+       <div class="g4">Secador de cabelo</div>
+       <div class="g5">Amenidades exclusivas do OlympSpa</div>
+
+
+       <div class="servicos">
+       <div class="g6">Serviços e amenidades</div>
+       </div>
+       <div class="g7">Bebida de boas-vindas cortesia</div>
+       <div class="g9">Garrafa de vinho e frutas cortesia na chegada</div>
+       <div class="g10"> Serviço de arrumação duas vezes ao dia</div>
+       <div class="g11">Serviço de impressão de cartão de embarque</div>
+       <div class="g12">Disponível 24 horas</div>
+
+          <div class="entre">
+       <div class="g13">Entretenimento</div>
+       </div>
+
+        <div class="g14"> Envio diário de newsletter mediante solicitação</div>
+       <div class="caracter"> Características do quarto</div>
+
+
+       <div class="room">
+       <div class="g14">Recepção 24 horas</div>
+         </div>
+       <div class="g14">Café da manhã americano (8:00-11:00 am)</div>
+       <div class="g14">Serviço de quarto 24 horas</div>
+       <div class="g14">Serviço de café da manhã antecipado</div>
+      <div class="g14">Marmita para almoço ou café da manhã disponível</div>
+       <div class="g14">Mediante solicitação</div>
+    <div class="g14">Lavanderia</div>
+      <div class="g14">Lavagem a seco</div>
+      <div class="g14">Services</div>
+      <div class="g14">Cofre no quarto</div>
+      <div class="g14">Telefone com discagem direta</div>
+      <div class="g14">Minibar refrigerada</div>
+      <div class="g14">Máquina de café Nespresso</div>
+      <div class="g14">Chaleira elétrica</div>
+
+
+      <div class="check">
+      <div class="g14">Políticas de check-in</div>
+      </div>
+      <div class="g14">Check-in às 3:00 PM</div>
+       <div class="g14">Check-out às 11:00 AM</div>
+      <div class="g14">Acesso à internet</div>
+      <div class="g14">Gratuito no quarto e nas áreas comuns</div>
+      </div>  
+</div>
+
+
+
+<div class="whitebox">
+         <div class="internet">Acesso à internet</div> 
+         <div class="i1">Acesso à internet Wi-Fi cortesia</div> 
+         <div class="i2">Nos quartos e nas áreas comuns</div>    
+</div>
+
+
+
+
+
+<div class="card-slider">
+  <div class="card">
+    <img src="images/c2.webp" alt="Bild 1">
+    <h3>O refúgio de Hermes
+</h3>
+    <p>Neste tesouro, você pode até ganhar asas. O deus grego das viagens aparentemente entendia do seu ofício. Ele não perdeu a chance de se instalar entre Apolo e Eros. Como convém a um deus grego, você pode se deliciar com uma vista fenomenal do paraíso.</p>
+  </div>
+  <div class="card">
+    <img src="images/c6.webp" alt="Bild 2">
+    <h3>A suíte de Hera</h3>
+    <p>Seguindo a filosofia de nossa casa, Hera lhe oferece um estilo de vida completamente único. Mesmo a “deusa da família” não economizou quando decidiu surpreendê-lo com uma estadia que, além de confortável, lhe brinda com colinas e vales verdejantes. É um paraíso dentro de outro paraíso. Um presente longe da loucura da cidade grande.</p>
+  </div>
+  <div class="card">
+    <img src="images/c5.webp" alt="Bild 3">
+    <h3>A casa de Apollo</h3>
+    <p>Aparentemente, o encanto de Monte das Gameleiras também não passou despercebido por Apolo. Parece que o deus da medicina encontrou o lugar perfeito para seu jardim de ervas. Aqui, a decoração interior brasileira também é um testemunho da fusão bem-sucedida de duas culturas que se encontram.</p>
+  </div>
+  <div class="card">
+    <img src="images/c6.webp" alt="Bild 4">
+    <h3>O aposento de Eros</h3>
+    <p>Deixe-se seduzir pelo ambiente sensual e compartilhe sua intimidade com a pessoa que você ama. Falando nisso, mesmo os que viajam sozinhos não deveriam se sentir desanimados com Eros. Quem sabe, nesse lugar mágico, você venha a ser atingido pelas flechas do cupido?</p>
+  </div>
+  <div class="card">
+    <img src="images/c7.webp" alt="Bild 5">
+    <h3>O santuário de Athena</h3>
+    <p>Athena lhe dá as boas-vindas em seu novo refúgio. Parece que ela usou toda sua sabedoria para escolher esse lugar. Provavelmente, o Brasil, com seus encantos naturais, seduziu e atraiu não só ela, mas também, outras divindades gregas para nele se estabelecerem. Onde mais, senão aqui, as mentes entusiasmadas poderiam encontrar paz?</p>
+  </div>
+  <div class="card">
+    <img src="images/c8.webp" alt="Bild 6">
+    <h3>O Templo de Zeus</h3>
+    <p>Não consegue abrir mão do cetro em sua jornada sensorial pelo Olymp Spa? Você não precisa! Com o nosso “Zeus” você escolheu a acomodação mais espaçosa e divina. Em 50m2 você encontrará tudo o que seu coração deseja. Deixe suas baterias serem recarregadas no templo do Deus Pai.</p>
+  </div>
+  <div class="card">
+    <img src="images/c9.webp" alt="Bild 7">
+    <h3>O refúgio de Aphrodite</h3>
+    <p>Ao entrar nos aposentos de “Aphrodite” você se depara com um reino de paixão e amor à vida. Cada detalhe deste luxuoso espaço é agora revelado para que você sinta e experiencie... cores, toques e aromas o envolvem, além de uma vista panorâmica infinita.</p>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<div class="newsletter2">
+<div class="email-input">
+  <label for="email"></label>
+  <input type="email" id="email" name="email" class="email-field" placeholder="Seu e-mail">
+</div>
+
+<a href="http://eepurl.com/jf6BEU" target="_blank" class="signup-button">Inscreva-se</a>
+</div>
+
+
+<div class="newsletter">
+   
+  <div class="newsletter">NEWSLETTER</div>
+
+     <div class="newsletterinfo">Receber atualizações sobre experiências exclusivas,
+eventos, e muito mais.</div>
+</div>
+
+
+<a href="https://www.instagram.com/olymp.spa/" target="_blank" class="instagram-icon" aria-label="Instagram">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.facebook.com/deinprofil" target="_blank" class="facebook-icon" aria-label="Facebook">
+  <i class="fab fa-facebook-f"></i>
+</a>
+
+
+<div class="footer">
+  
+
+  <div class="logo-trans"></div>
+<div class="row">
+  <div class="footerlogo1">Fale conosco
+<div class="content1">
+  <a href="mailto:patchamamaglamping@gmail.com" class="email-link">patchamamaglamping@gmail.com</a>
+   </div>       <div class="content2">
+   <a href="https://wa.me/message/GZALPFM2IAJUG1" class="whatsapplink2">00558488662244</a>
+   </div>
+       
+       </div>
+
+
+
+       <div class="footerlogo2">Corporativo
+      <div class="cont1">Termo de uso</div>
+      <div class="cont2">Política de Privacidade</div>
+  </div>
+
+  <div class="footerlogo4">
+  Contato
+  <div class="con1" onclick="abrirPopup()">Localização</div>
+</div>
+
+
+<div id="popup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-btn" onclick="fecharPopup()">&times;</span>
+
+    
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31717.162728650557!2d-35.80649690665418!3d-6.439571729346405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7adfb199e058c21%3A0xde8ad4783d7b473a!2sOlymp%20SPA%20(by%20Patchamama%20Glamping%20Ltda.)!5e0!3m2!1sen!2sbr!4v1750354458769!5m2!1sen!2sbr"
+        width="100%" height="100%" style="border:0;" 
+        allowfullscreen="" loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</div>
+<script src="index.html.js" defer></script>
+
+
+
+
+
+<script>
+  let currentIndex = 0;
+  const slider = document.querySelector(".slider");
+  const totalSlides = slider.children.length;
+
+  function moveSlide(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = totalSlides - 1;
+    if (currentIndex >= totalSlides) currentIndex = 0;
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+</script>
+
+
+<script>
+  window.addEventListener("scroll", function() {
+    const mElement = document.querySelector(".m");
+    if (window.scrollY > 50) {
+      mElement.classList.add("scrolled");
+    } else {
+      mElement.classList.remove("scrolled");
+    }
+  });
+</script>
+<script>
+  function abrirPopup() {
+    document.getElementById("popup").style.display = "flex";
+  }
+
+  function fecharPopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+
+
+  window.onclick = function(event) {
+    const popup = document.getElementById("popup");
+    if (event.target === popup) {
+      fecharPopup();
+    }
+  }
+</script>
+
+ <script>
+    function toggleMenu() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.closest('.hamburger')) {
+        const dropdown = document.getElementById("dropdownMenu");
+        if (dropdown.classList.contains("show")) {
+          dropdown.classList.remove("show");
+        }
+      }
+    }
+  </script>
+
+<script>
+  document.getElementById('whatsapp-trigger').addEventListener('click', function () {
+    window.open('https://wa.me/message/GZALPFM2IAJUG1', '_blank');
+  });
+
+  function openMapModal() {
+    document.getElementById('mapModal').style.display = 'flex';
+  }
+
+  function closeMapModal(event) {
+    event.stopPropagation();
+    document.getElementById('mapModal').style.display = 'none';
+  }
+
+  const icon = document.querySelector('.whatsapp-icon');
+  const trigger = document.getElementById('whatsapp-trigger');
+
+  const observer = new IntersectionObserver(([entry]) => {
+    if (!entry.isIntersecting) {
+      icon.classList.add('visible');
+    } else {
+      icon.classList.remove('visible');
+    }
+  }, { threshold: 0 });
+
+  observer.observe(trigger);
+
+</script>
+
+<script src="index.html.js" defer></script>
+
+ <script>
+    function toggleMenu() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.closest('.hamburger')) {
+        const dropdown = document.getElementById("dropdownMenu");
+        if (dropdown.classList.contains("show")) {
+          dropdown.classList.remove("show");
+        }
+      }
+    }
+  </script>
+
+<script>
+  document.getElementById('whatsapp-trigger').addEventListener('click', function () {
+    window.open('https://wa.me/message/GZALPFM2IAJUG1', '_blank');
+  });
+
+  function openMapModal() {
+    document.getElementById('mapModal').style.display = 'flex';
+  }
+
+  function closeMapModal(event) {
+    event.stopPropagation();
+    document.getElementById('mapModal').style.display = 'none';
+  }
+
+  const icon = document.querySelector('.whatsapp-icon');
+  const trigger = document.getElementById('whatsapp-trigger');
+
+  const observer = new IntersectionObserver(([entry]) => {
+    if (!entry.isIntersecting) {
+      icon.classList.add('visible');
+    } else {
+      icon.classList.remove('visible');
+    }
+  }, { threshold: 0 });
+
+  observer.observe(trigger);
+
+</script>
+
+
+<script>
+  function toggleLangMenu() {
+    const menu = document.getElementById('langMenu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+
+  // Optional: Klick außerhalb schließt das Menü
+  document.addEventListener('click', function (event) {
+    const langButton = document.querySelector('.lang-toggle');
+    const langMenu = document.getElementById('langMenu');
+    if (!langButton.contains(event.target) && !langMenu.contains(event.target)) {
+      langMenu.style.display = 'none';
+    }
+  });
+</script>
+
+
+<script>
+
+
+document.querySelectorAll('.slider-wrapper').forEach((sliderWrapper) => {
+  const sliderTrack = sliderWrapper.querySelector('.slider-track');
+  const slides = sliderTrack.querySelectorAll('.slide');
+  const prevBtn = sliderWrapper.querySelector('.arrow-left');
+  const nextBtn = sliderWrapper.querySelector('.arrow-right');
+  let currentIndex = 0;
+
+  function updateSlider() {
+    const slideWidth = slides[0].offsetWidth;
+    sliderTrack.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlider();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlider();
+  });
+
+  
+
+
+  updateSlider();
+});
+</script>
+
+
+
+
+<script>
+document.querySelectorAll('.harmonia').forEach(section => {
+  const btn1 = section.querySelector('.knopf1');
+  const btn2 = section.querySelector('.knopf2');
+  const btn3 = section.querySelector('.knopf3');
+  const textA = section.querySelector('.texta');
+  const textB = section.querySelector('.textb');
+  const textC = section.querySelector('.textc');
+
+  function activate(button) {
+  
+    btn1.classList.remove('active');
+    btn2.classList.remove('active');
+    btn3.classList.remove('active');
+  
+    textA.style.display = 'none';
+    textB.style.display = 'none';
+    textC.style.display = 'none';
+
+  
+    button.classList.add('active');
+    if (button === btn1) textA.style.display = 'block';
+    if (button === btn2) textB.style.display = 'block';
+    if (button === btn3) textC.style.display = 'block';
+  }
+
+  activate(btn1);
+
+  btn1.addEventListener('click', () => activate(btn1));
+  btn2.addEventListener('click', () => activate(btn2));
+  btn3.addEventListener('click', () => activate(btn3));
+});
+</script>
+
+<script>
+let currentIndex2 = 0;
+const track2 = document.getElementById("sliderTrack2");
+const slides2 = track2.children;
+const totalSlides2 = slides2.length;
+
+function updateSlider2() {
+  track2.style.transform = `translateX(-${currentIndex2 * 100}%)`;
+}
+
+function nextSlide2() {
+  currentIndex2 = (currentIndex2 + 1) % totalSlides2;
+  updateSlider2();
+}
+
+function prevSlide2() {
+  currentIndex2 = (currentIndex2 - 1 + totalSlides2) % totalSlides2;
+  updateSlider2();
+}
+</script>
+
+<script>
+  const sliderTrack = document.getElementById('sliderTrack');
+  const totalSlides = sliderTrack.children.length;
+  let currentIndex = 0;
+
+  function updateSlider() {
+    sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+    updateSlider();
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : totalSlides - 1;
+    updateSlider();
+  }
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const knopf1 = document.querySelector('.knopf1');
+    const knopf2 = document.querySelector('.knopf2');
+    const knopf3 = document.querySelector('.knopf3');
+    const texta  = document.querySelector('.texta');
+    const textb  = document.querySelector('.textb');
+    const textc  = document.querySelector('.textc');
+
+    function activate(button, text) {
+      [knopf1, knopf2, knopf3].forEach(k => k.classList.remove('active'));
+      [texta, textb, textc].forEach(t => t.classList.remove('active'));
+
+      button.classList.add('active');
+      text.classList.add('active');
+    }
+
+    knopf1.addEventListener('click', () => activate(knopf1, texta));
+    knopf2.addEventListener('click', () => activate(knopf2, textb));
+    knopf3.addEventListener('click', () => activate(knopf3, textc));
+
+    activate(knopf1, texta);
+  });
+</script>
+
+</body>
+
+</html>

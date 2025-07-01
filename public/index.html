@@ -1,0 +1,2324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Hotel ou Resort</title>
+  <meta name="description" content="Bem-vindo ao paraíso: conforto, natureza e bem-estar em um só lugar.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
+
+</head>
+<style>
+#select-hospedes {
+    font-size: 1rem;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+
+#google_translate_element {
+  transform: scale(0.4);
+  transform-origin: top left;  
+  position: fixed;            
+  top: 5.5%;                
+  right: 24px;               
+  z-index: 9999;       
+  background-color: #1e6395;       
+}
+
+
+.goog-te-banner-frame.skiptranslate,
+body > .skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-toggle {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: white !important;
+  margin-top: 45%;
+  transition: color 0.3s;
+  margin-right: 0.5rem;
+  margin-top: 77%;
+}
+
+.lang-toggle:hover {
+  color: #144c73;
+  
+}
+
+.lang-toggle i {
+  color: white !important;
+
+}
+
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: 120%;
+  margin-right: 30rem;
+  background-color: white;
+  border: 1px solid #1e6395;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 45px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+  border-radius: 5px;
+}
+
+.lang-menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #1e6395;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.lang-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+
+ #whatsapp-trigger {
+      position: absolute;
+      top: 55vh;  
+      left: 0;
+      width: 1px;
+      height: 1px;
+    }
+
+  
+    .whatsapp-icon {
+      position: fixed;
+      top: 55vh;
+      left: 2%;
+      width: 30px;
+      height: 30px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+
+
+    .whatsapp-icon.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    
+color:#1e6395;
+       }
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
+  background-image: url("images/Aussicht.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: sticky;
+   top: 0;
+  z-index: -1;        
+}
+
+.m {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 62px;
+  background-color: transparent !important;
+  display: flex;
+  flex-direction: row;
+  color: #1e6395;
+  z-index: 10; 
+}
+
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom:4rem;  
+  margin-left:30%;  
+
+}
+
+.my-buttonb1{
+ 
+height: 30px;
+z-index: 40;
+margin-top: 4%;
+border: 1px solid #1e6395;
+background-color: transparent;
+color: #1e6395;
+font-size: 12px;
+width: 200px;
+margin-left: 5%;
+ }
+
+
+.my-buttonb2{
+  width: 30%;
+height: 30px;
+z-index: 40;
+border: 1px solid #1e6395;
+margin-top: 4%;
+background-color: transparent;
+color: #1e6395;
+margin-right: 8%;
+ }
+
+
+.flex-container2{
+     height: 270px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1rem;
+    background-color: white;
+    padding-top: 10%;
+        }
+
+.titel{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: 900;
+    }
+
+
+.inhalt{
+    text-align: center;
+    width: 90%;
+   align-self: center;
+   }
+
+.my-button{
+    width: 80px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 11px;
+   
+
+       }
+
+
+ .logo1{
+    background-image: url("images/logo.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+ 
+ }
+
+.slider {
+      display: flex;
+      gap: 1cm;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      width: 100%;
+      padding-bottom: 1rem;
+      background-color: white;
+    }
+
+    .slide {
+      scroll-snap-align: start;
+      flex: 0 0 auto;
+      width: 100%;
+      height: 16cm;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .slide img {
+      width: 100%;
+      height: 16cm;
+      object-fit: cover;
+      display: block;
+    }
+
+.flex-container3{
+     height: 320px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color:#1e6395;
+    gap: 1rem;
+    padding-top: 3.1rem;
+    align-content: center;
+    background-color: white;
+        }
+
+.mein-button{
+  width: 130px;
+  height: 20px;
+  background-color: #1e6395;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  padding-bottom: 5%;
+  padding-top: 2%;
+  text-align: center;
+  border: none;
+   align-self: center;
+
+       }
+
+.titel{
+    align-self: center;
+    padding-top: 1rem;
+    }
+
+
+.inhalt{
+    text-align: center;
+    width: 90%;
+   align-self: center;
+   }
+
+.slider-wrappera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.slider2a {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide2a {
+  min-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide2a img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.slider-btna {
+  border: none !important;
+  background: none !important;
+  color: #1e6395 !important;
+  font-size: 1rem !important;      
+  font-weight: bold !important;
+  width: 22px !important;          
+  height: 22px !important;
+  text-align: center !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  text-shadow: 0 0 1px #1e6395 !important;
+}
+.slider-btna:hover {
+  opacity: 1;
+}
+
+.left-btna {
+  margin-right: 10px;
+  color:#1e6395 !important; 
+  font-weight: 300!important; 
+}
+
+.right-btna {
+  margin-left: 10px;
+  color:#1e6395 !important; 
+  font-weight: 300 !important; 
+}
+
+.slide2a {
+  display: none;
+}
+
+.slide2a.active {
+  display: flex;
+}
+
+#slidera {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; 
+  scroll-behavior: smooth;  
+  scrollbar-width: none;   
+}
+
+.slide2a {
+  scroll-snap-align: start;      
+  flex-shrink: 0;               
+  width: 300px;               
+  scrollbar-width: none;
+}
+
+
+
+.titel{
+    font-weight: bold;
+    }
+
+.chales{
+    font-weight: bold;
+    align-self: center;
+    }
+
+.flex-container2b{
+     height: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color:#1e6395;
+    gap: 1rem;
+    padding-top: 5%;
+    background-color: white;
+    
+        }
+
+.titelb{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: bold;
+    }
+
+
+.inhaltb{
+    text-align: justify;
+    width: 90%;
+   align-self: center;
+   }
+
+
+.slider::-webkit-scrollbar,
+.slider2::-webkit-scrollbar {
+  display: none; 
+}
+
+.slider {
+  scrollbar-width: none; 
+}
+
+.slider2 {
+  scrollbar-width: none; 
+}
+
+
+.sliderc::-webkit-scrollbar,
+.slider2c::-webkit-scrollbar {
+  display: none; 
+}
+
+.sliderc {
+  scrollbar-width: none; 
+}
+
+.slider2c {
+  scrollbar-width: none; 
+}
+
+
+
+.slider-wrapperc {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 350px;
+  background-color: #efeae8;
+  display: flex;
+  align-content: center;
+  padding-top: 2.5rem;
+
+}
+
+.slider2c {
+  display: flex;
+  gap: 10px; 
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+ 
+}
+
+.slide2c {
+  flex: 0 0 auto;
+  width: 380px; 
+  scroll-snap-align: start;
+}
+
+.slide2c img {
+  display: block;
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+
+
+.logob {
+  width: 60px;
+  height: 60px;
+  
+}
+
+.my-buttonb {
+  width: 480px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid #1e6395;
+  font-size: 11px;
+  color: #1e6395;
+}
+
+
+.slider-wrapperc {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 350px;
+  background-color: #efeae8;
+  display: flex;
+  align-content: center;
+  padding-top: 2.5rem;
+
+}
+
+.slider2d {
+  display: flex;
+  gap: 10px; 
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+ 
+}
+
+.slide2d {
+  flex: 0 0 auto;
+  width: 380px; 
+  scroll-snap-align: start;
+}
+
+.slide2d img {
+  display: block;
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.slider-wrapperd {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 350px;
+  background-color: #efeae8;
+  display: flex;
+  align-content: center;
+  padding-top: 2.5rem;
+
+}
+
+.flex-container2c{
+    padding-top: 6%;
+    padding-bottom: 4%;;
+     height: 220px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color:#1e6395;
+    gap: 1rem;
+    background-color: #efeae8;
+        }
+
+.titelc{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: bold;
+    }
+
+
+.inhaltc{
+    text-align:center;
+    width: 90%;
+   align-self: center;
+   }
+
+
+
+
+.sliderd::-webkit-scrollbar,
+.slider2d::-webkit-scrollbar {
+  display: none; 
+}
+
+.sliderd {
+  scrollbar-width: none; 
+}
+
+.slider2d {
+  scrollbar-width: none; 
+}
+
+
+.flex-container2e{
+     height: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color:#1e6395;
+    gap: 1rem;
+    
+        }
+
+.titele{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: bold;
+    }
+
+
+.inhalte{
+    text-align: justify;
+    width: 90%;
+   align-self: center;
+   }
+
+
+.slider-wrappere {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 350px;
+  background-color: #efeae8;
+  display: flex;
+  align-content: center;
+  padding-top: 2.5rem;
+
+}
+
+.flex-container2e{
+     height: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color:#1e6395;
+    gap: 1rem;
+    
+        }
+
+.titele{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: bold;
+    }
+
+
+.inhalte{
+    text-align: justify;
+    width: 90%;
+   align-self: center;
+   }
+
+
+.flex-container2f{
+     height: 165px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color:#1e6395;
+    gap: 1rem;
+    padding-top:7.2%;
+    background-color: white;
+        }
+
+.titelf{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: bold;
+    }
+
+
+.inhaltf{
+    text-align: center;
+    width: 90%;
+   align-self: center;
+   }
+
+.slider2f {
+  display: flex;
+  gap: 10px; 
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+ 
+}
+
+.slide2f {
+  flex: 0 0 auto;
+  width: 380px; 
+  scroll-snap-align: start;
+}
+
+.slide2f img {
+  display: block;
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.slider-wrapperf {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 350px;
+  background-color: #efeae8;
+  display: flex;
+  align-content: center;
+  padding-top: 2.5rem;
+
+}
+
+
+.sliderf::-webkit-scrollbar,
+.slider2f::-webkit-scrollbar {
+  display: none; 
+}
+
+.sliderf {
+  scrollbar-width: none; 
+}
+
+.slider2f {
+  scrollbar-width: none; 
+}
+
+
+
+.flex-container2g{
+     height: 330px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color:#1e6395;
+    gap: 1rem;
+    padding-top: 8%;
+    background-color: white;
+        }
+
+.titelg{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: bold;
+    }
+
+
+.inhaltg{
+    text-align: justify;
+    width: 90%;
+   align-self: center;
+   }
+
+.blue{
+  width: 100%;
+  height: 310px;
+  background-color: #efeae8;
+  display: flex;
+  flex-direction: column;
+  padding-top: 13%;
+   }
+
+.blue1{
+  width: 100%;
+  height: 255px;
+  background-color:#efeae8;
+ background-image: url("images/wedding.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   }
+
+.newsletter{
+  width: 100%;
+  height: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2%;
+  gap: 1rem;
+  background: white;
+  
+   }
+
+.newsbutton{
+ background-color: #1e6395;
+   color: white;
+  align-self: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  border: none;
+   font-family: 'Montserrat', sans-serif;
+   }
+
+.newsletterinfo{
+    width: 100%;
+  height: 100px;
+font-size: 9px;
+color: #1e6395;
+align-self: center;
+margin-right: 13%;
+padding-bottom: 11%;
+ }
+
+.newsletter-link{
+  background-color: #1e6395;
+   color: white;
+  align-self: center;
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border: none;
+   }
+
+
+
+
+.footer{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  font-size: 7px;
+  background-color: #efeae8;
+  justify-content: center;
+  gap: 1.7rem;
+     }
+
+
+ .content1{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+ }
+
+
+
+.content2{
+  font-weight: 400;
+  padding-top: 4%;
+ }
+
+
+
+.cont1{
+  font-weight: 400;
+  padding-top: 7%;
+ }
+
+.cont2{
+  font-weight: 400;
+  padding-top: 4%; 
+ }
+
+
+.con1{
+  font-weight: 400;
+  padding-top: 3%;
+  width: 40%;
+ }
+
+.whatsapplink2{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+  color: #1e6395;
+  text-decoration: none;
+ }
+
+.phone{
+  margin-top: 5%;
+  margin-left: 50%;
+  margin-top: 2%;
+ }
+
+
+ .telefon-link{
+  color: white;
+  margin-top: 5%;
+  margin-left: 16%;
+ }
+
+
+.email-link{
+  font-weight: 400;
+  width: 30%;
+  color: white;
+  text-decoration: none;
+  margin-left: 3%;
+  margin-top: 5%;
+ }
+
+
+
+.logo-trans{
+  background-image: url("images/logo.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+width: 15%;
+height: 25%;
+margin-left: 43%;
+
+ }
+
+
+.row{
+  width: 100%;
+  height:50px;
+display: flex;
+gap: 1rem;
+margin-left: 13%;
+ }
+
+.footerlogo1{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo2{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo4{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+
+.my-buttonb1{
+  font-family: 'Montserrat', sans-serif;
+  width: 60%;
+  align-items: center;
+  align-content: center;
+ text-decoration: none;
+ text-align: center;
+  }
+
+
+.restaurante{
+  width: 100%;
+  height: 530px;
+  background-color: #efeae8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.restaurante-bild{
+  width: 90%;
+  background-image: url("images/restaurant.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 450px;
+ align-self: center;
+}
+
+.descubra-btn{
+  width: 35%;
+  background-color: white;
+  color: #1e6395;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  margin-left: 32%;
+ margin-top: 90%;
+ padding-bottom: 2%;
+ padding-top: 2%;
+}
+
+
+
+.spa-bild{
+  width: 100%;
+height: 500px;
+background-image: url("images/spa1.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.vermais-btn{
+  width: 40%;
+  border: none;
+  text-decoration: underline;
+  color: #1e6395;
+  align-self: center;
+}
+
+.exp{
+     height: 210px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1rem;
+    background-color: white;
+    padding-top: 10%;
+        }
+
+.exp1{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: 900;
+    }
+
+
+.exp2{
+    text-align: center;
+    width: 90%;
+   align-self: center;
+   }
+
+
+
+.slider-wrappera2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.slider2a2 {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide2a {
+  min-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide2a img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.slider-btna {
+  background: none;
+  border: none;
+  color: #007BFF;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+  z-index: 5;
+  padding: 0 10px;
+}
+
+.slider-btna:hover {
+  opacity: 1;
+}
+
+.left-btna {
+  margin-right: 10px;
+}
+
+.right-btna {
+  margin-left: 10px;
+}
+
+
+.spa-container{
+  width: 100%;
+  height: 800px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.minizone-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height:700px;
+  overflow: hidden;
+}
+
+.minizone-wrapper {
+  width: 80%;
+  height: 600px;
+  overflow: hidden;
+  padding-left: 2%;
+}
+
+.minizone-track {
+  display: flex;
+  height: 100%;
+  transition: none; 
+}
+
+.minizone-slide {
+  min-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.minizone-slide img {
+  width: 300px;
+  height: 600px;
+}
+
+.minizone-arrow {
+  border: none;
+  background: none;
+  color: #1e6395;
+  font-size: 1rem;   
+  font-weight: 200;     
+  width: 25px;
+  height: 25px;
+
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+
+  z-index: 10;
+  transition: none; 
+}
+
+.minizone-arrow:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.minizone-left {
+  left: 10px;
+}
+
+.minizone-right {
+  right: 10px;
+}
+
+.newsletter{
+  align-self: center;
+  padding-left: 18%;
+}
+
+.newsletter2{
+  height: 50px;
+ width: 100%;
+ background-color: white;
+display: flex;
+ flex-direction: row;
+ gap: 2rem;
+}
+
+.email-field {
+  background-color: transparent;
+  margin-left: 50%;
+  margin-top: 15%;
+  border: none;
+  color: #1e6395; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  border-bottom: 1px solid #1e6395; 
+  text-decoration: none;
+}
+
+
+.email-field::placeholder {
+  color: #1e6395;        
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
+}
+
+
+.signup-button{
+  color: #1e6395;
+  border: solid #1e6395;
+  height: 20px;
+  text-decoration: none;
+  margin-left: 21%;
+  margin-top: 2.5%;
+  padding-bottom: 5%;
+  padding-top: 1%;
+  padding-left: 3%;
+  padding-right:3%;
+  background-color: #1e6395;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; 
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+.instagram-icon {
+  margin-left: 84%;
+  margin-top: 50%;
+  position: absolute;
+ color: #1e6395;
+}
+
+.facebook-icon{
+  color: #1e6395;
+ margin-left: 91%;
+ margin-top: 50%;
+ position: absolute;
+}
+
+
+    .navbar {
+      padding: 15px 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .hamburger {
+      font-size: 24px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      z-index: 1000;
+      width: 50px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 12px 16px;
+      color: #247ba0;
+      text-decoration: none;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.2s;
+      width: 50px;
+    }
+
+    .dropdown a:hover {
+      background-color: #e3f2fd;
+    }
+
+    .dropdown a:last-child {
+      border-bottom: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+.dropdown{
+width: 180px;
+white-space: nowrap;
+    }
+
+    .m{
+     background-color: white;
+
+          }
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: 450px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+
+.mein-button{
+  text-decoration: none;
+  align-self: center !important;
+}
+
+
+
+
+
+
+
+.reservebereich{
+  width: 70%;
+  height: 60px;
+  background-color: #efeae8;
+  margin-top:-16%;
+   z-index: 30;
+   display: flex;
+   flex-direction: row;
+   margin-left: 15%;
+   padding-top: -2%;
+   background-color: #ffffff;
+   border: solid 0.2px black;
+   
+   color: #1e6395;
+    }
+
+.inhalt1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 10px;
+  gap: 0.4rem;
+  padding-top: 2%;
+  margin-left: 4%;
+  font-weight: 600;
+ }
+
+.Datum{
+  height: 20px;
+  font-size: 8px;
+  width: 60px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  text-align: start;
+  
+ }
+
+.inhalt2{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  margin-top: 1.7%;
+  font-weight: 600;
+  margin-left: 8%;
+   }
+
+
+
+.line{
+   
+  
+   }
+
+
+.Datum2{
+  height: 20px;
+  font-size: 8px;
+  width: 20px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  text-align: start;
+  margin-bottom: 14%;
+ }
+
+.line2{
+
+   }
+
+.inhalt3{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  gap: 0.45rem;
+  margin-top: 2%;
+  margin-left: 40%;
+  position: absolute;
+  font-weight: 600;
+
+    }
+
+.partida{
+  height: 20px;
+  font-size: 8px;
+  width: 60px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  text-align: start;
+  
+ }
+
+
+#select-hospedes {
+    font-size: 1rem;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .hospedes {
+    width: 90px;
+    margin-left: 10%
+  }
+
+.quantos {
+  width: 100px;
+  font-size: 1rem;
+  border: none;
+  background-color: transparent; 
+  color:#1e6395;
+  width: 50%;
+  font-size: 10px;
+  padding-bottom: 4%;
+  padding-top: 4%;
+  padding-left: 4%;
+  padding-right: 4%;
+  text-align: start;
+}
+
+.quantos::placeholder {
+  color:#1e6395;
+  opacity: 1; 
+  padding-bottom: 4%;
+}
+
+
+.btn-reserve{
+  margin-bottom: 10%;
+  position: absolute;
+  margin-left: 55%;
+  margin-top: 7%;
+  font-size: 10px;
+  color: white;
+  background-color: #1e6395;
+  padding-bottom: 4%;
+  padding-top: 4%;
+   padding-right: 5%;
+   padding-left: 5%;
+   border: none;
+}
+
+
+.newsletter{
+  align-self: center;
+  padding-left: 18%;
+}
+
+.newsletter2{
+  height: 50px;
+ width: 100%;
+ background-color: white;
+display: flex;
+ flex-direction: row;
+ gap: 2rem;
+}
+
+.email-field {
+  background-color: transparent;
+  margin-left: 50%;
+  margin-top: 15%;
+  border: none;
+  color: #1e6395; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  border-bottom: 1px solid #1e6395; 
+  text-decoration: none;
+}
+
+
+.email-field::placeholder {
+  color: #1e6395;        
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
+}
+
+
+.signup-button{
+  color: #1e6395;
+  border: solid #1e6395;
+  height: 20px;
+  text-decoration: none;
+  margin-left: 21%;
+  margin-top: 2.5%;
+  padding-bottom: 5%;
+  padding-top: 1%;
+  padding-left: 3%;
+  padding-right:3%;
+  background-color: #1e6395;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; 
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+
+
+
+
+.m {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+
+.m.active,
+.m:hover {
+  background-color: white !important;
+}
+
+
+.m.active .hamburger i,
+.m.active .telefon-link i,
+.m.active .email-link i,
+.m.active .lang-toggle i,
+.m:hover .hamburger i,
+.m:hover .telefon-link i,
+.m:hover .email-link i,
+.m:hover .lang-toggle i {
+  color:#1e6395 !important;
+}
+
+
+
+.m {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.m.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+</style>
+
+<body>
+    
+
+<div id="whatsapp-trigger" style="display: inline-block; cursor: pointer;">
+  <img src="images/whatsappicon.webp" alt="WhatsApp Icon" class="whatsapp-icon" />
+</div>
+
+
+
+
+
+
+<header>
+  
+    <div class="m">
+       <div class="navbar">
+    <button class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+   
+  </div>
+
+  <div id="dropdownMenu" class="dropdown">
+    <a href="index.html">Home</a>
+    <a href="nossa.html">Nossa História</a>
+    <a href="chales.html">Chalés</a>
+    <a href="restaurante.html">Restaurante</a>
+    <a href="spa.html">Spa</a>
+    <a href="pacotes.html">Pacotes e Passeios</a>
+    <a href="experiencas.html">Experiências</a>
+    <a href="contato.html">Contato</a>
+  </div>
+      <img src="images/logo.webp" alt="Beschreibung des Bildes" class="logo" loading="lazy">
+      <a href="tel:+558488662244" class="telefon-link">
+  <i class="fas fa-phone"></i> 
+</a>
+<a href="mailto:beispiel@email.com" class="email-link">
+  <i class="fas fa-envelope"></i> 
+</a>
+      <div class="language-selector">
+  <button class="lang-toggle" onclick="toggleLangMenu()">
+    <i class="fas fa-globe"></i>
+  </button>
+  <ul class="lang-menu" id="langMenu">
+    <li><a href="#">PT</a></li>
+    <li><a href="index-en.html">EN</a></li>
+    <li><a href="index-es.html">ES</a></li>
+    <li><a href="index-fr.html">FR</a></li>
+  </ul>
+</div>
+</div>
+    </div>
+  </div>
+</header>
+
+
+
+<div class="flex-container"></div>
+
+
+
+
+
+<div class="flex-container2">
+
+  <div class="reserve">
+
+ <div class="reservebereich">
+
+  <div class="inhalt1">Chegada
+    <button class="Datum" id="calendar-btn">Selecionar data</button>
+    <input type="text" id="datepicker" class="visually-hidden">
+  </div>
+
+  <div style="width: 1px; height: 40px; background-color: #1e6395; margin-top: 2%;"></div>
+
+  <div class="inhalt2">Partida
+    <button class="partida" id="calendar-btn-partida">Selecionar data</button>
+    <input type="text" id="datepicker-partida" class="visually-hidden">
+  </div>
+
+  <div style="width: 1px; height: 40px; background-color: #1e6395; margin-top: 2%;"></div>
+
+  <div class="inhalt3">Hóspedes
+    <input type="text" placeholder="Quantos?" class="quantos">
+    <button class="btn-reserve">Reserve</button>
+  </div>
+
+</div>
+
+<!-- Flatpickr + Stripe -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  const stripe = Stripe("pk_test_51Rehi44MlG2x5SrzqscwINvP2kFWwkXpqB8bEOOetzZTfYWXe3inXW9xBqARKL7RMg7rDK0PNbv8ilsMY0P9uNg100NNbMBixA");
+</script>
+
+<script>
+  let fp, fpPartida;
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const calendarBtn = document.getElementById("calendar-btn");
+    const calendarBtnPartida = document.getElementById("calendar-btn-partida");
+    const datepicker = document.getElementById("datepicker");
+    const datepickerPartida = document.getElementById("datepicker-partida");
+
+    // Lade blockierte Daten vom Railway-Backend
+    async function loadBlockedDates() {
+      try {
+        const res = await fetch("https://olympspa.up.railway.app/bookings");
+        const bookings = await res.json();
+        return bookings.map(b => ({ from: b.from, to: b.to }));
+      } catch (err) {
+        console.error("❌ Fehler beim Laden der Buchungen:", err);
+        return [];
+      }
+    }
+
+    const blocked = await loadBlockedDates();
+
+    // Flatpickr: Chegada
+    fp = flatpickr(datepicker, {
+      dateFormat: "d/m/Y",
+      allowInput: true,
+      clickOpens: false,
+      disable: blocked,
+      minDate: "today",
+      onChange: (_, dateStr) => {
+        calendarBtn.textContent = dateStr || "Selecionar data";
+
+        // Validierung: Chegada darf nicht nach Partida sein
+        if (fpPartida.selectedDates[0] && fp.selectedDates[0] > fpPartida.selectedDates[0]) {
+          fpPartida.clear();
+          calendarBtnPartida.textContent = "Selecionar data";
+        }
+
+        // Mindestdatum für Partida anpassen
+        fpPartida.set("minDate", fp.selectedDates[0] || "today");
+      }
+    });
+
+    // Flatpickr: Partida
+    fpPartida = flatpickr(datepickerPartida, {
+      dateFormat: "d/m/Y",
+      allowInput: true,
+      clickOpens: false,
+      disable: blocked,
+      minDate: "today",
+      onChange: (_, dateStr) => {
+        calendarBtnPartida.textContent = dateStr || "Selecionar data";
+      }
+    });
+
+    // Button-Events
+    calendarBtn.addEventListener("click", () => fp.open());
+    calendarBtnPartida.addEventListener("click", () => fpPartida.open());
+
+    // Buchung + Zahlung starten
+    document.querySelector(".btn-reserve").addEventListener("click", async () => {
+      const checkinText = calendarBtn.textContent;
+      const checkoutText = calendarBtnPartida.textContent;
+      const guests = document.querySelector(".quantos").value.trim();
+
+      if (checkinText === "Selecionar data" || checkoutText === "Selecionar data" || guests === "") {
+        alert("❗ Por favor, selecione todas as informações.");
+        return;
+      }
+
+      // Datum ins ISO-Format umwandeln
+      const convertDate = (str) => {
+        const [d, m, y] = str.split('/');
+        return `${y}-${m.padStart(2, "0")}-${d.padStart(2, "0")}`;
+      };
+
+      const from = convertDate(checkinText);
+      const to = convertDate(checkoutText);
+
+      try {
+        // 1️⃣ Buchung speichern
+        const save = await fetch("https://olympspa.up.railway.app/bookings", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ from, to, guests })
+        });
+
+        if (save.status === 409) {
+          alert("❌ Este período já está reservado.");
+          return;
+        }
+
+        if (!save.ok) throw new Error("❌ Falha ao salvar a reserva.");
+
+        // 2️⃣ Neue blockierte Daten laden
+        const newBlocked = await loadBlockedDates();
+        fp.set("disable", newBlocked);
+        fpPartida.set("disable", newBlocked);
+
+        // 3️⃣ Stripe Checkout starten
+        const stripeRes = await fetch("https://olympspa.up.railway.app/bookings", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ checkin: checkinText, checkout: checkoutText, guests })
+        });
+
+        if (!stripeRes.ok) throw new Error("❌ Erro ao criar sessão Stripe.");
+
+        const { id } = await stripeRes.json();
+        const { error } = await stripe.redirectToCheckout({ sessionId: id });
+        if (error) alert(error.message);
+
+      } catch (err) {
+        console.error("❌ Fehler:", err);
+        alert(err.message);
+      }
+    });
+  });
+</script>
+
+
+</div>
+          
+          <div class="titel">Nosso Hotel</div>
+         <div class="inhalt">O hotel Olymp Spa convida os hóspedes que procuram acomodações de alto padrão a desfrutar da elegância de um retiro de 
+férias no meio da serra, no Nordeste.</div>
+         
+</div>
+
+<div class="slider-wrappera">
+  <button style="font-weight: 100;" class="slider-btna left-btna">&lt;</button>
+
+  <div class="slider2a" id="slidera">
+    <div class="slide2a"><img src="images/saulen.webp" alt="Bild 1" loading="lazy" /></div>
+    <div class="slide2a"><img src="images/chalweiss.webp" alt="Bild 2" loading="lazy" /></div>
+    <div class="slide2a"><img src="images/hotelrosen.webp" alt="Bild 3" loading="lazy" /></div>
+    <div class="slide2a"><img src="images/pool.webp" alt="Bild 4" loading="lazy" /></div>
+    <div class="slide2a"><img src="images/saunaally.webp" alt="Bild 5" loading="lazy" /></div>
+    <div class="slide2a"><img src="images/reiten.webp" alt="Bild 6"s loading="lazy" /></div>
+    <div class="slide2a"><img src="images/escritorio.webp" alt="Bild 7" loading="lazy" /></div>
+    <div class="slide2a"><img src="images/voce.webp" alt="Bild 8" loading="lazy" /></div>
+  </div>
+
+  <button class="slider-btna right-btna">&gt;</button>
+</div>
+
+<div class="flex-container3">
+
+    <div class="chales">Chalés</div>
+    <div class="inhalt">Nossos oito chalés, inspirados na mitologia grega, foram cuidadosamente projetados no coração da serra para oferecer uma experiência única. Cada um homenageia uma divindade grega, unindo conforto, simbolismo e conexão com a natureza.</div>
+
+  <a href="chales-description.html" class="mein-button">Ver mais</a>
+
+
+
+
+
+</div>
+
+
+<div class="slider" id="slider">
+  <div class="slide">
+      <img src="images/3.webp" alt="Bild 1" loading="lazy" width="9cm" height="16cm" />
+    </div>
+    <div class="slide">
+      <img src="images/2.webp" alt="Bild 2"  loading="lazy" width="9cm" height="16cm"/>
+    </div>
+    <div class="slide">
+      <img src="images/zeus.3.webp" alt="Bild 3"  loading="lazy" width="9cm" height="16cm"/>
+    </div>
+    <div class="slide">
+      <img src="images/c5.webp" alt="Bild 3"  loading="lazy" width="9cm" height="16cm"/>
+    </div>
+    <div class="slide">
+      <img src="images/c6.webp" alt="Bild 3"  loading="lazy" width="9cm" height="16cm"/>
+    </div>
+     <div class="slide">
+      <img src="images/c7.webp" alt="Bild 3"  loading="lazy" width="9cm" height="16cm"/>
+    </div>
+     <div class="slide">
+      <img src="images/c8.webp" alt="Bild 3"  loading="lazy" width="9cm" height="16cm"/>
+    </div>
+      <div class="slide">
+      <img src="images/c9.webp" alt="Bild 3"  loading="lazy" width="9cm" height="16cm"/>
+    </div>
+  </div>
+
+
+
+
+
+
+<div class="restaurante">
+   <div class="restaurante-bild"></div>
+   <button class="descubra-btn">Descubra mais</button>
+</div>
+
+<div class="spa-bild"></div>
+
+<div class="flex-container2c">
+          <div class="titelc">Spa & Bem estar </div>
+         <div class="inhaltc">
+Rejuvenesça a mente, o corpo e a alma 
+com nossa variedade de atividades e 
+tratamentos de bem-estar.</div>
+
+         </div>
+
+</div>
+
+
+  
+</div>
+</div>
+
+
+
+
+
+<div class="flex-container2f">
+          <div class="titelf">Experiencias no Monte das Gameleiras</div>
+         <div class="inhaltf">
+No Olymp Spa, sua viagem se transforma em uma vivência 
+única que transcende as férias convencionais. Descubra a 
+beleza autêntica da região com nossa curadoria exclusiva de 
+experiências personalizadas</div>
+         </div>
+</div>
+
+
+<div class="minizone-container">
+  <button class="minizone-arrow minizone-left">&lt;</button>
+
+  <div class="minizone-wrapper">
+    <div class="minizone-track" id="minizone-track">
+      <div class="minizone-slide"><img src="images/1.webp" alt="Bild 1" loading="lazy" /></div>
+      <div class="minizone-slide"><img src="images/topfton.webp" alt="Bild 2" loading="lazy" /></div>
+      <div class="minizone-slide"><img src="images/hotelb.webp" alt="Bild 3" loading="lazy" /></div>
+    </div>
+  </div>
+
+  <button class="minizone-arrow minizone-right">&gt;</button>
+</div>
+
+<hr style="border: none; height: 0.5px; background-color: #1e6395; width: 80%; margin-left: 10%; margin-bottom: 2.6rem;">
+
+
+<div class="newsletter2">
+<div class="email-input">
+  <label for="email"></label>
+  <input type="email" id="email" name="email" class="email-field" placeholder="Seu e-mail">
+</div>
+
+<a href="http://eepurl.com/jf6BEU" target="_blank" class="signup-button">Inscreva-se</a>
+</div>
+
+
+<div class="newsletter">
+   
+  <div class="newsletter">NEWSLETTER</div>
+
+     <div class="newsletterinfo">Receber atualizações sobre experiências exclusivas,
+eventos, e muito mais.</div>
+</div>
+
+
+<a href="https://www.instagram.com/olymp.spa/" target="_blank" class="instagram-icon" aria-label="Instagram">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.facebook.com/deinprofil" target="_blank" class="facebook-icon" aria-label="Facebook">
+  <i class="fab fa-facebook-f"></i>
+</a>
+
+
+<div class="footer">
+  
+
+  <div class="logo-trans"></div>
+<div class="row">
+  <div class="footerlogo1">Fale conosco
+<div class="content1">
+  <a style="color: #1e6395 !important;" href="mailto:patchamamaglamping@gmail.com" class="email-link">patchamamaglamping@gmail.com</a>
+   </div>       <div class="content2">
+   <a href="https://wa.me/message/GZALPFM2IAJUG1" class="whatsapplink2">00558488662244</a>
+   </div>
+       
+       </div>
+
+
+
+       <div class="footerlogo2">Corporativo
+      <div class="cont1">Termo de uso</div>
+      <div class="cont2">Política de Privacidade</div>
+  </div>
+
+  <div class="footerlogo4">
+  Contato
+  <div class="con1" onclick="abrirPopup()">Localização</div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+function toggleLangMenu() {
+  const langMenu = document.getElementById("langMenu");
+  langMenu.classList.toggle("show");
+}
+
+// Schließen, wenn außerhalb geklickt wird
+window.addEventListener('click', (e) => {
+  const langButton = document.querySelector('.lang-toggle');
+  const langMenu = document.getElementById('langMenu');
+
+  if (!langButton.contains(e.target) && !langMenu.contains(e.target)) {
+    langMenu.classList.remove('show');
+  }
+});
+</script>
+<script>
+window.toggleMenu = function() {
+  console.log("toggleMenu wurde geklickt");
+  const dropdown = document.getElementById("dropdownMenu");
+  dropdown.classList.toggle("show");
+}
+</script>
+<script>
+  const stripe = Stripe("pk_test_51Rehi44MlG2x5SrzqscwINvP2kFWwkXpqB8bEOOetzZTfYWXe3inXW9xBqARKL7RMg7rDK0PNbv8ilsMY0P9uNg100NNbMBixA");
+
+  let fp, fpPartida;
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const calendarBtn = document.getElementById("calendar-btn");
+    const calendarBtnPartida = document.getElementById("calendar-btn-partida");
+    const datepicker = document.getElementById("datepicker");
+    const datepickerPartida = document.getElementById("datepicker-partida");
+
+    // Lade blockierte Daten vom Backend
+    async function loadBlockedDates() {
+      try {
+        const res = await fetch("https://olympspa.up.railway.app/bookings");
+        const bookings = await res.json();
+        // Umwandlung in Flatpickr-kompatible Form
+        return bookings.map(b => ({ from: b.from, to: b.to }));
+      } catch (err) {
+        console.error("Fehler beim Laden der Buchungen:", err);
+        return [];
+      }
+    }
+
+    const blocked = await loadBlockedDates();
+
+    // Flatpickr: Chegada (Checkin)
+    fp = flatpickr(datepicker, {
+      dateFormat: "d/m/Y",
+      allowInput: true,
+      clickOpens: false,
+      disable: blocked,
+      minDate: "today",
+      onChange: (_, dateStr) => {
+        calendarBtn.textContent = dateStr || "Selecionar data";
+
+        // Check: Chegada darf nicht nach Partida sein
+        if (fpPartida.selectedDates[0] && fp.selectedDates[0] > fpPartida.selectedDates[0]) {
+          fpPartida.clear();
+          calendarBtnPartida.textContent = "Selecionar data";
+        }
+
+        // minDate für Partida anpassen
+        fpPartida.set("minDate", fp.selectedDates[0] || "today");
+      }
+    });
+
+    // Flatpickr: Partida (Checkout)
+    fpPartida = flatpickr(datepickerPartida, {
+      dateFormat: "d/m/Y",
+      allowInput: true,
+      clickOpens: false,
+      disable: blocked,
+      minDate: "today",
+      onChange: (_, dateStr) => {
+        calendarBtnPartida.textContent = dateStr || "Selecionar data";
+      }
+    });
+
+    // Buttons öffnen Flatpickr
+    calendarBtn.addEventListener("click", () => fp.open());
+    calendarBtnPartida.addEventListener("click", () => fpPartida.open());
+
+    // Buchung + Stripe Checkout starten
+    document.querySelector(".btn-reserve").addEventListener("click", async () => {
+      const checkinText = calendarBtn.textContent;
+      const checkoutText = calendarBtnPartida.textContent;
+      const guests = document.querySelector(".quantos").value.trim();
+
+      if (checkinText === "Selecionar data" || checkoutText === "Selecionar data" || guests === "") {
+        alert("❗ Por favor, selecione todas as informações.");
+        return;
+      }
+
+      // Datum konvertieren (dd/mm/yyyy -> yyyy-mm-dd)
+      const convertDate = (str) => {
+        const [d, m, y] = str.split('/');
+        return `${y}-${m.padStart(2,"0")}-${d.padStart(2,"0")}`;
+      };
+
+      const from = convertDate(checkinText);
+      const to = convertDate(checkoutText);
+
+      try {
+        // 1️⃣ Buchung speichern
+        const save = await fetch("https://olympspa.up.railway.app/bookings", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ from, to, guests })
+        });
+
+        if (save.status === 409) {
+          alert("❌ Este período já está reservado.");
+          return;
+        }
+
+        if (!save.ok) throw new Error("❌ Falha ao salvar a reserva.");
+
+        // 2️⃣ Neue blockierte Daten laden und Flatpickr aktualisieren
+        const newBlocked = await loadBlockedDates();
+        fp.set("disable", newBlocked);
+        fpPartida.set("disable", newBlocked);
+
+        // 3️⃣ Stripe Checkout starten
+        const stripeRes = await fetch("https://olympspa.up.railway.app/bookings", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ checkin: checkinText, checkout: checkoutText, guests })
+        });
+
+        if (!stripeRes.ok) throw new Error("❌ Erro ao criar sessão Stripe.");
+
+        const { id } = await stripeRes.json();
+        const { error } = await stripe.redirectToCheckout({ sessionId: id });
+        if (error) alert(error.message);
+
+      } catch (err) {
+        console.error("Fehler:", err);
+        alert(err.message);
+      }
+    });
+
+
+    // --- Popup Karte ---
+    window.abrirPopup = function() {
+      document.getElementById("popup").style.display = "flex";
+    }
+    window.fecharPopup = function() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    // --- Menü Dropdown ---
+    window.toggleMenu = function() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    // --- Slider minizone ---
+    const track = document.getElementById('minizone-track');
+    const slidesMinizone = Array.from(document.querySelectorAll('.minizone-slide'));
+    const prevArrow = document.querySelector('.minizone-left'); 
+    const nextArrow = document.querySelector('.minizone-right'); 
+
+    let currentIndexMinizone = 0;
+    function updateSliderMinizone() {
+      track.style.transition = 'transform 0.5s ease';
+      track.style.transform = `translateX(-${currentIndexMinizone * 100}%)`;
+    }
+    prevArrow.addEventListener('click', () => {
+      currentIndexMinizone = (currentIndexMinizone - 1 + slidesMinizone.length) % slidesMinizone.length;
+      updateSliderMinizone();
+    });
+    nextArrow.addEventListener('click', () => {
+      currentIndexMinizone = (currentIndexMinizone + 1) % slidesMinizone.length;
+      updateSliderMinizone();
+    });
+    updateSliderMinizone();
+
+    // --- Slider "slidera" mit Scroll ---
+    const slidera = document.getElementById('slidera');
+    const btnLeft = document.querySelector('.left-btna');
+    const btnRight = document.querySelector('.right-btna');
+    const slidesScroll = document.querySelectorAll('.slide2a');
+
+    let scrollPosition = 0;
+    const slideWidth = slidera.querySelector('.slide2a').offsetWidth;
+
+    btnLeft.addEventListener('click', () => {
+      scrollPosition -= slideWidth;
+      if (scrollPosition < 0) scrollPosition = 0;
+      slidera.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+    });
+    btnRight.addEventListener('click', () => {
+      scrollPosition += slideWidth;
+      const maxScroll = slidera.scrollWidth - slidera.clientWidth;
+      if (scrollPosition > maxScroll) scrollPosition = maxScroll;
+      slidera.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+    });
+
+    // --- Slider Einzeldarstellung für "slidera" ---
+    let currentIndexSlides = 0;
+    function showSlide(index) {
+      slidesScroll.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+    btnLeft.addEventListener('click', () => {
+      currentIndexSlides = (currentIndexSlides - 1 + slidesScroll.length) % slidesScroll.length;
+      showSlide(currentIndexSlides);
+    });
+    btnRight.addEventListener('click', () => {
+      currentIndexSlides = (currentIndexSlides + 1) % slidesScroll.length;
+      showSlide(currentIndexSlides);
+    });
+    showSlide(currentIndexSlides);
+
+    // --- Fenster-Klicks für Menüs/Popup schließen ---
+    window.addEventListener('click', (event) => {
+      const popup = document.getElementById("popup");
+      if (popup && event.target === popup) {
+        fecharPopup();
+      }
+
+      if (!event.target.closest('.hamburger')) {
+        const dropdown = document.getElementById("dropdownMenu");
+        if (dropdown && dropdown.classList.contains("show")) {
+          dropdown.classList.remove("show");
+        }
+      }
+
+      const langButton = document.querySelector('.lang-toggle');
+      const langMenu = document.getElementById('langMenu');
+      if (langButton && langMenu && !langButton.contains(event.target) && !langMenu.contains(event.target)) {
+        langMenu.style.display = 'none';
+      }
+    });
+
+  });
+
+</script>
+  
+</body>
+</html>

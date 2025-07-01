@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Hotel ou Resort</title>
+  <meta name="description" content="Bem-vindo ao paraíso: conforto, natureza e bem-estar em um só lugar.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+
+</head>
+<style>
+#select-hospedes {
+    font-size: 1rem;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+
+#google_translate_element {
+  transform: scale(0.4);
+  transform-origin: top left;  
+  position: fixed;            
+  top: 5.5%;                
+  right: 24px;               
+  z-index: 9999;       
+  background-color: #1e6395;       
+}
+
+
+.goog-te-banner-frame.skiptranslate,
+body > .skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-toggle {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  padding-left: 1rem;
+  padding-top: 0.3rem;
+  transition: color 0.3s;
+  margin-top:6%;
+  margin-right: 10rem;
+  
+}
+
+.lang-toggle:hover {
+  color: white;
+  
+}
+
+.lang-toggle i {
+  color: white; !important;
+  margin-right: 4rem;
+}
+
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: 120%;
+  margin-right: 30rem;
+  background-color: white;
+  border: 1px solid #1e6395;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 45px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+  border-radius: 5px;
+}
+
+.lang-menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #1e6395;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.lang-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+
+ #whatsapp-trigger {
+      position: absolute;
+      top: 55vh;  
+      left: 0;
+      width: 1px;
+      height: 1px;
+    }
+
+  
+    .whatsapp-icon {
+      position: fixed;
+      top: 55vh;
+      left: 2%;
+      width: 30px;
+      height: 30px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+
+
+    .whatsapp-icon.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    
+color:#1e6395;
+       }
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
+  background-image: url("images/mont.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: sticky;
+   top: 0;
+  z-index: -1;        
+}
+
+.m {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 62px;
+  background-color: transparent !important;
+  display: flex;
+  flex-direction: row;
+  color: #1e6395;
+  z-index: 10; 
+}
+
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom:4rem;  
+  margin-left:30%;  
+
+}
+
+.my-buttonb1{
+ 
+height: 30px;
+z-index: 40;
+margin-top: 4%;
+border: 1px solid #1e6395;
+background-color: transparent;
+color: #1e6395;
+font-size: 12px;
+width: 200px;
+margin-left: 5%;
+ }
+
+
+.my-buttonb2{
+  width: 30%;
+height: 30px;
+z-index: 40;
+border: 1px solid #1e6395;
+margin-top: 4%;
+background-color: transparent;
+color: #1e6395;
+margin-right: 8%;
+ }
+
+
+.flex-container2{
+     height: 320px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1rem;
+    background-color: white;
+    padding-top: 10%;
+        }
+
+.titel{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: 900;
+    }
+
+
+.inhalt{
+    text-align: justify;
+    width: 90%;
+   align-self: center;
+   hyphens: auto;
+   word-spacing: normal;
+   overflow-wrap:break-word;
+   }
+
+.my-button{
+    width: 80px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 11px;
+   
+
+       }
+
+
+ .logo1{
+    background-image: url("images/logo.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+ 
+ }
+
+
+
+
+.slider-wrappera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.slider2a {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide2a {
+  min-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide2a img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.slider-btna {
+  border: none !important;
+  background: none !important;
+  color: #1e6395 !important;
+  font-size: 1rem !important;      
+  font-weight: bold !important;
+  width: 22px !important;          
+  height: 22px !important;
+  text-align: center !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  text-shadow: 0 0 1px #1e6395 !important;
+}
+.slider-btna:hover {
+  opacity: 1;
+}
+
+.left-btna {
+  margin-right: 10px;
+  color:#1e6395 !important; 
+  font-weight: 300!important; 
+}
+
+.right-btna {
+  margin-left: 10px;
+  color:#1e6395 !important; 
+  font-weight: 300 !important; 
+}
+
+.slide2a {
+  display: none;
+}
+
+.slide2a.active {
+  display: flex;
+}
+
+#slidera {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; 
+  scroll-behavior: smooth;  
+  scrollbar-width: none;   
+}
+
+.slide2a {
+  scroll-snap-align: start;      
+  flex-shrink: 0;               
+  width: 300px;               
+  scrollbar-width: none;
+}
+
+
+
+.titel{
+    font-weight: bold;
+    }
+
+.chales{
+    font-weight: bold;
+    align-self: center;
+    }
+
+.flex-container2b{
+     height: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color:#1e6395;
+    gap: 1rem;
+    padding-top: 5%;
+    background-color: white;
+    
+        }
+
+.titelb{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: bold;
+    }
+
+
+.inhaltb{
+    text-align: justify;
+    width: 90%;
+   align-self: center;
+   }
+
+
+.slider::-webkit-scrollbar,
+.slider2::-webkit-scrollbar {
+  display: none; 
+}
+
+.slider {
+  scrollbar-width: none; 
+}
+
+.slider2 {
+  scrollbar-width: none; 
+}
+
+
+.sliderc::-webkit-scrollbar,
+.slider2c::-webkit-scrollbar {
+  display: none; 
+}
+
+.sliderc {
+  scrollbar-width: none; 
+}
+
+.slider2c {
+  scrollbar-width: none; 
+}
+
+
+
+.slider-wrapperc {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 350px;
+  background-color: #efeae8;
+  display: flex;
+  align-content: center;
+  padding-top: 2.5rem;
+
+}
+
+.slider2c {
+  display: flex;
+  gap: 10px; 
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+ 
+}
+
+.slide2c {
+  flex: 0 0 auto;
+  width: 380px; 
+  scroll-snap-align: start;
+}
+
+.slide2c img {
+  display: block;
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+
+
+.logob {
+  width: 60px;
+  height: 60px;
+  
+}
+
+.my-buttonb {
+  width: 480px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid #1e6395;
+  font-size: 11px;
+  color: #1e6395;
+}
+
+
+.slider-wrapperc {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 350px;
+  background-color: #efeae8;
+  display: flex;
+  align-content: center;
+  padding-top: 2.5rem;
+
+}
+
+.slider2d {
+  display: flex;
+  gap: 10px; 
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+ 
+}
+
+.slide2d {
+  flex: 0 0 auto;
+  width: 380px; 
+  scroll-snap-align: start;
+}
+
+.slide2d img {
+  display: block;
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.slider-wrapperd {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 350px;
+  background-color: #efeae8;
+  display: flex;
+  align-content: center;
+  padding-top: 2.5rem;
+
+}
+
+
+
+
+.sliderd::-webkit-scrollbar,
+.slider2d::-webkit-scrollbar {
+  display: none; 
+}
+
+.sliderd {
+  scrollbar-width: none; 
+}
+
+.slider2d {
+  scrollbar-width: none; 
+}
+
+
+.flex-container2e{
+     height: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color:#1e6395;
+    gap: 1rem;
+    
+        }
+
+.titele{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: bold;
+    }
+
+
+.inhalte{
+    text-align: justify;
+    width: 90%;
+   align-self: center;
+   }
+
+
+.slider-wrappere {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 350px;
+  background-color: #efeae8;
+  display: flex;
+  align-content: center;
+  padding-top: 2.5rem;
+
+}
+
+.flex-container2e{
+     height: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color:#1e6395;
+    gap: 1rem;
+    
+        }
+
+.titele{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: bold;
+    }
+
+
+.inhalte{
+    text-align: justify;
+    width: 90%;
+   align-self: center;
+   }
+
+
+
+.slider2f {
+  display: flex;
+  gap: 10px; 
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+ 
+}
+
+.slide2f {
+  flex: 0 0 auto;
+  width: 380px; 
+  scroll-snap-align: start;
+}
+
+.slide2f img {
+  display: block;
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.slider-wrapperf {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 350px;
+  background-color: #efeae8;
+  display: flex;
+  align-content: center;
+  padding-top: 2.5rem;
+
+}
+
+
+.sliderf::-webkit-scrollbar,
+.slider2f::-webkit-scrollbar {
+  display: none; 
+}
+
+.sliderf {
+  scrollbar-width: none; 
+}
+
+.slider2f {
+  scrollbar-width: none; 
+}
+
+
+
+.flex-container2g{
+     height: 330px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color:#1e6395;
+    gap: 1rem;
+    padding-top: 8%;
+    background-color: white;
+        }
+
+.titelg{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: bold;
+    }
+
+
+.inhaltg{
+    text-align: justify;
+    width: 90%;
+   align-self: center;
+   }
+
+.blue{
+  width: 100%;
+  height: 310px;
+  background-color: #efeae8;
+  display: flex;
+  flex-direction: column;
+  padding-top: 13%;
+   }
+
+.blue1{
+  width: 100%;
+  height: 255px;
+  background-color:#efeae8;
+ background-image: url("images/wedding.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   }
+
+.newsletter{
+  width: 100%;
+  height: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2%;
+  gap: 1rem;
+  background: white;
+  
+   }
+
+.newsbutton{
+ background-color: #1e6395;
+   color: white;
+  align-self: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  border: none;
+   font-family: 'Montserrat', sans-serif;
+   }
+
+.newsletterinfo{
+    width: 100%;
+  height: 100px;
+font-size: 9px;
+color: #1e6395;
+align-self: center;
+margin-right: 13%;
+padding-bottom: 11%;
+ }
+
+.newsletter-link{
+  background-color: #1e6395;
+   color: white;
+  align-self: center;
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border: none;
+   }
+
+
+
+
+.footer{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  font-size: 7px;
+  background-color: #efeae8;
+  justify-content: center;
+  gap: 1.7rem;
+     }
+
+
+ .content1{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+ }
+
+
+
+.content2{
+  font-weight: 400;
+  padding-top: 4%;
+ }
+
+
+
+.cont1{
+  font-weight: 400;
+  padding-top: 7%;
+ }
+
+.cont2{
+  font-weight: 400;
+  padding-top: 4%; 
+ }
+
+
+.con1{
+  font-weight: 400;
+  padding-top: 3%;
+  width: 40%;
+ }
+
+.whatsapplink2{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+  color: #1e6395;
+  text-decoration: none;
+ }
+
+.phone{
+  margin-top: 5%;
+  margin-left: 50%;
+  margin-top: 2%;
+ }
+
+
+ .telefon-link{
+  color: white;
+  margin-top: 5%;
+  margin-left: 16%;
+ }
+
+
+.email-link{
+  font-weight: 400;
+  width: 30%;
+  color: white;
+  text-decoration: none;
+  margin-left: 3%;
+  margin-top: 5%;
+ }
+
+
+
+.logo-trans{
+  background-image: url("images/logo.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+width: 15%;
+height: 25%;
+margin-left: 43%;
+
+ }
+
+
+.row{
+  width: 100%;
+  height:50px;
+display: flex;
+gap: 1rem;
+margin-left: 13%;
+ }
+
+.footerlogo1{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo2{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo4{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+
+.my-buttonb1{
+  font-family: 'Montserrat', sans-serif;
+  width: 60%;
+  align-items: center;
+  align-content: center;
+ text-decoration: none;
+ text-align: center;
+  }
+
+
+
+
+
+.vermais-btn{
+  width: 40%;
+  border: none;
+  text-decoration: underline;
+  color: #1e6395;
+  align-self: center;
+}
+
+.exp{
+     height: 210px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1rem;
+    background-color: white;
+    padding-top: 10%;
+        }
+
+.exp1{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: 900;
+    }
+
+
+.exp2{
+    text-align: center;
+    width: 90%;
+   align-self: center;
+   }
+
+
+
+.slider-wrappera2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.slider2a2 {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide2a {
+  min-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide2a img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.slider-btna {
+  background: none;
+  border: none;
+  color: #007BFF;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+  z-index: 5;
+  padding: 0 10px;
+}
+
+.slider-btna:hover {
+  opacity: 1;
+}
+
+.left-btna {
+  margin-right: 10px;
+}
+
+.right-btna {
+  margin-left: 10px;
+}
+
+
+.spa-container{
+  width: 100%;
+  height: 800px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.newsletter{
+  align-self: center;
+  padding-left: 18%;
+}
+
+.newsletter2{
+  height: 50px;
+ width: 100%;
+ background-color: white;
+display: flex;
+ flex-direction: row;
+ gap: 2rem;
+}
+
+.email-field {
+  background-color: transparent;
+  margin-left: 50%;
+  margin-top: 15%;
+  border: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  border-bottom: 1px solid #1e6395; 
+  text-decoration: none;
+}
+
+
+.email-field::placeholder {
+  color: #1e6395;        
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
+}
+
+
+.signup-button{
+  color: #1e6395;
+  border: solid #1e6395;
+  height: 20px;
+  text-decoration: none;
+  margin-left: 21%;
+  margin-top: 2.5%;
+  padding-bottom: 5%;
+  padding-top: 1%;
+  padding-left: 3%;
+  padding-right:3%;
+  background-color: #1e6395;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; 
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+.instagram-icon {
+  margin-left: 84%;
+  margin-top: 50%;
+  position: absolute;
+ color: #1e6395;
+}
+
+.facebook-icon{
+  color: #1e6395;
+ margin-left: 91%;
+ margin-top: 50%;
+ position: absolute;
+}
+
+
+    .navbar {
+      background-color: transparent;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .hamburger {
+      font-size: 24px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      z-index: 1000;
+      width: 50px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 12px 16px;
+      color: #247ba0;
+      text-decoration: none;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.2s;
+      width: 50px;
+    }
+
+    .dropdown a:hover {
+      background-color: #e3f2fd;
+    }
+
+    .dropdown a:last-child {
+      border-bottom: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+.dropdown{
+width: 180px;
+white-space: nowrap;
+    }
+
+    .m{
+     background-color: white;
+
+          }
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: 450px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+
+.mein-button{
+  text-decoration: none;
+  align-self: center !important;
+}
+
+
+
+.comida{
+    height: 770px;
+    background-color: #efeae8;
+    margin-top: 3rem;
+    margin-bottom:3rem;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    color: #1e6395;
+    text-align: justify;
+    hyphens: auto;
+    word-spacing: normal;
+    overflow-wrap:break-word;
+}
+
+.comida-text{
+width: 80%;
+align-self: center;
+margin-top: 4rem;
+    }
+
+
+.comida-image{
+width: 80%;
+height: 400px;
+background-color: #e3f2fd;
+align-self: center;
+margin-top: 3.5rem;
+background-image: url("images/yoga2.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+ }
+
+
+
+
+
+
+.reservebereich{
+  width: 70%;
+  height: 60px;
+  background-color: #efeae8;
+  margin-top:-16%;
+   z-index: 30;
+   display: flex;
+   flex-direction: row;
+   margin-left: 18%;
+   padding-top: -2%;
+   background-color: #ffffff;
+   border: solid 0.2px black;
+   
+   color: #1e6395;
+    }
+
+.inhalt1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 10px;
+  gap: 0.4rem;
+  padding-top: 2%;
+  margin-left: 4%;
+  font-weight: 600;
+ }
+
+.Datum{
+  height: 20px;
+  font-size: 8px;
+  width: 60px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  text-align: start;
+  
+ }
+
+.inhalt2{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  margin-top: 1.7%;
+  font-weight: 600;
+  margin-left: 8%;
+   }
+
+
+
+.line{
+   
+  
+   }
+
+
+.Datum2{
+  height: 20px;
+  font-size: 8px;
+  width: 20px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  text-align: start;
+  margin-bottom: 14%;
+ }
+
+.line2{
+
+   }
+
+.inhalt3{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  gap: 0.45rem;
+  margin-top: 2%;
+  margin-right: %;
+  font-weight: 600;
+
+    }
+
+.partida{
+  height: 20px;
+  font-size: 8px;
+  width: 60px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  text-align: start;
+  
+ }
+
+
+#select-hospedes {
+    font-size: 1rem;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .hospedes {
+    width: 90px;
+    margin-left: 10%
+  }
+
+.quantos {
+
+  font-size: 1rem;
+  border: none;
+  background-color: transparent; 
+  color:#1e6395;
+  width: 70%;
+  font-size: 10px;
+  padding-bottom: 4%;
+  padding-top: 4%;
+  padding-left: 4%;
+  padding-right: 4%;
+  text-align: start;
+}
+
+.quantos::placeholder {
+  color:#1e6395;
+  opacity: 1; 
+  padding-bottom: 4%;
+}
+
+
+.btn-reserve{
+margin-right:6%;
+margin-top: 8%;
+height: 15px;
+  font-size: 10px;
+  color: white;
+  background-color: #1e6395;
+   border: none;
+   padding-left: 3%;
+   padding-right: 3%;
+}
+
+
+.newsletter{
+  align-self: center;
+  padding-left: 18%;
+}
+
+.newsletter2{
+  height: 50px;
+ width: 100%;
+ background-color: white;
+display: flex;
+ flex-direction: row;
+ gap: 2rem;
+}
+
+.email-field {
+  background-color: transparent;
+  margin-left: 50%;
+  margin-top: 15%;
+  border: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  border-bottom: 1px solid #1e6395; 
+  text-decoration: none;
+}
+
+
+.email-field::placeholder {
+  color: #1e6395;        
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
+}
+
+
+.signup-button{
+  color: #1e6395;
+  border: solid #1e6395;
+  height: 20px;
+  text-decoration: none;
+  margin-left: 21%;
+  margin-top: 2.5%;
+  padding-bottom: 5%;
+  padding-top: 1%;
+  padding-left: 3%;
+  padding-right:3%;
+  background-color: #1e6395;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; 
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.m {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+
+.m.active,
+.m:hover {
+  background-color: white !important;
+}
+
+
+.m.active .hamburger i,
+.m.active .telefon-link i,
+.m.active .email-link i,
+.m.active .lang-toggle i,
+.m:hover .hamburger i,
+.m:hover .telefon-link i,
+.m:hover .email-link i,
+.m:hover .lang-toggle i {
+  color:#1e6395 !important;
+}
+
+.btn-passeio {
+    background-color: transparent;
+    border: 1px solid #1e6395;
+    color: #1e6395;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    width: 60%;
+    align-self: center;
+    margin-top: 2rem;
+  }
+
+  .quad{
+    background-image: url("images/quad.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:50%;
+  width:90%;
+  align-self: center;
+  margin-top: 3rem;
+  }
+
+
+.chef{
+background-color:white;
+height: 580px;
+display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    hyphens: auto;
+    word-spacing: normal;
+    overflow-wrap:break-word;
+  
+  
+ }
+
+.chef-text{
+    width: 90%;
+    text-align: justify;
+    align-self: center;
+ 
+ }
+
+.saber-mais-btn {
+  background-color: transparent;
+  border: 1px solid #1e6395;
+  color: #1e6395;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+  width: 40%;
+  align-self: center;
+  margin-top: 2rem;
+}
+
+
+.mein-video{
+    height:300px;
+    width:300px;
+    align-self: center;
+    margin-top: 2rem;;
+    }
+</style>
+
+<body>
+    
+
+<div id="whatsapp-trigger" style="display: inline-block; cursor: pointer;">
+  <img src="images/whatsappicon.webp" alt="WhatsApp Icon" class="whatsapp-icon" />
+</div>
+
+
+
+
+
+
+<header>
+  
+    <div class="m">
+       <div class="navbar">
+    <button class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+   
+  </div>
+
+  <div id="dropdownMenu" class="dropdown">
+    <a href="index.html">Home</a>
+    <a href="nossa.html">Nossa História</a>
+    <a href="chales.html">Chalés</a>
+    <a href="restaurante.html">Restaurante</a>
+    <a href="spa.html">Spa</a>
+    <a href="pacotes.html">Pacotes e Passeios</a>
+    <a href="experiencas.html">Experiências</a>
+    <a href="contato.html">Contato</a>
+  </div>
+      <img src="images/logo.webp" alt="Beschreibung des Bildes" class="logo" loading="lazy">
+      <a href="tel:+558488662244" class="telefon-link">
+  <i class="fas fa-phone"></i> 
+</a>
+<a href="mailto:beispiel@email.com" class="email-link">
+  <i class="fas fa-envelope"></i> 
+</a>
+      <div class="language-selector">
+  <button class="lang-toggle" onclick="toggleLangMenu()">
+    <i class="fas fa-globe"></i>
+  </button>
+  <ul class="lang-menu" id="langMenu">
+    <li><a href="#">PT</a></li>
+    <li><a href="index-en.html">EN</a></li>
+    <li><a href="index-es.html">ES</a></li>
+    <li><a href="index-fr.html">FR</a></li>
+  </ul>
+</div>
+</div>
+    </div>
+  </div>
+</header>
+
+
+
+<div class="flex-container"></div>
+
+
+
+
+
+<div class="flex-container2">
+
+    <div class="reserve">
+       <div class="reservierung">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+ <div class="reservebereich">
+
+  <div class="inhalt1">Chegada
+    <button class="Datum" id="calendar-btn">Selecionar data</button>
+    <input type="text" id="datepicker" class="visually-hidden">
+  </div>
+
+  <div style="width: 1px; height: 40px; background-color: #1e6395; margin-top: 2%;"></div>
+
+  <div class="inhalt2">Partida
+    <button class="partida" id="calendar-btn-partida">Selecionar data</button>
+    <input type="text" id="datepicker-partida" class="visually-hidden">
+  </div>
+
+  <div style="width: 1px; height: 40px; background-color: #1e6395; margin-top: 2%;"></div>
+
+  <div class="inhalt3">Hóspedes
+    <input type="text" placeholder="Quantos?" class="quantos">
+   </div>
+     <button class="btn-reserve">Reserve</button>
+  </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+  const datepicker = flatpickr("#datepicker", {
+    dateFormat: "d.m.Y",
+    allowInput: false,
+    onChange: (selectedDates, dateStr) => {
+      document.getElementById("calendar-btn").textContent = dateStr;
+    }
+  });
+
+  document.getElementById("calendar-btn").addEventListener("click", () => {
+    datepicker.open();
+  });
+
+  const partidaPicker = flatpickr("#datepicker-partida", {
+    dateFormat: "d.m.Y",
+    allowInput: false,
+    onChange: (selectedDates, dateStr) => {
+      document.getElementById("calendar-btn-partida").textContent = dateStr;
+    }
+  });
+
+  document.getElementById("calendar-btn-partida").addEventListener("click", () => {
+    partidaPicker.open();
+  });
+</script>
+    </div>
+          
+<div class="titel">Viva Experiências</div>
+<div class="inhalt">Descubra um refúgio de tranquilidade absoluta, onde experiências ganham forma em meio à beleza hipnotizante de Monte das Gameleiras. No Olymp Spa, saúde e natureza se encontram em perfeita harmonia para oferecer momentos de profundo equilíbrio e conexão interior.</div>
+         
+</div>
+
+<div class="slider-wrappera">
+  <button style="font-weight: 100;" class="slider-btna left-btna">&lt;</button>
+
+  <div class="slider2a" id="slidera">
+    <div class="slide2a"><img src="images/horse.webp" alt="Bild 1" loading="lazy" /></div>
+    <div class="slide2a"><img src="images/pacote.webp" alt="Bild 2" loading="lazy" /></div>
+    <div class="slide2a"><img src="images/meal3.webp" alt="Bild 3" loading="lazy" /></div>
+    <div class="slide2a"><img src="images/pool.webp" alt="Bild 4" loading="lazy" /></div>
+    <div class="slide2a"><img src="images/saunaally.webp" alt="Bild 5" loading="lazy" /></div>
+    <div class="slide2a"><img src="images/reiten.webp" alt="Bild 6"s loading="lazy" /></div>
+    <div class="slide2a"><img src="images/escritorio.webp" alt="Bild 7" loading="lazy" /></div>
+    <div class="slide2a"><img src="images/voce.webp" alt="Bild 8" loading="lazy" /></div>
+  </div>
+
+  <button class="slider-btna right-btna">&gt;</button>
+</div>
+
+
+<div class="comida">
+     <div class="comida-text">No Olymp Spa, oferecemos uma curadoria exclusiva de terapias holísticas, tratamentos revitalizantes e práticas de ioga e fitness, desenvolvidas por especialistas para cuidar do corpo, acalmar a mente e renovar a energia.
+</div>
+
+  
+   <div class="comida-image"></div>
+   <button class="btn-passeio">Ver mais</button>
+
+</div>
+
+
+<div class="chef">
+     <div class="chef-text">E para quem deseja estender esse estilo de vida, o Olymp Spa convida você a explorar os encantos da região de Monte das Gameleiras ao lado de guias locais experientes.</div>
+
+   <video class="mein-video" autoplay loop muted playsinline>
+  <source src="images/guido.mp4" type="video/mp4">
+  Dein Browser unterstützt das Video-Tag nicht.
+</video>
+
+    <button class="saber-mais-btn">Saber mais</button>
+
+
+</div>
+
+
+
+
+
+
+
+<hr style="border: none; height: 0.5px; background-color: #1e6395; width: 80%; margin-left: 10%; margin-bottom: 2.6rem;">
+
+
+<div class="newsletter2">
+<div class="email-input">
+  <label for="email"></label>
+  <input type="email" id="email" name="email" class="email-field" placeholder="Seu e-mail">
+</div>
+
+<a href="http://eepurl.com/jf6BEU" target="_blank" class="signup-button">Inscreva-se</a>
+</div>
+
+
+<div class="newsletter">
+   
+  <div class="newsletter">NEWSLETTER</div>
+
+     <div class="newsletterinfo">Receber atualizações sobre experiências exclusivas,
+eventos, e muito mais.</div>
+</div>
+
+
+<a href="https://www.instagram.com/olymp.spa/" target="_blank" class="instagram-icon" aria-label="Instagram">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.facebook.com/deinprofil" target="_blank" class="facebook-icon" aria-label="Facebook">
+  <i class="fab fa-facebook-f"></i>
+</a>
+
+
+<div class="footer">
+  
+
+  <div class="logo-trans"></div>
+<div class="row">
+  <div class="footerlogo1">Fale conosco
+<div class="content1">
+  <a style="color: #1e6395;" href="mailto:patchamamaglamping@gmail.com" class="email-link">patchamamaglamping@gmail.com</a>
+   </div>       <div class="content2">
+   <a href="https://wa.me/message/GZALPFM2IAJUG1" class="whatsapplink2">00558488662244</a>
+   </div>
+       
+       </div>
+
+
+
+       <div class="footerlogo2">Corporativo
+      <div class="cont1">Termo de uso</div>
+      <div class="cont2">Política de Privacidade</div>
+  </div>
+
+  <div class="footerlogo4">
+  Contato
+  <div class="con1" onclick="abrirPopup()">Localização</div>
+</div>
+
+
+
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector(".m");
+    if (window.scrollY > 50) {
+      header.classList.add("active");
+    } else {
+      header.classList.remove("active");
+    }
+  });
+</script>
+<!-- Modal-Overlay mit eingebetteter Karte -->
+<div id="popup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-btn" onclick="fecharPopup()">&times;</span>
+
+    <!-- Eingebettete Google Maps Karte -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31717.162728650557!2d-35.80649690665418!3d-6.439571729346405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7adfb199e058c21%3A0xde8ad4783d7b473a!2sOlymp%20SPA%20(by%20Patchamama%20Glamping%20Ltda.)!5e0!3m2!1sen!2sbr!4v1750354458769!5m2!1sen!2sbr"
+        width="100%" height="100%" style="border:0;" 
+        allowfullscreen="" loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</div>
+<script src="index.html.js" defer></script>
+
+<script>
+  function abrirPopup() {
+    document.getElementById("popup").style.display = "flex";
+  }
+
+  function fecharPopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+
+  // Schließen durch Klick außerhalb des Inhalts
+  window.onclick = function(event) {
+    const popup = document.getElementById("popup");
+    if (event.target === popup) {
+      fecharPopup();
+    }
+  }
+</script>
+ <script>
+    function toggleMenu() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.closest('.hamburger')) {
+        const dropdown = document.getElementById("dropdownMenu");
+        if (dropdown.classList.contains("show")) {
+          dropdown.classList.remove("show");
+        }
+      }
+    }
+  </script>
+
+<script>
+  document.getElementById('whatsapp-trigger').addEventListener('click', function () {
+    window.open('https://wa.me/message/GZALPFM2IAJUG1', '_blank');
+  });
+
+  function openMapModal() {
+    document.getElementById('mapModal').style.display = 'flex';
+  }
+
+  function closeMapModal(event) {
+    event.stopPropagation();
+    document.getElementById('mapModal').style.display = 'none';
+  }
+
+  const icon = document.querySelector('.whatsapp-icon');
+  const trigger = document.getElementById('whatsapp-trigger');
+
+  const observer = new IntersectionObserver(([entry]) => {
+    if (!entry.isIntersecting) {
+      icon.classList.add('visible');
+    } else {
+      icon.classList.remove('visible');
+    }
+  }, { threshold: 0 });
+
+  observer.observe(trigger);
+
+</script>
+
+
+<script>
+  function toggleLangMenu() {
+    const menu = document.getElementById('langMenu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+
+  document.addEventListener('click', function (event) {
+    const langButton = document.querySelector('.lang-toggle');
+    const langMenu = document.getElementById('langMenu');
+    if (!langButton.contains(event.target) && !langMenu.contains(event.target)) {
+      langMenu.style.display = 'none';
+    }
+  });
+</script>
+
+
+
+
+
+
+
+<script>
+  const track = document.getElementById('minizone-track');
+  const slides = Array.from(document.querySelectorAll('.minizone-slide'));
+  const prevArrow = document.querySelector('.minizone-left'); 
+  const nextArrow = document.querySelector('.minizone-right'); 
+
+  let currentIndex = 0;
+
+  function updateSlider() {
+    track.style.transition = 'transform 0.5s ease';
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  prevArrow.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlider();
+  });
+
+  nextArrow.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlider();
+  });
+
+
+  updateSlider();
+</script>
+
+<script>
+const slider = document.getElementById('slidera');
+const btnLeft = document.querySelector('.left-btna');
+const btnRight = document.querySelector('.right-btna');
+
+const slideWidth = slider.querySelector('.slide2a').offsetWidth;
+let scrollPosition = 0;
+
+btnLeft.addEventListener('click', () => {
+  scrollPosition -= slideWidth;
+  if (scrollPosition < 0) scrollPosition = 0; 
+  slider.scrollTo({
+    left: scrollPosition,
+    behavior: 'smooth'
+  });
+});
+
+btnRight.addEventListener('click', () => {
+  scrollPosition += slideWidth;
+  const maxScroll = slider.scrollWidth - slider.clientWidth;
+  if (scrollPosition > maxScroll) scrollPosition = maxScroll; 
+  slider.scrollTo({
+    left: scrollPosition,
+    behavior: 'smooth'
+  });
+});
+</script>
+<script>
+  const slides = document.querySelectorAll('.slide2a');
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  document.querySelector('.left-btna').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  });
+
+  document.querySelector('.right-btna').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  });
+
+
+  showSlide(currentIndex);
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const calendarBtn = document.getElementById('calendar-btn-partida');
+    const datepicker = document.getElementById('datepicker-partida');
+
+    const fp = flatpickr(datepicker, {
+      dateFormat: "d/m/Y", 
+      allowInput: true,
+      clickOpens: false,
+      onChange: function(selectedDates, dateStr) {
+        calendarBtn.textContent = dateStr ? dateStr : "Selecionar data";
+      }
+    });
+
+    calendarBtn.addEventListener('click', function () {
+      fp.open();
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const calendarBtn = document.getElementById('calendar-btn');
+    const datepicker = document.getElementById('datepicker');
+
+    const fp = flatpickr(datepicker, {
+      dateFormat: "d/m/Y",  
+      allowInput: true,
+      clickOpens: false,
+      onChange: function(selectedDates, dateStr, instance) {
+        if (dateStr) {
+          calendarBtn.textContent = dateStr; 
+        } else {
+          calendarBtn.textContent = "Selecionar data"; 
+        }
+      }
+    });
+
+    calendarBtn.addEventListener('click', function () {
+      fp.open();
+    });
+  });
+</script>
+</body>
+
+</html>

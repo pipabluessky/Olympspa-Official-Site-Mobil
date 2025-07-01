@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Hotel ou Resort</title>
+  <meta name="description" content="Bem-vindo ao paraíso: conforto, natureza e bem-estar em um só lugar.">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<style>
+
+
+
+body{
+    
+color:#1e6395;
+background-color: white !important;
+       }
+
+
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+
+  height: 500px;
+  width: 100%;
+  background-image: url("images/nossa.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: sticky;
+   top: 0;
+  z-index: -1;
+          
+}
+
+.m{
+ background-color: transparent !important;
+  width: 100%;
+  height: 62px;
+  display: flex;
+  flex-direction: row;
+  color: #1e6395;
+  position: fixed;
+}
+
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom:4rem;  
+  margin-left:10%;  
+}
+
+.my-buttonb1{
+ 
+height: 30px;
+z-index: 40;
+margin-top: 4%;
+border: 1px solid #1e6395;
+background-color: transparent;
+color: #1e6395;
+font-size: 12px;
+width: 200px;
+margin-left: 5%;
+ }
+
+
+.my-buttonb2{
+  width: 30%;
+height: 30px;
+z-index: 40;
+border: 1px solid #1e6395;
+margin-top: 4%;
+background-color: transparent;
+color: #1e6395;
+margin-right: 8%;
+ }
+
+
+.flex-container2{
+     height: 330px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1rem;
+    background-color: white;
+   
+        }
+
+.titel{
+    align-self: center;
+
+    font-weight: 900;
+    }
+
+
+
+.my-button{
+    width: 80px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 11px;
+   
+
+       }
+
+
+ .logo1{
+    background-image: url("images/logo.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+ 
+ }
+
+.slider {
+      display: flex;
+      gap: 1cm;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      
+      padding-bottom: 1rem;
+      background-color: white;
+    }
+
+    .slide {
+      scroll-snap-align: start;
+      flex: 0 0 auto;
+      width: 9cm;
+      height: 16cm;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .slide img {
+      width: 9cm;
+      height: 16cm;
+      object-fit: cover;
+      display: block;
+    }
+
+
+.flex-container2f{
+     height: 360px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color:#1e6395;
+    gap: 1rem;
+    padding-top:6.8%;
+    background-color: white;
+        }
+
+.titelf{
+    align-self: center;
+    padding-top: 1rem;
+    font-weight: bold;
+    }
+
+
+.inhaltf{
+    text-align: justify;
+    width: 90%;
+   align-self: center;
+   }
+
+.slider2f {
+  display: flex;
+  gap: 10px; 
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+ 
+}
+
+.slide2f {
+  flex: 0 0 auto;
+  width: 380px; 
+  scroll-snap-align: start;
+}
+
+.slide2f img {
+  display: block;
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.slider-wrapperf {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 350px;
+  background-color: #efeae8;
+  display: flex;
+  align-content: center;
+  padding-top: 2.5rem;
+
+}
+
+
+.sliderf::-webkit-scrollbar,
+.slider2f::-webkit-scrollbar {
+  display: none; 
+}
+
+.sliderf {
+  scrollbar-width: none; 
+}
+
+.slider2f {
+  scrollbar-width: none; 
+}
+
+.gruppenfoto {
+      height: 350px;
+  width: 100%;
+  background-image: url("images/a.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.flex-container3{
+     height: 440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: white;
+    align-content: center;
+    padding-top: 9%;
+        }
+
+.flex-container4{
+     height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    gap: 1rem;
+    background-color: white;
+    align-content: center;
+    padding-top: 13%;
+        }
+
+.flex-container5{
+     height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    gap: 1rem;
+    background-color: white;
+    align-content: center;
+    padding-top: 12%;
+        }
+
+.flex-container6{
+     height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    gap: 1rem;
+    background-color: white;
+    align-content: center;
+    padding-top: 12%;
+        }
+
+.flex-container7{
+     height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    gap: 1rem;
+    background-color: white;
+    align-content: center;
+    padding-top: 12%;
+        }
+
+.newsletter-link{
+    font-size: small;
+    font-weight: 100;
+
+        }
+
+.newsletter{
+  width: 100%;
+  height: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 6%;
+  gap: 1rem;
+  background: white;
+   }
+
+.newsbutton{
+ background-color: #1e6395;
+   color: white;
+  align-self: center;
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border: none;
+   }
+
+.newsletterinfo{
+    width: 100%;
+  height: 100px;
+font-size: 14px;
+color: #1e6395;
+
+ }
+
+.newsletter-link{
+  background-color: #1e6395;
+   color: white;
+  align-self: center;
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border: none;
+   }
+
+.newsletterinfo{
+  align-self: center;
+  padding-left: 10%;
+   }
+
+
+.footer{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  font-size: 7px;
+  background-color: #efeae8;
+  justify-content: center;
+  gap: 1.7rem;
+     }
+
+
+ .content1{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+ }
+
+
+
+.content2{
+  font-weight: 400;
+  padding-top: 4%;
+ }
+
+
+
+.cont1{
+  font-weight: 400;
+  padding-top: 7%;
+ }
+
+.cont2{
+  font-weight: 400;
+  padding-top: 4%; 
+ }
+
+
+.con1{
+  font-weight: 400;
+  padding-top: 3%;
+  width: 40%;
+ }
+
+.whatsapplink2{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+  color: #1e6395;
+  text-decoration: none;
+ }
+
+.phone{
+  margin-top: 5%;
+  margin-left: 12%;
+  margin-top: 2%;
+ }
+
+
+ .telefon-link{
+  margin-top: 4.5%;
+  color: #1e6395;
+  margin-top: 6%;
+  margin-left: 9%;
+ }
+
+
+.email-link{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+  color: #1e6395;
+  text-decoration: none;
+  margin-left: 3%;
+  margin-top: 2%;
+ }
+
+
+
+.logo-trans{
+  background-image: url("images/logo.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+width: 15%;
+height: 25%;
+margin-left: 42%;
+
+ }
+
+
+.row{
+  width: 100%;
+  height:50px;
+display: flex;
+gap: 1rem;
+margin-left: 13%;
+ }
+
+.footerlogo1{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo2{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo4{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-toggle {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #1e6395;
+  padding-left: 1rem;
+  padding-top: 0.3rem;
+  transition: color 0.3s;
+  margin-top: 1.2rem;
+  margin-right: 10rem;
+  
+}
+
+.lang-toggle:hover {
+  color: #144c73;
+  
+}
+
+.lang-toggle i {
+  color: #1e6395 !important;
+  margin-right: 4rem;
+}
+
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: 120%;
+  margin-right: 30rem;
+  background-color: white;
+  border: 1px solid #1e6395;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 45px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+  border-radius: 5px;
+}
+
+.lang-menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #1e6395;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.lang-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+.logo{
+  margin-left: 7rem;
+}
+
+.m {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 62px;
+  background-color: #efeae8;
+  display: flex;
+  flex-direction: row;
+  color: #1e6395;
+  z-index: 10; 
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom:4rem;  
+  margin-left:27%;  
+
+}
+
+.email-field {
+  background-color: transparent;
+  margin-left: 50%;
+  margin-top: 15%;
+  border: none;
+  color: #1e6395; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  border-bottom: 1px solid #1e6395; 
+  text-decoration: none;
+}
+
+
+.email-field::placeholder {
+  color: #1e6395;        
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
+}
+
+
+.signup-button{
+  color: #1e6395;
+  border: solid #1e6395;
+  height: 20px;
+  text-decoration: none;
+  margin-left: 21%;
+  margin-top: 2.5%;
+  padding-bottom: 5%;
+  padding-top: 1%;
+  padding-left: 3%;
+  padding-right:3%;
+  background-color: #1e6395;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; 
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+.instagram-icon {
+  margin-left: 84%;
+  margin-top: 50%;
+  position: absolute;
+ color: #1e6395;
+}
+
+.facebook-icon{
+  color: #1e6395;
+ margin-left: 91%;
+ margin-top: 50%;
+ position: absolute;
+}
+
+
+    .navbar {
+
+      padding: 15px 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .hamburger {
+      font-size: 24px;
+      color:#1e6395;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      z-index: 1000;
+      width: 50px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 12px 16px;
+      color: #1e6395;
+      text-decoration: none;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.2s;
+      width: 50px;
+    }
+
+    .dropdown a:hover {
+      background-color: #e3f2fd;
+    }
+
+    .dropdown a:last-child {
+      border-bottom: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+.dropdown{
+width: 180px;
+white-space: nowrap;
+    }
+
+
+.reservebereich{
+  width: 80%;
+  height: 60px;
+  background-color: #efeae8;
+  margin-top: -7%;
+   z-index: 30;
+   display: flex;
+   flex-direction: row;
+   margin-left: 9%;
+   padding-top: 1%;
+   background-color: #ffffff;
+   border: solid 0.2px black
+    }
+
+.inhalt1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 10px;
+  gap: 0.4rem;
+  padding-top: 2%;
+  margin-left: 4%;
+  
+ }
+
+.Datum{
+  height: 20px;
+  font-size: 8px;
+  width: 60px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  text-align: start;
+  
+ }
+
+.inhalt2{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  margin-top: 1.7%;
+ 
+   }
+
+
+
+.line{
+margin-right: 1.7rem;
+   }
+
+
+.Datum2{
+  height: 20px;
+  font-size: 8px;
+  width: 60px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  text-align: start;
+  margin-bottom: 14%;
+ }
+
+.line2{
+
+
+   }
+
+.inhalt3{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  gap: 0.45rem;
+  margin-top: 2%;
+  margin-left: 7%;
+    }
+
+.partida{
+  height: 20px;
+  font-size: 8px;
+  width: 60px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  text-align: start;
+
+ }
+
+
+#select-hospedes {
+    font-size: 1rem;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .hospedes {
+    width: 90px;
+    margin-left: 10%
+  }
+
+.quantos {
+  width: 100px;
+  font-size: 1rem;
+  border: none;
+  background-color: transparent; 
+  color:#1e6395;
+  width: 50%;
+  font-size: 10px;
+  padding-bottom: 4%;
+  padding-top: 4%;
+  padding-left: 4%;
+  padding-right: 4%;
+  text-align: start;
+}
+
+.quantos::placeholder {
+  color:#1e6395;
+  opacity: 1; 
+  padding-bottom: 4%;
+}
+
+
+.btn-reserve{
+
+  font-size: 10px;
+  color: white;
+  background-color: #1e6395;
+  height: 25px;
+  margin-top: 1rem;
+   border: none;
+}
+
+
+
+.m {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+
+.m.active,
+.m:hover {
+  background-color: white !important;
+}
+
+
+.m.active .hamburger i,
+.m.active .telefon-link i,
+.m.active .email-link i,
+.m.active .lang-toggle i,
+.m:hover .hamburger i,
+.m:hover .telefon-link i,
+.m:hover .email-link i,
+.m:hover .lang-toggle i {
+  color:#1e6395 !important;
+}
+
+.titel{
+  margin-top: 2rem;
+}
+
+.inhalt{
+  
+  width: 85% !important;
+  margin-left: 1.2rem;
+  text-align: justify;
+  hyphens: auto;
+  word-spacing: normal;
+  overflow-wrap:break-word;
+  }
+
+
+
+
+.custom-scrollbar {
+  height: 4px;
+  background-color: #d0dff1; /* helles Blau als Hintergrund */
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.custom-scrollbar-thumb {
+  height: 100%;
+  width: 30%;
+  background-color: #1e6395; /* kräftiges Blau für den Balken */
+  border-radius: 2px;
+  transition: width 0.2s, transform 0.2s;
+}
+
+.slider-wrapperf {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider2f {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.slider2f::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar {
+  height: 4px;
+  background-color: #d0dff1; /* helles Blau */
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.custom-scrollbar-thumb {
+  height: 100%;
+  width: 30%;
+  background-color: #1e6395; /* DEIN Blau */
+  border-radius: 2px;
+  transition: width 0.2s, transform 0.2s;
+}
+</style>
+
+
+
+
+
+
+<body>
+    
+
+
+
+    <div class="m">
+       <div class="navbar">
+    <button class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+   
+  </div>
+
+  <div id="dropdownMenu" class="dropdown">
+    <a href="index.html">Home</a>
+    <a href="nossa.html">Nossa História</a>
+    <a href="chales.html">Chalés</a>
+    <a href="restaurante.html">Restaurante</a>
+    <a href="spa.html">Spa</a>
+    <a href="pacotes.html">Pacotes e Passeios</a>
+    <a href="experiencas.html">Experiências</a>
+    <a href="contato.html">Contato</a>
+  </div>
+      <img src="images/logo.webp" alt="Beschreibung des Bildes" class="logo" loading="lazy">
+      <a href="tel:+558488662244" class="telefon-link">
+  <i class="fas fa-phone"></i> 
+</a>
+<a href="mailto:beispiel@email.com" class="email-link">
+  <i class="fas fa-envelope"></i> 
+</a>
+      <div class="language-selector">
+  <button class="lang-toggle" onclick="toggleLangMenu()">
+    <i class="fas fa-globe"></i>
+  </button>
+  <ul class="lang-menu" id="langMenu">
+    <li><a href="#">PT</a></li>
+    <li><a href="index-en.html">EN</a></li>
+    <li><a href="index-es.html">ES</a></li>
+    <li><a href="index-fr.html">FR</a></li>
+  </ul>
+</div>
+</div>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+<div class="flex-container"></div>
+
+</div>
+
+
+</div>
+
+<div class="flex-container2">
+
+<div class="reserve">
+
+<div class="reservebereich">
+    <div class="inhalt1">Chegada
+      
+<button class="Datum" id="calendar-btn">Selecionar data</button>
+
+
+<input type="text" id="datepicker" class="visually-hidden">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script>
+  const datepicker = flatpickr("#datepicker", {
+    dateFormat: "d.m.Y",
+    allowInput: false,
+    onChange: function(selectedDates, dateStr, instance) {
+  
+      document.getElementById("calendar-btn").textContent = dateStr;
+    }
+  });
+
+  document.getElementById("calendar-btn").addEventListener("click", function () {
+    datepicker.open();
+  });
+</script>
+          </div>
+
+        <div style="width: 1px; height: 40px; background-color: #1e6395; margin-top: 2%;" class="line"></div>
+
+    <div class="inhalt2">Partida
+       <button class="partida" id="calendar-btn-partida">Selecionar data</button>
+
+
+<input type="text" id="datepicker-partida" class="visually-hidden">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script>
+  const partidaPicker = flatpickr("#datepicker-partida", {
+    dateFormat: "d.m.Y",
+    allowInput: false,
+    onChange: function(selectedDates, dateStr, instance) {
+      document.getElementById("calendar-btn-partida").textContent = dateStr;
+    }
+  });
+
+  document.getElementById("calendar-btn-partida").addEventListener("click", function () {
+    partidaPicker.open();
+  });
+</script>
+
+
+
+          </div>
+    <div style="width: 1px; height: 40px; background-color: #1e6395; margin-top: 2%;" class="line2"></div>
+
+
+    <div class="inhalt3">Hospedes
+        <input 
+  type="text" 
+  placeholder="Quantos?" 
+  class="quantos"
+>
+
+</div>
+<button class="btn-reserve">Reserve</button>
+</div>
+
+
+
+
+</div>
+
+          <div class="titel">Nossa História</div>
+         <div class="inhalt">Tudo começou com uma paixão pela Grécia. Movidos por esse encanto, Ally e Stefan embarcaram em um empreendimento pioneiro que transformaria para sempre a paisagem de Monte das Gameleiras. O que antes era um pequeno sonho, evoluiu para se tornar um dos destinos mais desejados da região.</div>
+         
+</div>
+
+<div class="gruppenfoto"></div>
+
+<div class="flex-container3">
+          <div style="align-self: center; font-size: 12px;" class="jahr">2020</div>
+          <div style="border: 1px solid #1e6395; width: 45%; align-self: center;"></div>
+          <div class="titel">O Encontro</div>
+         <div class="inhalt">
+         
+
+Stefan Bofos estava hospedado na pousada de um amigo, vizinha ao Olympspa. Após mais um torneio de pingue-pongue entre amigos, numa dessas noites, Ally Linhares apareceu por acaso. De um encontro inesperado, nasceu o destino — e assim surgiu um romance que teve seu desfecho no Olympspa. Um projeto de hotel nasceu dessa união, no qual os dois empreendedores expressam sua paixão compartilhada pela cultura grega e pelas viagens.</div>
+  <div style="border: 1px solid #1e6395; width: 45%; align-self: center; margin-top: 2rem;"></div>    
+
+
+</div>
+
+<div class="slider-wrapperf">
+  <div class="slider2f" id="slider">
+    <div class="slide2f"><img data-src="images/t24.webp" alt="Bild 1" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t20.webp" alt="Bild 2" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t27.webp" alt="Bild 3" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t28.webp" alt="Bild 4" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t19.webp" alt="Bild 5" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t21.webp" alt="Bild 6" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t30.webp" alt="Bild 7" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t33.webp" alt="Bild 8" loading="lazy" width="100%" height="270px"/></div>
+  </div>
+  <div class="custom-scrollbar">
+    <div class="custom-scrollbar-thumb"></div>
+  </div>
+</div>
+
+
+<div class="flex-container4">
+          <div style="align-self: center; font-size: 12px;" class="jahr">2020</div>
+          <div style="border: 1px solid #1e6395; width: 45%; align-self: center;"></div>
+          <div class="titel"> Uma paixão</div>
+         <div class="inhalt">
+O casal inicia as primeiras viagens de pesquisa, visitando hotéis-boutique e spas na Grécia e em outros destinos de referência. Inspirados pela arquitetura e hospitalidade mediterrâneas, começam a desenhar o conceito do Olymp Spa.</div>
+
+<div style="border: 1px solid #1e6395; width: 45%; align-self: center; margin-top: 2rem;"></div>
+</div>
+
+<div class="slider-wrapperf">
+  <div class="slider2f" id="slider">
+    <div class="slide2f"><img data-src="images/t29.webp" alt="Bild 1" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t17.webp" alt="Bild 2" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t14.webp" alt="Bild 3" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t6.webp" alt="Bild 4" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t34.webp" alt="Bild 5" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t35.webp" alt="Bild 6" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t36.webp" alt="Bild 7" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t37.webp" alt="Bild 8" loading="lazy" width="100%" height="270px"/></div>
+  </div>
+  <div class="custom-scrollbar">
+    <div class="custom-scrollbar-thumb"></div>
+  </div>
+</div>
+
+
+
+<div class="flex-container5">
+          <div style="align-self: center; font-size: 12px;" class="jahr">2020</div>
+          <div style="border: 1px solid #1e6395; width: 45%; align-self: center;"></div>
+          <div class="titel">Um nascimento</div>
+         <div class="inhalt">
+Adquire-se o terreno ideal, ao pé da serra. O projeto arquitetônico é encomendado, com foco na integração entre natureza, sofisticação e estética grega.</div>
+         <div style="border: 1px solid #1e6395; width: 45%; align-self: center; margin-top: 1.4rem;"></div>
+</div>
+
+<div class="slider-wrapperf">
+  <div class="slider2f" id="slider">
+    <div class="slide2f"><img data-src="images/t38.webp" alt="Bild 1" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t40.webp" alt="Bild 2" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t41.webp" alt="Bild 3" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t43.webp" alt="Bild 4" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t44.webp" alt="Bild 5" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t55.webp" alt="Bild 6" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t57.webp" alt="Bild 7" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/t60.webp" alt="Bild 8" loading="lazy" width="100%" height="270px"/></div>
+  </div>
+  <div class="custom-scrollbar">
+    <div class="custom-scrollbar-thumb"></div>
+  </div>
+</div>
+
+<div class="flex-container5">
+          <div style="align-self: center; font-size: 12px;" class="jahr">2020</div>
+          <div style="border: 1px solid #1e6395; width: 45%; align-self: center;"></div>
+          <div class="titel">Pedra por pedra</div>
+         <div class="inhalt">
+
+Início oficial das obras. As construções seguem padrões sustentáveis, priorizando materiais naturais, luz abundante e vista panorâmica.</div>
+         <div style="border: 1px solid #1e6395; width: 45%; align-self: center; margin-top: 1.5rem;"></div>
+</div>
+
+<div class="slider-wrapperf">
+  <div class="slider2f" id="slider">
+    <div class="slide2f"><img data-src="images/t62.webp" alt="Bild 1" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/rece.webp" alt="Bild 2" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/identidade.webp" alt="Bild 3" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/amor.webp" alt="Bild 4" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/tor.webp" alt="Bild 5" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/visual.webp" alt="Bild 6" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/rezeption.webp" alt="Bild 7" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/chalesorange.webp" alt="Bild 8" loading="lazy" width="100%" height="270px"/></div>
+  </div>
+  <div class="custom-scrollbar">
+    <div class="custom-scrollbar-thumb"></div>
+  </div>
+</div>
+
+<div class="flex-container6">
+          <div style="align-self: center; font-size: 12px;" class="jahr">2020</div>
+          <div style="border: 1px solid #1e6395; width: 45%; align-self: center;"></div>
+          <div class="titel">Um destino</div>
+         <div class="inhalt">
+
+
+Interiores, paisagismo e identidade visual ganham forma. Os chalés recebem nomes de divindades gregas e o restaurante começa a ser estruturado com chefs convidados.</div>
+         <div style="border: 1px solid #1e6395; width: 45%; align-self: center; margin-top: 1.8rem;"></div>
+</div>
+
+<div class="slider-wrapperf">
+  <div class="slider2f" id="slider">
+    <div class="slide2f"><img data-src="images/ol.webp" alt="Bild 1" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/offen.webp" alt="Bild 2" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/chales.webp" alt="Bild 3" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/ch.webp" alt="Bild 4" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/violet.webp" alt="Bild 5" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/badezimmer.webp" alt="Bild 6" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/deko.webp" alt="Bild 7" loading="lazy" width="100%" height="270px"/></div>
+    <div class="slide2f"><img data-src="images/ole.webp" alt="Bild 8" loading="lazy" width="100%" height="270px"/></div>
+  </div>
+  <div class="custom-scrollbar">
+    <div class="custom-scrollbar-thumb"></div>
+  </div>
+</div>
+
+<div class="flex-container7">
+          <div style="align-self: center; font-size: 12px;" class="jahr">2020</div>
+          <div style="border: 1px solid #1e6395; width: 45%; align-self: center;"></div>
+          <div class="titel">O início</div>
+         <div class="inhalt">
+
+
+
+Finalização do Olymp Spa. O hotel abre suas portas com oito chalés exclusivos, um restaurante autoral e um spa inspirado nos rituais da Grécia Antiga — marcando o início de uma nova referência em hospitalidade na Serra.</div>
+         <div style="border: 1px solid #1e6395; width: 45%; align-self: center; margin-top: 5%;"></div>
+</div>
+
+
+
+
+
+<div class="newsletter">
+   <a href="http://eepurl.com/jf6BEU" target="_blank" class="newsletter-link">
+  <button class="newsbutton" type="button" onclick="window.open('http://eepurl.com/jf6BEU', '_blank')">Newsletter</button>
+</a>
+     <div class="newsletterinfo">Clique aqui para ficar informado sobre novidades e ofertas.</div>
+</div>
+
+
+
+
+
+<div class="footer">
+  
+
+  <div class="logo-trans"></div>
+<div class="row">
+  <div class="footerlogo1">Fale conosco
+<div class="content1">
+  <a href="mailto:patchamamaglamping@gmail.com" class="email-link">patchamamaglamping@gmail.com</a>
+   </div>       <div class="content2">
+   <a href="https://wa.me/message/GZALPFM2IAJUG1" class="whatsapplink2">00558488662244</a>
+   </div>
+       
+       </div>
+
+
+
+       <div class="footerlogo2">Corporativo
+      <div class="cont1">Termo de uso</div>
+      <div class="cont2">Política de Privacidade</div>
+  </div>
+
+  <div class="footerlogo4">Contato
+      <div class="con1" onclick="abrirPopup()">Localização</div>
+
+  </div>
+<script src="index.html.js" defer></script>
+
+
+<script>
+  window.addEventListener("scroll", function () {
+    const mElement = document.querySelector(".m");
+    if (window.scrollY > 50) {
+      mElement.classList.add("active");
+    } else {
+      mElement.classList.remove("active");
+    }
+  });
+</script>
+<script>
+  function updateThumb(slider, thumb) {
+    const scrollLeft = slider.scrollLeft;
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+    const thumbWidth = (slider.clientWidth / slider.scrollWidth) * 100;
+    const maxTranslate = 100 - thumbWidth;
+
+    // Neue Berechnung: Thumb ganz rechts, wenn am Ende
+    const scrollPercent = scrollLeft / maxScroll;
+    const translateX = scrollPercent * maxTranslate;
+
+    thumb.style.width = `${thumbWidth}%`;
+    thumb.style.transform = `translateX(${translateX}%)`;
+  }
+
+  function setupScrollbars() {
+    const wrappers = document.querySelectorAll('.slider-wrapperf');
+
+    wrappers.forEach(wrapper => {
+      const slider = wrapper.querySelector('.slider2f');
+      const thumb = wrapper.querySelector('.custom-scrollbar-thumb');
+
+      if (!slider || !thumb) return;
+
+      updateThumb(slider, thumb);
+      slider.addEventListener('scroll', () => updateThumb(slider, thumb));
+      window.addEventListener('resize', () => updateThumb(slider, thumb));
+    });
+  }
+
+  window.addEventListener('load', setupScrollbars);
+</script>
+ <script>
+    function toggleMenu() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.closest('.hamburger')) {
+        const dropdown = document.getElementById("dropdownMenu");
+        if (dropdown.classList.contains("show")) {
+          dropdown.classList.remove("show");
+        }
+      }
+    }
+  </script>
+
+
+
+<script>
+
+
+  function abrirPopup() {
+    window.open(
+      "https://maps.app.goo.gl/vJDeSBXi5Af5Pinz8",
+      "popupWindow",
+      "width=800,height=600,scrollbars=yes,resizable=yes"
+    );
+  }
+
+      
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll('img[data-src]');
+  
+  if (!('IntersectionObserver' in window)) {
+   
+    images.forEach(img => {
+      img.src = img.dataset.src;
+      img.removeAttribute('data-src');
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+        observer.unobserve(img);
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1
+  });
+
+  images.forEach(img => observer.observe(img));
+});
+
+
+let lastScroll = 0;
+const mb = document.querySelector('.mb');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll < lastScroll) {
+   
+    mb.style.height = '60px';  
+  } else {
+    
+    mb.style.height = '60px';  
+  }
+
+  lastScroll = currentScroll;
+});
+
+</script>
+
+<script>
+  function toggleLangMenu() {
+    const menu = document.getElementById('langMenu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+
+  document.addEventListener('click', function (event) {
+    const langButton = document.querySelector('.lang-toggle');
+    const langMenu = document.getElementById('langMenu');
+    if (!langButton.contains(event.target) && !langMenu.contains(event.target)) {
+      langMenu.style.display = 'none';
+    }
+  });
+</script>
+
+  
+</body>
+</html>

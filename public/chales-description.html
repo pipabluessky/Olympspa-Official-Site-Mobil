@@ -1,0 +1,2468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Hotel ou Resort</title>
+  <meta name="description" content="Bem-vindo ao paraíso: conforto, natureza e bem-estar em um só lugar.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+#select-hospedes {
+    font-size: 1rem;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .chalescontainer{
+    width: 100%;
+    height: 500px;
+    background-image: url("images/menubilda.webp");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+
+ }
+
+
+.flex-container2{
+     height:230px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1rem;
+    background-color: white;
+    color:#1e6395;
+   
+        }
+
+.titel{
+    align-self: center;
+    font-weight: 600;
+    }
+
+
+.inhalt{
+    text-align: center;
+    width: 90%;
+   align-self: center;
+   }
+
+
+.slider-wrapper {
+  width: 80%;
+  height: 400px;
+  position: relative;
+  background-color: white;
+  margin: 0 auto;
+  
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: white
+}
+
+.slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.arrow {
+  
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  font-weight: 300;
+  color:#1e6395;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.arrow:hover {
+  color: #1d6fa5;
+}
+
+.arrow-left {
+  left: -6vw;  
+}
+
+.arrow-right {
+  right: -6vw;  
+}
+
+
+
+
+
+.harmonia{
+font-family: 'Montserrat', sans-serif;
+font-weight: 400;
+display: flex;
+flex-direction: column;
+height: 350px;
+padding-top:14%;
+padding-left:5%;
+
+}
+
+
+.h1{
+    font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+   font-size: 18px;
+   width: 100%;
+   height: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   margin-bottom: 13%;
+   margin-right: 20%,
+}
+
+.h2{
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    font-weight: 500;
+}
+
+
+
+
+
+ .knopf1, .knopf2, .knopf3 {
+      
+      background: #1e6395;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .texta, .textb, .textc {
+      margin-top: 20px;
+     font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      color:#1e6395;
+      display: none;
+      
+    }
+    .active {
+      display: block;
+    }
+
+    .knopf1{
+    background: none;
+    border: none;
+    color:#1e6395;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+    .knopf2{
+    background: none;
+    border: none;
+    color:#1e6395;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+    .knopf3{
+    background: none;
+    border: none;
+    color:#1e6395;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.knopf1.active,
+.knopf2.active,
+.knopf3.active {
+  text-decoration: underline;
+}
+
+
+.kolonne{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.r-knopf{
+    background-color: #1d6fa5;
+    color: white;
+     font-family: 'Montserrat', sans-serif;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    width:130px;
+    border: none;
+}
+
+.r-knopf{
+    margin-top: 2rem;
+}
+
+.adultos{
+    position: absolute;
+    margin-left: 65%;
+    margin-top: 30%;
+    width: 150px;
+    height:140px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    color: #1e6395;
+    font-size: 14px;
+
+}
+
+.vista{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.Vale{
+    font-weight: 500;
+}
+
+.dormi{
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+    font-size: ;
+}
+
+.meter{
+    font-weight: 500;
+}
+
+
+.deck{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.m40{
+    font-weight: 500;
+}
+
+
+.banheiro{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    font-weight: 400;
+    }
+
+.meter{
+    font-weight: 500;
+
+    }
+.slider-wrapper.ander {
+  width: 80%;
+  height: 400px;
+  position: relative;
+  background-color: white;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.slider-container{
+  background-color: white;
+}
+
+.dünne-linie {
+  height: 0.5px;
+  width: 100%;
+  background-color: #1d6fa5;
+  margin-bottom: 5%;
+}
+
+.texta {
+  text-wrap: balance;
+}
+
+
+.textb {
+  text-wrap: balance;
+}
+
+
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-toggle {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+  padding-left: 1rem;
+  padding-top: 0.3rem;
+  transition: color 0.3s;
+  margin-top: 1.2rem;
+  margin-right: 10rem;
+  
+}
+
+
+
+.lang-toggle i {
+  color: white;
+  margin-right: 4rem;
+}
+
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: 120%;
+  margin-right: 30rem;
+  background-color: white;
+  border: 1px solid #1e6395;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 45px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+  border-radius: 5px;
+}
+
+.lang-menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #1e6395;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.lang-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+
+.logo{
+  margin-left: 8rem;
+
+
+}
+
+
+
+ #whatsapp-trigger {
+      position: absolute;
+      top: 55vh;  
+      left: 0;
+      width: 1px;
+      height: 1px;
+    }
+
+  
+    .whatsapp-icon {
+      position: fixed;
+      top: 55vh;
+      left: 2%;
+      width: 30px;
+      height: 30px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+
+
+    .whatsapp-icon.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+
+    .navbar {
+   
+      padding: 15px 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .hamburger {
+      font-size: 24px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      z-index: 1000;
+      width: 50px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 12px 16px;
+      color: #247ba0;
+      text-decoration: none;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.2s;
+      width: 50px;
+    }
+
+    .dropdown a:hover {
+      background-color: #e3f2fd;
+    }
+
+    .dropdown a:last-child {
+      border-bottom: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+.dropdown{
+width: 180px;
+white-space: nowrap;
+    }
+
+
+
+.logo-trans{
+  background-image: url("images/logo.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+width: 15%;
+height: 25%;
+margin-left: 43%;
+
+ }
+.m {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 62px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  color: #1e6395;
+  z-index: 10; 
+}
+
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom:4rem;  
+  margin-left:30%;  
+
+}
+.phone{
+  margin-top: 5%;
+  margin-left: 40%;
+  margin-top: 2%;
+ }
+
+
+ .telefon-link{
+  margin-top: 4.5%;
+  color: white !important;
+  margin-top: 6%;
+  margin-left: 12%;
+ }
+
+
+
+
+.flex-container{
+  height: 500px;
+  width:100%;
+   background-image: url("images/chalesweiss.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: sticky;
+   top: 0;
+  z-index: -1;     
+ }
+
+
+
+.harmonia{
+  background-color: white;
+
+ }
+
+.slider-container-outer {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+.logo-trans{
+  background-image: url("images/logo.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+width: 15%;
+height: 25%;
+margin-left: 43%;
+
+ }
+
+
+.row{
+  width: 100%;
+  height:50px;
+display: flex;
+gap: 1rem;
+margin-left: 13%;
+ }
+
+.footerlogo1{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo2{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo4{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+
+.my-buttonb1{
+  font-family: 'Montserrat', sans-serif;
+  width: 60%;
+  align-items: center;
+  align-content: center;
+ text-decoration: none;
+ text-align: center;
+  }
+
+
+.restaurante{
+  width: 100%;
+  height: 530px;
+  background-color: #efeae8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.restaurante-bild{
+  width: 90%;
+  background-image: url("images/restaurant.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 450px;
+ align-self: center;
+}
+
+.descubra-btn{
+  width: 35%;
+  background-color: white;
+  color: #1e6395;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  margin-left: 32%;
+ margin-top: 90%;
+ padding-bottom: 2%;
+ padding-top: 2%;
+}
+
+
+.newsletter2{
+  height: 50px;
+ width: 100%;
+ background-color: white;
+display: flex;
+ flex-direction: row;
+ gap: 2rem;
+}
+.newsletter{
+  width: 100%;
+  height: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2%;
+  gap: 1rem;
+  background: white;
+  
+   }
+
+.newsbutton{
+ background-color: #1e6395;
+   color: white;
+  align-self: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  border: none;
+   font-family: 'Montserrat', sans-serif;
+   }
+
+.newsletterinfo{
+    width: 100%;
+  height: 100px;
+font-size: 9px;
+color: #1e6395;
+align-self: center;
+margin-right: 13%;
+padding-bottom: 11%;
+ }
+
+.newsletter-link{
+  background-color: #1e6395;
+   color: white;
+  align-self: center;
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border: none;
+   }
+
+
+.footer{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  font-size: 7px;
+  background-color: #efeae8;
+  justify-content: center;
+  gap: 1.7rem;
+     }
+
+
+ .content1{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+ }
+
+
+
+.content2{
+  font-weight: 400;
+  padding-top: 4%;
+ }
+
+
+
+.cont1{
+  font-weight: 400;
+  padding-top: 7%;
+ }
+
+.cont2{
+  font-weight: 400;
+  padding-top: 4%; 
+ }
+
+
+.con1{
+  font-weight: 400;
+  padding-top: 3%;
+  width: 40%;
+ }
+
+.whatsapplink2{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+  color: #1e6395;
+  text-decoration: none;
+ }
+
+.phone{
+  margin-top: 5%;
+  margin-left: 50%;
+  margin-top: 2%;
+ }
+
+
+ .telefon-link{
+  margin-top: 4.5%;
+  color: #1e6395;
+  margin-top: 6%;
+  margin-left: 16%;
+ }
+
+
+
+
+.logo-trans{
+  background-image: url("images/logo.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+width: 15%;
+height: 25%;
+margin-left: 43%;
+
+ }
+
+
+.row{
+  width: 100%;
+  height:50px;
+display: flex;
+gap: 1rem;
+margin-left: 13%;
+ }
+
+.footerlogo1{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo2{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo4{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+
+.my-buttonb1{
+  font-family: 'Montserrat', sans-serif;
+  width: 60%;
+  align-items: center;
+  align-content: center;
+ text-decoration: none;
+ text-align: center;
+  }
+
+.restaurante{
+  width: 100%;
+  height: 530px;
+  background-color: #efeae8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.restaurante-bild{
+  width: 90%;
+  background-image: url("images/restaurant.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 450px;
+ align-self: center;
+}
+
+.descubra-btn{
+  width: 35%;
+  background-color: white;
+  color: #1e6395;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  margin-left: 32%;
+ margin-top: 90%;
+ padding-bottom: 2%;
+ padding-top: 2%;
+}
+
+.email-field {
+  background-color: transparent;
+  margin-left: 50%;
+  margin-top: 15%;
+  border: none;
+  color: #1e6395; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  border-bottom: 1px solid #1e6395; 
+  text-decoration: none;
+}
+
+.newsletterinfo{
+    width: 60%;
+  height: 100px;
+font-size: px;
+color: #1e6395;
+align-self: center;
+margin-left: 4rem;
+padding-bottom: 11%;
+ }
+
+
+.signup-button{
+  color: #1e6395;
+  border: solid #1e6395;
+  height: 20px;
+  text-decoration: none;
+  margin-left: 21%;
+  margin-top: 2.5%;
+  padding-bottom: 5%;
+  padding-top: 1%;
+  padding-left: 3%;
+  padding-right:3%;
+  background-color: #1e6395;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+
+}
+
+.instagram-icon {
+  margin-left: 84%;
+  margin-top: 50%;
+  position: absolute;
+ color: #1e6395;
+}
+
+.facebook-icon{
+  color: #1e6395;
+ margin-left: 91%;
+ margin-top: 50%;
+ position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.newsletter{
+  width: 100%;
+  height: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2%;
+  gap: 1rem;
+  background: white;
+  
+   }
+
+.newsbutton{
+ background-color: #1e6395;
+   color: white;
+  align-self: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  border: none;
+   font-family: 'Montserrat', sans-serif;
+   }
+
+.newsletterinfo{
+    width: 100%;
+  height: 100px;
+font-size: 9px;
+color: #1e6395;
+align-self: center;
+margin-right: 13%;
+padding-bottom: 11%;
+ }
+
+.newsletter-link{
+  background-color: #1e6395;
+   color: white;
+  align-self: center;
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border: none;
+   }
+
+
+
+
+.footer{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  font-size: 7px;
+  background-color: #efeae8;
+  justify-content: center;
+  gap: 1.7rem;
+     }
+
+
+ .content1{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+ }
+
+
+
+.content2{
+  font-weight: 400;
+  padding-top: 4%;
+ }
+
+
+
+.cont1{
+  font-weight: 400;
+  padding-top: 7%;
+ }
+
+.cont2{
+  font-weight: 400;
+  padding-top: 4%; 
+ }
+
+
+.con1{
+  font-weight: 400;
+  padding-top: 3%;
+  width: 40%;
+ }
+
+.whatsapplink2{
+  font-weight: 400;
+  padding-top: 4%;
+  width: 30%;
+  color: #1e6395;
+  text-decoration: none;
+ }
+
+.phone{
+  margin-top: 5%;
+  margin-left: 50%;
+  margin-top: 2%;
+ }
+
+
+ .telefon-link{
+  margin-top: 4.5%;
+  color: #1e6395;
+  margin-top: 6%;
+  margin-left: 16%;
+ }
+
+
+.email-link{
+  font-weight: 400;
+  width: 30%;
+  color:white;
+  text-decoration: none;
+  margin-left: 3%;
+  margin-top: 6%;
+ }
+
+
+
+.logo-trans{
+  background-image: url("images/logo.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+width: 15%;
+height: 25%;
+margin-left: 43%;
+
+ }
+
+
+.row{
+  width: 100%;
+  height:50px;
+display: flex;
+gap: 1rem;
+margin-left: 13%;
+ }
+
+.footerlogo1{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo2{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.footerlogo4{
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+
+.my-buttonb1{
+  font-family: 'Montserrat', sans-serif;
+  width: 60%;
+  align-items: center;
+  align-content: center;
+ text-decoration: none;
+ text-align: center;
+  }
+
+
+
+
+.instagram-icon {
+  margin-left: 84%;
+  margin-top: 50%;
+  position: absolute;
+ color: #1e6395;
+}
+
+.facebook-icon{
+  color: #1e6395;
+ margin-left: 91%;
+ margin-top: 50%;
+ position: absolute;
+}
+
+
+.h1{
+  color: #1e6395;
+  font-family: 'Montserrat', sans-serif;
+
+  }
+
+
+.newsletter{
+  color: #1e6395;
+  }
+
+.newsletterinfo{
+  margin-right: 9rem;
+  white-space: nowrap;
+  }
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: 450px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.reservebereich{
+  width: 70%;
+  height: 60px;
+  background-color: #efeae8;
+  margin-top:-7%;
+   z-index: 30;
+   display: flex;
+   flex-direction: row;
+   margin-left: 18%;
+   padding-top: -2%;
+   background-color: #ffffff;
+   border: solid 0.2px black;
+   
+   color: #1e6395;
+    }
+
+.inhalt1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 10px;
+  gap: 0.4rem;
+  padding-top: 2%;
+  margin-left: 4%;
+  font-weight: 600;
+ }
+
+.Datum{
+  height: 20px;
+  font-size: 8px;
+  width: 60px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  text-align: start;
+  
+ }
+
+.inhalt2{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  margin-top: 1.7%;
+  font-weight: 600;
+  margin-left: 8%;
+   }
+
+
+
+.line{
+   
+  
+   }
+
+
+.Datum2{
+  height: 20px;
+  font-size: 8px;
+  width: 20px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  text-align: start;
+  margin-bottom: 14%;
+ }
+
+.line2{
+
+   }
+
+.inhalt3{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  gap: 0.45rem;
+  margin-top: 2%;
+  margin-left: 40%;
+  position: absolute;
+  font-weight: 600;
+
+    }
+
+.partida{
+  height: 20px;
+  font-size: 8px;
+  width: 60px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e6395;
+  text-align: start;
+  
+ }
+
+
+#select-hospedes {
+    font-size: 1rem;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .hospedes {
+    width: 90px;
+    margin-left: 10%
+  }
+
+.quantos {
+  width: 100px;
+  font-size: 1rem;
+  border: none;
+  background-color: transparent; 
+  color:#1e6395;
+  width: 50%;
+  font-size: 10px;
+  padding-bottom: 4%;
+  padding-top: 4%;
+  padding-left: 4%;
+  padding-right: 4%;
+  text-align: start;
+}
+
+.quantos::placeholder {
+  color:#1e6395;
+  opacity: 1; 
+  padding-bottom: 4%;
+}
+
+
+.btn-reserve{
+  margin-bottom: 10%;
+  position: absolute;
+  margin-left: 55%;
+  margin-top: 7%;
+  font-size: 10px;
+  color: white;
+  background-color: #1e6395;
+  padding-bottom: 4%;
+  padding-top: 4%;
+   padding-right: 5%;
+   padding-left: 5%;
+   border: none;
+}
+
+
+.newsletter{
+  align-self: center;
+  padding-left: 18%;
+}
+
+.newsletter2{
+  height: 50px;
+ width: 100%;
+ background-color: white;
+display: flex;
+ flex-direction: row;
+ gap: 2rem;
+}
+
+.email-field {
+  background-color: transparent;
+  margin-left: 50%;
+  margin-top: 15%;
+  border: none;
+  color: #1e6395; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  border-bottom: 1px solid #1e6395; 
+  text-decoration: none;
+}
+
+
+.email-field::placeholder {
+  color: #1e6395;        
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
+}
+
+
+.signup-button{
+  color: #1e6395;
+  border: solid #1e6395;
+  height: 20px;
+  text-decoration: none;
+  margin-left: 21%;
+  margin-top: 2.5%;
+  padding-bottom: 5%;
+  padding-top: 1%;
+  padding-left: 3%;
+  padding-right:3%;
+  background-color: #1e6395;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; 
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+
+.m {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+
+.m.active,
+.m:hover {
+  background-color: white !important;
+}
+
+
+.m.active .hamburger i,
+.m.active .telefon-link i,
+.m.active .email-link i,
+.m.active .lang-toggle i,
+.m:hover .hamburger i,
+.m:hover .telefon-link i,
+.m:hover .email-link i,
+.m:hover .lang-toggle i {
+  color:#1e6395 !important;
+}
+
+
+
+.description{
+background-image: url("images/chalesorange.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+height: 500px;
+width:100%;
+}
+
+.email-linkf{
+  color: #1e6395;
+  text-decoration: none;
+}
+
+
+</style>
+
+
+
+<body>
+  
+
+<div id="whatsapp-trigger" style="display: inline-block; cursor: pointer;">
+  <img src="images/whatsappicon.webp" alt="WhatsApp Icon" class="whatsapp-icon" />
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  
+    <div class="m">
+       <div class="navbar">
+    <button class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+   
+  </div>
+
+  <div id="dropdownMenu" class="dropdown">
+    <a href="index.html">Home</a>
+    <a href="nossa.html">Nossa História</a>
+    <a href="chales.html">Chalés</a>
+    <a href="restaurante.html">Restaurante</a>
+    <a href="spa.html">Spa</a>
+    <a href="pacotes.html">Pacotes e Passeios</a>
+    <a href="experiencas.html">Experiências</a>
+    <a href="contato.html">Contato</a>
+  </div>
+      <img src="images/logo.webp" alt="Beschreibung des Bildes" class="logo" loading="lazy">
+      <a href="tel:+558488662244" class="telefon-link">
+  <i class="fas fa-phone"></i> 
+</a>
+<a href="mailto:beispiel@email.com" class="email-link">
+  <i class="fas fa-envelope"></i> 
+</a>
+      <div class="language-selector">
+  <button class="lang-toggle" onclick="toggleLangMenu()">
+    <i class="fas fa-globe"></i>
+  </button>
+  <ul class="lang-menu" id="langMenu">
+    <li><a href="#">PT</a></li>
+    <li><a href="index-en.html">EN</a></li>
+    <li><a href="index-es.html">ES</a></li>
+    <li><a href="index-fr.html">FR</a></li>
+  </ul>
+</div>
+</div>
+    </div>
+  </div>
+</header>
+
+
+
+<div class="description"></div>
+
+
+
+
+<div class="flex-container2">
+<div class="reservierung">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+ <div class="reservebereich">
+
+  <div class="inhalt1">Chegada
+    <button class="Datum" id="calendar-btn">Selecionar data</button>
+    <input type="text" id="datepicker" class="visually-hidden">
+  </div>
+
+  <div style="width: 1px; height: 40px; background-color: #1e6395; margin-top: 2%;"></div>
+
+  <div class="inhalt2">Partida
+    <button class="partida" id="calendar-btn-partida">Selecionar data</button>
+    <input type="text" id="datepicker-partida" class="visually-hidden">
+  </div>
+
+  <div style="width: 1px; height: 40px; background-color: #1e6395; margin-top: 2%;"></div>
+
+  <div class="inhalt3">Hóspedes
+    <input type="text" placeholder="Quantos?" class="quantos">
+    <button class="btn-reserve">Reserve</button>
+  </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+  const datepicker = flatpickr("#datepicker", {
+    dateFormat: "d.m.Y",
+    allowInput: false,
+    onChange: (selectedDates, dateStr) => {
+      document.getElementById("calendar-btn").textContent = dateStr;
+    }
+  });
+
+  document.getElementById("calendar-btn").addEventListener("click", () => {
+    datepicker.open();
+  });
+
+  const partidaPicker = flatpickr("#datepicker-partida", {
+    dateFormat: "d.m.Y",
+    allowInput: false,
+    onChange: (selectedDates, dateStr) => {
+      document.getElementById("calendar-btn-partida").textContent = dateStr;
+    }
+  });
+
+  document.getElementById("calendar-btn-partida").addEventListener("click", () => {
+    partidaPicker.open();
+  });
+</script>
+
+
+  </div>
+          
+  <div class="titel">Chalés</div>
+  <div class="inhalt">Nossos oito chalés gregos, foram cuidadosamente projetados 
+com amor e dedicação. Cada um homenageia uma deidade única 
+da mitologia grega, refletindo sua essência em cada detalhe. Do 
+design à atmosfera, cada chalé traduz o charme e a força de sua 
+inspiração divina, proporcionando uma estadia inesquecível, em 
+perfeita harmonia com a natureza.</div>
+</div>
+
+<div class="slider-container-outer">
+<div class="slider-wrapper ander">
+    <button class="arrow arrow-left" onclick="prevSlide2()">&#10094;</button>
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack2">
+        <div class="slide"><img src="images/har.webp" alt="Bild A" /></div>
+        <div class="slide"><img src="images/c2.webp" alt="Bild B" /></div>
+        <div class="slide"><img src="images/c3.webp" alt="Bild C" /></div>
+        <div class="slide"><img src="images/c4.webp" alt="Bild D" /></div>
+      </div>
+    </div>
+    <button class="arrow arrow-right" onclick="nextSlide2()">&#10095;</button>
+</div>
+</div>
+
+
+<div class="adultos"><strong>2 Adultos</strong>
+    <div class="vista">Vista:
+        <div class="Vale">Vale</div>
+        </div>
+
+    <div class="dormi">Dormitorio:
+        <div class="meter">20m2</div>
+        </div>
+
+    <div class="deck">Deck:
+    <div class="m40">40m2</div>
+    </div>
+
+    <div class="banheiro">banheiro:
+    <div class="meter">5m2</div>
+    </div>
+</div>
+
+
+
+
+<div class="harmonia">
+       <div class="h1">Santuário de Harmonia
+            <div class="kolonne">
+            
+           <button class="knopf1">Descrição</button>
+           <button class="knopf2"> Comodidades</button>
+           <button class="knopf3">Destaques</button>
+           </div>
+       </div>
+
+
+  <div style="width: 60%;  text-wrap: balance; "  class="texta">Existe um lugar melhor do que o cômodo de Harmonia para experimentar toda a gama de prazeres do Olymp Spa?</div>
+  <div style="width: 60%;  text-wrap: balance;" class="textb"> WIFY<br>
+Ar condicionado<br> Geladeira<br>
+Mesa com Cadeiras<br> Máquina de café
+</div>
+  <div style="width: 60%; text-align:left;  text-wrap: balance;"   class="textc">A divisão criou um banheiro no chalé.
+A proximidade com a entrada principal oferece acesso facilitado para pessoas com mobilidade reduzida.
+</div>
+       
+<button class="r-knopf" onclick="window.location.href='harmonia.html'">Ver mais</button>
+</div>
+
+
+<div class="slider-container-outer">
+<div class="slider-wrapper">
+    <button class="arrow arrow-left" onclick="prevSlide()">&#10094;</button>
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        <div class="slide"><img src="images/har.webp" alt="Bild 1" /></div>
+        <div class="slide"><img src="images/c2.webp" alt="Bild 2" /></div>
+        <div class="slide"><img src="images/c3.webp" alt="Bild 3" /></div>
+        <div class="slide"><img src="images/c4.webp" alt="Bild 4" /></div>
+        <div class="slide"><img src="images/c5.webp" alt="Bild 5" /></div>
+        <div class="slide"><img src="images/c6.webp" alt="Bild 6" /></div>
+        <div class="slide"><img src="images/c7.webp" alt="Bild 7" /></div>
+        <div class="slide"><img src="https://picsum.photos/id/1020/800/400" alt="Bild 8" /></div>
+      </div>
+    </div>
+    <button class="arrow arrow-right" onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+
+<div class="adultos"><strong>2 Adultos</strong>
+    <div class="vista">Vista:
+        <div class="Vale">Vale</div>
+        </div>
+
+    <div class="dormi">Dormitorio:
+        <div class="meter">20m2</div>
+        </div>
+
+    <div class="deck">Deck:
+    <div class="m40">43m2</div>
+    </div>
+
+    <div class="banheiro">banheiro:
+    <div class="meter">6m2</div>
+    </div>
+</div>
+
+
+
+
+<div class="harmonia">
+       <div class="h1">A suíte de Hera
+            <div class="kolonne">
+            
+           <button class="knopf1">Descrição</button>
+           <button class="knopf2"> Comodidades</button>
+           <button class="knopf3">Destaques</button>
+           </div>
+       </div>
+
+
+  <div style="width: 60%; text-align:left;  text-wrap: balance;"  class="texta">Seguindo a filosofia de nossa<br>  casa, Hera lhe oferece <br> um  estilo de vida <br>  completamente único.</div>
+  <div style="width: 60%; text-align:left;  text-wrap: balance;" class="textb"> WIFY<br>
+Ar condicionado<br> Geladeira<br>
+Mesa com Cadeiras<br> Máquina de café
+</div>
+  <div style="width: 60%; text-align:left; text-wrap: balance;"   class="textc">O banheiro, em forma de espiral, está anexo ao chalé e oferece uma ex- periência única de banho sob o céu estrelado.
+</div>
+
+<button class="r-knopf" onclick="window.location.href='hera.html'">Ver mais</button>
+</div>
+
+
+<div class="slider-container-outer">
+  <div class="slider-wrapper">
+    <button class="arrow arrow-left" onclick="prevSlide()">&#10094;</button>
+    
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        <div class="slide"><img src="images/har.webp" alt="Bild 1" /></div>
+        <div class="slide"><img src="images/c2.webp" alt="Bild 2" /></div>
+        <div class="slide"><img src="images/c3.webp" alt="Bild 3" /></div>
+        <div class="slide"><img src="images/c4.webp" alt="Bild 4" /></div>
+        <div class="slide"><img src="images/c6.webp" alt="Bild 5" /></div>
+        <div class="slide"><img src="images/c7.webp" alt="Bild 6" /></div>
+        <div class="slide"><img src="images/c3.webp" alt="Bild 7" /></div>
+        <div class="slide"><img src="https://picsum.photos/id/1020/800/400" alt="Bild 8" /></div>
+      </div>
+    </div>
+
+    <button class="arrow arrow-right" onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+
+
+<div class="adultos"><strong>2 Adultos</strong>
+    <div class="vista">Vista:
+        <div class="Vale">Vale</div>
+        </div>
+
+    <div class="dormi">Dormitorio:
+        <div class="meter">20m2</div>
+        </div>
+
+    <div class="deck">Deck:
+    <div class="m40">58m2</div>
+    </div>
+
+    <div class="banheiro">banheiro:
+    <div class="meter">6m2</div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="harmonia">
+       <div class="h1">A casa de Apollo
+            <div class="kolonne">
+            
+           <button class="knopf1">Descrição</button>
+           <button class="knopf2"> Comodidades</button>
+           <button class="knopf3">Destaques</button>
+           </div>
+       </div>
+
+
+  <div style="width: 60%; text-align:left;  text-wrap: balance;"  class="texta">Aparentemente, o encanto de Monte das Gameleiras<br> também não passou<br> despercebido por Apollo.</div>
+  <div style="width: 60%; text-align:left;  text-wrap: balance;" class="textb"> WIFY<br>
+Ar condicionado<br> Geladeira<br>
+Mesa com Cadeiras<br> Máquina de café
+</div>
+  <div style="width: 60%; text-align:left;  text-wrap: balance;"   class="textc">Colha as ervas para o seu chá diretamente do seu próprio jardim.
+</div>
+
+<button class="r-knopf" onclick="window.location.href='apollo.html'">Ver mais</button>
+</div>
+
+
+<div class="slider-container-outer">
+<div class="slider-wrapper">
+    <button class="arrow arrow-left" onclick="prevSlide()">&#10094;</button>
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        <div class="slide"><img src="images/har.webp" alt="Bild 1" /></div>
+        <div class="slide"><img src="images/c2.webp" alt="Bild 2" /></div>
+        <div class="slide"><img src="images/c3.webp" alt="Bild 3" /></div>
+        <div class="slide"><img src="images/c4.webp" alt="Bild 4" /></div>
+        <div class="slide"><img src="images/c5.webp" alt="Bild 5" /></div>
+        <div class="slide"><img src="images/c6.webp" alt="Bild 6" /></div>
+        <div class="slide"><img src="images/c7.webp" alt="Bild 7" /></div>
+        <div class="slide"><img src="https://picsum.photos/id/1020/800/400" alt="Bild 8" /></div>
+      </div>
+    </div>
+    <button class="arrow arrow-right" onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+
+<div class="adultos"><strong>2 Adultos</strong>
+    <div class="vista">Vista:
+        <div class="Vale">Vale</div>
+        </div>
+
+    <div class="dormi">Dormitorio:
+        <div class="meter">20m2</div>
+        </div>
+
+    <div class="deck">Deck:
+    <div class="m40">48m2</div>
+    </div>
+
+    <div class="banheiro">banheiro:
+    <div class="meter">6m2</div>
+    </div>
+</div>
+
+
+
+
+<div class="harmonia">
+       <div class="h1">O refúgio de Hermes
+            <div class="kolonne">
+            
+           <button class="knopf1">Descrição</button>
+           <button class="knopf2"> Comodidades</button>
+           <button class="knopf3">Destaques</button>
+           </div>
+       </div>
+
+
+  <div style="width: 60%; text-align:left;  text-wrap: balance;"  class="texta">Neste tesouro, você pode até ganhar asas. O deus grego das viagens aparentemente entendia do seu ofício.</div>
+  <div style="width: 60%; text-align:left;  text-wrap: balance;" class="textb"> WIFY<br>
+Ar condicionado<br> Geladeira<br>
+Mesa com Cadeiras<br> Máquina de café
+</div>
+  <div style="width: 60%; text-align:left;  text-wrap: balance;"   class="textc">O nosso bistrô Dionysos fica logo ali na esquina.
+</div>
+
+<button class="r-knopf" onclick="window.location.href='hermes.html'">Ver mais</button>
+</div>
+<div class="slider-container-outer">
+<div class="slider-wrapper">
+    <button class="arrow arrow-left" onclick="prevSlide()">&#10094;</button>
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        <div class="slide"><img src="images/har.webp" alt="Bild 1" /></div>
+        <div class="slide"><img src="images/c2.webp" alt="Bild 2" /></div>
+        <div class="slide"><img src="images/c3.webp" alt="Bild 3" /></div>
+        <div class="slide"><img src="images/c4.webp" alt="Bild 4" /></div>
+        <div class="slide"><img src="images/c5.webp" alt="Bild 5" /></div>
+        <div class="slide"><img src="images/c6.webp" alt="Bild 6" /></div>
+        <div class="slide"><img src="images/c7.webp" alt="Bild 7" /></div>
+        <div class="slide"><img src="https://picsum.photos/id/1020/800/400" alt="Bild 8" /></div>
+      </div>
+    </div>
+    <button class="arrow arrow-right" onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+
+
+
+
+<div class="adultos"><strong>2 Adultos</strong>
+    <div class="vista">Vista:
+        <div class="Vale">Vale</div>
+        </div>
+
+    <div class="dormi">Dormitorio:
+        <div class="meter">20m2</div>
+        </div>
+
+    <div class="deck">Deck:
+    <div class="m40">40m2</div>
+    </div>
+
+    <div class="banheiro">banheiro:
+    <div class="meter">7m2</div>
+    </div>
+</div>
+
+
+
+
+
+<div class="harmonia">
+       <div class="h1">O aposento de Eros
+            <div class="kolonne">
+            
+           <button class="knopf1">Descrição</button>
+           <button class="knopf2"> Comodidades</button>
+           <button class="knopf3">Destaques</button>
+           </div>
+       </div>
+
+
+  <div style="width: 60%; text-align:left;  text-wrap: balance;;"  class="texta">Provavelmente foram as flechas do Cupido que levaram você direto para
+o aposento de Eros.
+</div>
+  <div style="width: 60%; text-align:left;  text-wrap: balance;" class="textb"> WIFY<br>
+Ar condicionado<br> Geladeira<br>
+Mesa com Cadeiras<br> Máquina de café
+</div>
+  <div style="width: 60%; text-align:left; text-wrap: balance;"   class="textc">A sua próxima massagem está a um lance de escada de distância.
+</div>
+
+<button class="r-knopf" onclick="window.location.href='eros.html'">Ver mais</button>
+</div>
+
+<div class="slider-container-outer">
+<div class="slider-wrapper">
+    <button class="arrow arrow-left" onclick="prevSlide()">&#10094;</button>
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        <div class="slide"><img src="images/har.webp" alt="Bild 1" /></div>
+        <div class="slide"><img src="images/c3.webp" alt="Bild 2" /></div>
+        <div class="slide"><img src="images/c2.webp" alt="Bild 3" /></div>
+        <div class="slide"><img src="images/c4.webp" alt="Bild 4" /></div>
+        <div class="slide"><img src="images/c5.webp" alt="Bild 5" /></div>
+        <div class="slide"><img src="images/c6.webp" alt="Bild 6" /></div>
+        <div class="slide"><img src="images/c7.webp" alt="Bild 7" /></div>
+        <div class="slide"><img src="https://picsum.photos/id/1020/800/400" alt="Bild 8" /></div>
+      </div>
+    </div>
+    <button class="arrow arrow-right" onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+
+<div class="adultos"><strong>2 Adultos</strong>
+    <div class="vista">Vista:
+        <div class="Vale">Vale</div>
+        </div>
+
+    <div class="dormi">Dormitorio:
+        <div class="meter">20m2</div>
+        </div>
+
+    <div class="deck">Deck:
+    <div class="m40">40m2</div>
+    </div>
+
+    <div class="banheiro">banheiro:
+    <div class="meter">5m2</div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="harmonia">
+       <div class="h1">O Santuário de Athena
+            <div class="kolonne">
+            
+           <button class="knopf1">Descrição</button>
+           <button class="knopf2"> Comodidades</button>
+           <button class="knopf3">Destaques</button>
+           </div>
+       </div>
+
+
+  <div style="width: 60%; text-align:left;  text-wrap: balance;;"  class="texta">Athena lhe dá as boas-vindas em seu novo refúgio. Parece que ela usou toda sua sabedoria
+para escolher esse lugar.</div>
+  <div style="width: 60%; text-align:left; text-wrap: balance;" class="textb"> WIFY<br>
+Ar condicionado<br> Geladeira<br>
+Mesa com Cadeiras<br> Máquina de café
+</div>
+  <div style="width: 60%; text-align:left;  text-wrap: balance;"   class="textc">Daqui, têm dois amplos panoramas: um profundo no vale e outro na colina mais próxima.
+
+</div>
+
+<button class="r-knopf" onclick="window.location.href='athena.html'">Ver mais</button>
+</div>
+
+
+<div class="slider-container-outer">
+<div class="slider-wrapper">
+    <button class="arrow arrow-left" onclick="prevSlide()">&#10094;</button>
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        <div class="slide"><img src="images/har.webp" alt="Bild 1" /></div>
+        <div class="slide"><img src="images/c2.webp" alt="Bild 2" /></div>
+        <div class="slide"><img src="images/c3.webp" alt="Bild 3" /></div>
+        <div class="slide"><img src="images/c4.webp" alt="Bild 4" /></div>
+        <div class="slide"><img src="images/c6.webp" alt="Bild 5" /></div>
+        <div class="slide"><img src="images/c7.webp" alt="Bild 6" /></div>
+        <div class="slide"><img src="https://picsum.photos/id/1018/800/400" alt="Bild 7" /></div>
+        <div class="slide"><img src="https://picsum.photos/id/1020/800/400" alt="Bild 8" /></div>
+      </div>
+    </div>
+    <button class="arrow arrow-right" onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+
+<div class="adultos"><strong>2 Adultos</strong>
+    <div class="vista">Vista:
+        <div class="Vale">Vale</div>
+        </div>
+
+    <div class="dormi">Dormitorio:
+        <div class="meter">20m2</div>
+        </div>
+
+    <div class="deck">Deck:
+    <div class="m40">50m2</div>
+    </div>
+
+    <div class="banheiro">banheiro:
+    <div class="meter">7m2</div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="harmonia">
+       <div class="h1">O Templo de Zeus
+            <div class="kolonne">
+            
+           <button class="knopf1">Descrição</button>
+           <button class="knopf2"> Comodidades</button>
+           <button class="knopf3">Destaques</button>
+           </div>
+       </div>
+
+
+  <div style="width: 60%; text-align:left; text-wrap: balance;"  class="texta">Não consegue abrir mão do<br> cetro em sua jornada <br>sensorial
+pelo Olymp Spa?</div>
+  <div style="width: 60%; text-align:left;  text-wrap: balance;" class="textb"> WIFY<br>
+Ar condicionado<br> Geladeira<br>
+Mesa com Cadeiras<br> Máquina de café
+</div>
+  <div style="width: 60%; text-align:left;  text-wrap: balance;"   class="textc">O nosso maior chalé oferece-lhe um jacuzzi privado no jardim.
+
+</div>
+
+<button class="r-knopf" onclick="window.location.href='zeus.html'">Ver mais</button>
+</div>
+
+<div class="slider-container-outer">
+<div class="slider-wrapper">
+    <button class="arrow arrow-left" onclick="prevSlide()">&#10094;</button>
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        <div class="slide"><img src="images/har.webp" alt="Bild 1" /></div>
+        <div class="slide"><img src="images/c2.webp" alt="Bild 2" /></div>
+        <div class="slide"><img src="images/c3.webp" alt="Bild 3" /></div>
+        <div class="slide"><img src="images/c4.webp" alt="Bild 4" /></div>
+        <div class="slide"><img src="images/c5.webp" alt="Bild 5" /></div>
+        <div class="slide"><img src="images/c6.webp" alt="Bild 6" /></div>
+        <div class="slide"><img src="images/c7.webp" alt="Bild 7" /></div>
+        <div class="slide"><img src="images/c8.webp" alt="Bild 8" /></div>
+      </div>
+    </div>
+    <button class="arrow arrow-right" onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+
+
+
+<div class="adultos"><strong>2 Adultos</strong>
+    <div class="vista">Vista:
+        <div class="Vale">Vale</div>
+        </div>
+
+    <div class="dormi">Dormitorio:
+        <div class="meter">20m2</div>
+        </div>
+
+    <div class="deck">Deck:
+    <div class="m40">40m2</div>
+    </div>
+
+    <div class="banheiro">banheiro:
+    <div class="meter">5m2</div>
+    </div>
+</div>
+
+
+
+  
+<div class="harmonia">
+       <div class="h1">O Santuário de Afrodite
+            <div class="kolonne">
+            
+           <button class="knopf1">Descrição</button>
+           <button class="knopf2"> Comodidades</button>
+           <button class="knopf3">Destaques</button>
+           </div>
+       </div>
+
+
+  <div style="width: 60%; text-align:left;  text-wrap: balance;;"  class="texta">Ao entrar nos aposentos de “Aphrodite” você se depara com um reino de paixão
+e amor à vida.</div>
+  <div style="width: 60%; text-align:left; text-wrap: balance;" class="textb"> WIFY<br>
+Ar condicionado<br> Geladeira<br>
+Mesa com Cadeiras<br> Máquina de café
+</div>
+  <div style="width: 60%; text-align:left;  text-wrap: balance;"   class="textc">Afrodite também está um pouco maior e mais isolada em relação a Zeus.
+</div>
+
+<button class="r-knopf" onclick="window.location.href='afrodite.html'">Ver mais</button>
+</div>
+
+<div style="position: absolute;" class="dünne-linie"></div>
+
+
+<div class="newsletter2">
+<div class="email-input">
+  <label for="email"></label>
+  <input type="email" id="email" name="email" class="email-field" placeholder="Seu e-mail">
+</div>
+
+<a href="http://eepurl.com/jf6BEU" target="_blank" class="signup-button">Inscreva-se</a>
+</div>
+
+
+<div class="newsletter">
+   
+  <div class="newsletter">NEWSLETTER</div>
+
+     <div class="newsletterinfo">Receber atualizações sobre experiências exclusivas,
+eventos, e muito mais.</div>
+</div>
+
+
+<a href="https://www.instagram.com/olymp.spa/" target="_blank" class="instagram-icon" aria-label="Instagram">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.facebook.com/deinprofil" target="_blank" class="facebook-icon" aria-label="Facebook">
+  <i class="fab fa-facebook-f"></i>
+</a>
+
+
+<div class="footer">
+  
+
+  <div class="logo-trans"></div>
+<div class="row">
+  <div class="footerlogo1">Fale conosco
+<div class="content1">
+  <a href="mailto:patchamamaglamping@gmail.com" class="email-linkf">patchamamaglamping@gmail.com</a>
+   </div>       <div class="content2">
+   <a href="https://wa.me/message/GZALPFM2IAJUG1" class="whatsapplink2">00558488662244</a>
+   </div>
+       
+       </div>
+
+
+
+       <div class="footerlogo2">Corporativo
+      <div class="cont1">Termo de uso</div>
+      <div class="cont2">Política de Privacidade</div>
+  </div>
+
+  <<div class="footerlogo4">
+  Contato
+  <div class="con1" onclick="abrirPopup()">Localização</div>
+</div>
+
+
+
+<script>
+window.addEventListener("scroll", function () {
+  const header = document.querySelector(".m");
+  if (window.scrollY > 50) {
+    header.classList.add("active");
+  } else {
+    header.classList.remove("active");
+  }
+});
+</script>
+<!-- Modal-Overlay mit eingebetteter Karte -->
+<div id="popup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-btn" onclick="fecharPopup()">&times;</span>
+
+    <!-- Eingebettete Google Maps Karte -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31717.162728650557!2d-35.80649690665418!3d-6.439571729346405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7adfb199e058c21%3A0xde8ad4783d7b473a!2sOlymp%20SPA%20(by%20Patchamama%20Glamping%20Ltda.)!5e0!3m2!1sen!2sbr!4v1750354458769!5m2!1sen!2sbr"
+        width="100%" height="100%" style="border:0;" 
+        allowfullscreen="" loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</div>
+<script src="index.html.js" defer></script>
+
+<script>
+  function abrirPopup() {
+    document.getElementById("popup").style.display = "flex";
+  }
+
+  function fecharPopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+
+  // Schließen durch Klick außerhalb des Inhalts
+  window.onclick = function(event) {
+    const popup = document.getElementById("popup");
+    if (event.target === popup) {
+      fecharPopup();
+    }
+  }
+</script>
+
+ <script>
+    function toggleMenu() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.closest('.hamburger')) {
+        const dropdown = document.getElementById("dropdownMenu");
+        if (dropdown.classList.contains("show")) {
+          dropdown.classList.remove("show");
+        }
+      }
+    }
+  </script>
+
+<script>
+  document.getElementById('whatsapp-trigger').addEventListener('click', function () {
+    window.open('https://wa.me/message/GZALPFM2IAJUG1', '_blank');
+  });
+
+  function openMapModal() {
+    document.getElementById('mapModal').style.display = 'flex';
+  }
+
+  function closeMapModal(event) {
+    event.stopPropagation();
+    document.getElementById('mapModal').style.display = 'none';
+  }
+
+  const icon = document.querySelector('.whatsapp-icon');
+  const trigger = document.getElementById('whatsapp-trigger');
+
+  const observer = new IntersectionObserver(([entry]) => {
+    if (!entry.isIntersecting) {
+      icon.classList.add('visible');
+    } else {
+      icon.classList.remove('visible');
+    }
+  }, { threshold: 0 });
+
+  observer.observe(trigger);
+
+</script>
+
+<script src="index.html.js" defer></script>
+
+ <script>
+    function toggleMenu() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.closest('.hamburger')) {
+        const dropdown = document.getElementById("dropdownMenu");
+        if (dropdown.classList.contains("show")) {
+          dropdown.classList.remove("show");
+        }
+      }
+    }
+  </script>
+
+<script>
+  document.getElementById('whatsapp-trigger').addEventListener('click', function () {
+    window.open('https://wa.me/message/GZALPFM2IAJUG1', '_blank');
+  });
+
+  function openMapModal() {
+    document.getElementById('mapModal').style.display = 'flex';
+  }
+
+  function closeMapModal(event) {
+    event.stopPropagation();
+    document.getElementById('mapModal').style.display = 'none';
+  }
+
+  const icon = document.querySelector('.whatsapp-icon');
+  const trigger = document.getElementById('whatsapp-trigger');
+
+  const observer = new IntersectionObserver(([entry]) => {
+    if (!entry.isIntersecting) {
+      icon.classList.add('visible');
+    } else {
+      icon.classList.remove('visible');
+    }
+  }, { threshold: 0 });
+
+  observer.observe(trigger);
+
+</script>
+
+
+<script>
+  function toggleLangMenu() {
+    const menu = document.getElementById('langMenu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+
+  // Optional: Klick außerhalb schließt das Menü
+  document.addEventListener('click', function (event) {
+    const langButton = document.querySelector('.lang-toggle');
+    const langMenu = document.getElementById('langMenu');
+    if (!langButton.contains(event.target) && !langMenu.contains(event.target)) {
+      langMenu.style.display = 'none';
+    }
+  });
+</script>
+
+
+<script>
+
+
+document.querySelectorAll('.slider-wrapper').forEach((sliderWrapper) => {
+  const sliderTrack = sliderWrapper.querySelector('.slider-track');
+  const slides = sliderTrack.querySelectorAll('.slide');
+  const prevBtn = sliderWrapper.querySelector('.arrow-left');
+  const nextBtn = sliderWrapper.querySelector('.arrow-right');
+  let currentIndex = 0;
+
+  function updateSlider() {
+    const slideWidth = slides[0].offsetWidth;
+    sliderTrack.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlider();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlider();
+  });
+
+  
+
+
+  updateSlider();
+});
+</script>
+
+
+
+
+<script>
+document.querySelectorAll('.harmonia').forEach(section => {
+  const btn1 = section.querySelector('.knopf1');
+  const btn2 = section.querySelector('.knopf2');
+  const btn3 = section.querySelector('.knopf3');
+  const textA = section.querySelector('.texta');
+  const textB = section.querySelector('.textb');
+  const textC = section.querySelector('.textc');
+
+  function activate(button) {
+  
+    btn1.classList.remove('active');
+    btn2.classList.remove('active');
+    btn3.classList.remove('active');
+  
+    textA.style.display = 'none';
+    textB.style.display = 'none';
+    textC.style.display = 'none';
+
+  
+    button.classList.add('active');
+    if (button === btn1) textA.style.display = 'block';
+    if (button === btn2) textB.style.display = 'block';
+    if (button === btn3) textC.style.display = 'block';
+  }
+
+  activate(btn1);
+
+  btn1.addEventListener('click', () => activate(btn1));
+  btn2.addEventListener('click', () => activate(btn2));
+  btn3.addEventListener('click', () => activate(btn3));
+});
+</script>
+
+<script>
+let currentIndex2 = 0;
+const track2 = document.getElementById("sliderTrack2");
+const slides2 = track2.children;
+const totalSlides2 = slides2.length;
+
+function updateSlider2() {
+  track2.style.transform = `translateX(-${currentIndex2 * 100}%)`;
+}
+
+function nextSlide2() {
+  currentIndex2 = (currentIndex2 + 1) % totalSlides2;
+  updateSlider2();
+}
+
+function prevSlide2() {
+  currentIndex2 = (currentIndex2 - 1 + totalSlides2) % totalSlides2;
+  updateSlider2();
+}
+</script>
+
+<script>
+  const sliderTrack = document.getElementById('sliderTrack');
+  const totalSlides = sliderTrack.children.length;
+  let currentIndex = 0;
+
+  function updateSlider() {
+    sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+    updateSlider();
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : totalSlides - 1;
+    updateSlider();
+  }
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const knopf1 = document.querySelector('.knopf1');
+    const knopf2 = document.querySelector('.knopf2');
+    const knopf3 = document.querySelector('.knopf3');
+    const texta  = document.querySelector('.texta');
+    const textb  = document.querySelector('.textb');
+    const textc  = document.querySelector('.textc');
+
+    function activate(button, text) {
+      [knopf1, knopf2, knopf3].forEach(k => k.classList.remove('active'));
+      [texta, textb, textc].forEach(t => t.classList.remove('active'));
+
+      button.classList.add('active');
+      text.classList.add('active');
+    }
+
+    knopf1.addEventListener('click', () => activate(knopf1, texta));
+    knopf2.addEventListener('click', () => activate(knopf2, textb));
+    knopf3.addEventListener('click', () => activate(knopf3, textc));
+
+    activate(knopf1, texta);
+  });
+</script>
+
+</body>
+
+</html>
