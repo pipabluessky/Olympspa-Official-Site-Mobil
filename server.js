@@ -75,11 +75,14 @@ app.post("/create-checkout-session", async (req, res) => {
 
     res.json({ id: session.id });
 
-  } catch (error) {
-   console.error("❌ Stripe Error (Message):", error.message);
-console.error("❌ Stripe Error (Full):", error);
-res.json({ stripeError: error.message });
-  }
-});
+} catch (error) {
+  console.error("❌ Stripe Session Creation Failed:");
+  console.error(error); // zeig mir die komplette Fehlermeldung
+
+  res.status(500).json({
+    error: "Stripe session creation failed",
+    stripeError: error.message, // <-- das brauchen wir im curl-Ergebnis
+  });
+}
 
 console.log("🔑 Geladener Stripe Secret Key:", process.env.STRIPE_SECRET_KEY);
