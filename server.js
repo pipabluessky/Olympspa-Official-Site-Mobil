@@ -51,7 +51,6 @@ app.post("/bookings", (req, res) => {
   res.status(201).json({ message: "Booking saved" });
 });
 
-// 💳 Stripe Checkout Session erstellen
 app.post("/create-checkout-session", async (req, res) => {
   console.log("🔑 Stripe Key beim Start:", process.env.STRIPE_SECRET_KEY);
 
@@ -74,9 +73,12 @@ app.post("/create-checkout-session", async (req, res) => {
       metadata: { checkin, checkout, guests },
     });
 
+    res.json({ id: session.id });
 
-
-// 🚀 Server starten
-app.listen(PORT, () => {
-  console.log(`✅ Server läuft auf Port ${PORT}`);
+  } catch (error) {
+    console.error("Stripe Error:", error);
+    res.status(500).json({ error: "Stripe session creation failed" });
+  }
 });
+
+console.log("🔑 Geladener Stripe Secret Key:", process.env.STRIPE_SECRET_KEY);
