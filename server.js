@@ -8,14 +8,14 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: "2022-11-15",
 });
 
-const PORT = process.env.PORT; // <-- Kein Fallback auf lokale Zahl!
+const PORT = process.env.PORT; // Kein Fallback!
 
 app.use(cors());
 app.use(express.json());
 
 const BOOKINGS_FILE = "./bookings.json";
 
-// 🧪 Test-Route
+// Test-Route
 app.get("/", (req, res) => {
   res.send("API läuft ✅");
 });
@@ -30,13 +30,13 @@ function saveBookings(bookings) {
   fs.writeFileSync(BOOKINGS_FILE, JSON.stringify(bookings, null, 2));
 }
 
-// 📅 Alle Buchungen abrufen
+// Alle Buchungen abrufen
 app.get("/bookings", (req, res) => {
   const bookings = loadBookings();
   res.json(bookings);
 });
 
-// 📝 Neue Buchung speichern
+// Neue Buchung speichern
 app.post("/bookings", (req, res) => {
   const { from, to, guests } = req.body;
   if (!from || !to || !guests) return res.status(400).json({ error: "Missing data" });
@@ -51,6 +51,7 @@ app.post("/bookings", (req, res) => {
   res.status(201).json({ message: "Booking saved" });
 });
 
+// Stripe Checkout Session erstellen
 app.post("/create-checkout-session", async (req, res) => {
   console.log("🔑 Stripe Key beim Start:", process.env.STRIPE_SECRET_KEY);
 
@@ -75,16 +76,18 @@ app.post("/create-checkout-session", async (req, res) => {
 
     res.json({ id: session.id });
 
-} catch (error) {
-  console.error("❌ Stripe Session Creation Failed:");
-  console.error(error); // <- zeigt vollständige Fehlermeldung im Render-Log an
+  } catch (error) {
+    console.error("❌ Stripe Session Creation Failed:");
+    console.error(error);
 
-  res.status(500).json({
-    error: "Stripe session creation failed",
-    message: error.message, // <- wird per curl sichtbar
-    type: error.type || null, // <- falls vorhanden
-    raw: error.raw || null,   // <- detaillierte Infos
-  });
-}
+    res.status(500).json({
+      error: "Stripe session creation failed",
+      message: error.message,
+      type: error.type || null,
+      raw: error.raw || null,
+    });
+  }
+});
 
-console.log("🔑 Geladener Stripe Secret Key:", process.env.STRIPE_SECRET_KEY);
+// Server starten
+app.listen(PORT, () => console.log(`Server läuft auf Port ${PORT}`));
