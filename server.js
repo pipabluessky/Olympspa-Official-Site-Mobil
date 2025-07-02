@@ -78,6 +78,7 @@ app.post("/create-checkout-session", async (req, res) => {
   } catch (error) {
    console.error("❌ Stripe Error (Message):", error.message);
 console.error("❌ Stripe Error (Full):", error);
+res.json({ stripeError: error.message });
   }
 });
 
