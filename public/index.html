@@ -2091,33 +2091,10 @@ eventos, e muito mais.</div>
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="https://js.stripe.com/v3/"></script>
 <script>
-function toggleLangMenu() {
-  const langMenu = document.getElementById("langMenu");
-  langMenu.classList.toggle("show");
-}
+  const API_BASE_URL = "https://olympspa-official-site-mobil.onrender.com";
+  const stripe = Stripe("pk_test_51RfsLaR9fiXdrF5sVxHS206Uoiu0F3wCzGHihxtep4BgZKrJTMcjs6Cm2GI7dYEYpE6zZItRk9CCkZLb98E3Aoft00tzyhLp3F");
 
-// Schließen, wenn außerhalb geklickt wird
-window.addEventListener('click', (e) => {
-  const langButton = document.querySelector('.lang-toggle');
-  const langMenu = document.getElementById('langMenu');
-
-  if (!langButton.contains(e.target) && !langMenu.contains(e.target)) {
-    langMenu.classList.remove('show');
-  }
-});
-</script>
-<script>
-window.toggleMenu = function() {
-  console.log("toggleMenu wurde geklickt");
-  const dropdown = document.getElementById("dropdownMenu");
-  dropdown.classList.toggle("show");
-}
-</script>
-<script>
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2022-11-15" });
   let fp, fpPartida;
 
   document.addEventListener("DOMContentLoaded", async () => {
@@ -2131,17 +2108,30 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2022-11-
       try {
         const res = await fetch(`${API_BASE_URL}/bookings`);
         const bookings = await res.json();
-        // Umwandlung in Flatpickr-kompatible Form
         return bookings.map(b => ({ from: b.from, to: b.to }));
       } catch (err) {
-        console.error("Fehler beim Laden der Buchungen:", err);
+        console.error("❌ Fehler beim Laden der Buchungen:", err);
         return [];
       }
     }
 
-    const blocked = await loadBlockedDates();
+    // Blockierte Daten von Backend laden
+    let blocked = await loadBlockedDates();
 
-    // Flatpickr: Chegada (Checkin)
+    // LocalStorage-Zusatzdaten hinzufügen, falls vorhanden
+    const stored = localStorage.getItem("bookedDates");
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored);
+        blocked = blocked.concat(parsed.map(b => ({ from: b.from, to: b.to })));
+        console.log("✅ Zusätzliche geblockte Daten aus localStorage geladen.");
+        localStorage.removeItem("bookedDates");
+      } catch (e) {
+        console.error("❌ Fehler beim Lesen der lokalen Buchungen:", e);
+      }
+    }
+
+    // Flatpickr: Chegada (Check-in)
     fp = flatpickr(datepicker, {
       dateFormat: "d/m/Y",
       allowInput: true,
@@ -2151,18 +2141,18 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2022-11-
       onChange: (_, dateStr) => {
         calendarBtn.textContent = dateStr || "Selecionar data";
 
-        // Check: Chegada darf nicht nach Partida sein
+        // Validierung: Chegada darf nicht nach Partida sein
         if (fpPartida.selectedDates[0] && fp.selectedDates[0] > fpPartida.selectedDates[0]) {
           fpPartida.clear();
           calendarBtnPartida.textContent = "Selecionar data";
         }
 
-        // minDate für Partida anpassen
+        // Mindestdatum für Partida anpassen
         fpPartida.set("minDate", fp.selectedDates[0] || "today");
       }
     });
 
-    // Flatpickr: Partida (Checkout)
+    // Flatpickr: Partida (Check-out)
     fpPartida = flatpickr(datepickerPartida, {
       dateFormat: "d/m/Y",
       allowInput: true,
@@ -2174,7 +2164,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2022-11-
       }
     });
 
-    // Buttons öffnen Flatpickr
+    // Button-Events zum Öffnen der Kalender
     calendarBtn.addEventListener("click", () => fp.open());
     calendarBtnPartida.addEventListener("click", () => fpPartida.open());
 
@@ -2189,10 +2179,10 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2022-11-
         return;
       }
 
-      // Datum konvertieren (dd/mm/yyyy -> yyyy-mm-dd)
+      // Datum ins ISO-Format umwandeln (dd/mm/yyyy → yyyy-mm-dd)
       const convertDate = (str) => {
         const [d, m, y] = str.split('/');
-        return `${y}-${m.padStart(2,"0")}-${d.padStart(2,"0")}`;
+        return `${y}-${m.padStart(2, "0")}-${d.padStart(2, "0")}`;
       };
 
       const from = convertDate(checkinText);
@@ -2200,17 +2190,16 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2022-11-
 
       try {
         // 1️⃣ Buchung speichern
-       const save = await fetch(`${API_BASE_URL}/bookings`, {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ from, to, guests })
-});
+        const save = await fetch(`${API_BASE_URL}/bookings`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ from, to, guests })
+        });
 
         if (save.status === 409) {
           alert("❌ Este período já está reservado.");
           return;
         }
-
         if (!save.ok) throw new Error("❌ Falha ao salvar a reserva.");
 
         // 2️⃣ Neue blockierte Daten laden und Flatpickr aktualisieren
@@ -2219,11 +2208,11 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2022-11-
         fpPartida.set("disable", newBlocked);
 
         // 3️⃣ Stripe Checkout starten
-      const stripeRes = await fetch(`${API_BASE_URL}/create-checkout-session`, {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ checkin: checkinText, checkout: checkoutText, guests })
-});
+        const stripeRes = await fetch(`${API_BASE_URL}/create-checkout-session`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ checkin: checkinText, checkout: checkoutText, guests })
+        });
 
         if (!stripeRes.ok) throw new Error("❌ Erro ao criar sessão Stripe.");
 
@@ -2232,11 +2221,10 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2022-11-
         if (error) alert(error.message);
 
       } catch (err) {
-        console.error("Fehler:", err);
+        console.error("❌ Fehler:", err);
         alert(err.message);
       }
     });
-
 
     // --- Popup Karte ---
     window.abrirPopup = function() {
@@ -2332,6 +2320,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2022-11-
     });
 
   });
+</script>
 
 </script>
   
