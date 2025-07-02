@@ -1773,7 +1773,11 @@ display: flex;
 <script>
   const stripe = Stripe("pk_test_51Rehi44MlG2x5SrzqscwINvP2kFWwkXpqB8bEOOetzZTfYWXe3inXW9xBqARKL7RMg7rDK0PNbv8ilsMY0P9uNg100NNbMBixA");
 </script>
-
+<script>
+fetch("https://olympspa-official-site-mobil.onrender.com/bookings")
+  .then(res => res.json())
+  .then(data => console.log(data));
+  </script>
 <script>
   let fp, fpPartida;
 
