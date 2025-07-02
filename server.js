@@ -77,11 +77,13 @@ app.post("/create-checkout-session", async (req, res) => {
 
 } catch (error) {
   console.error("❌ Stripe Session Creation Failed:");
-  console.error(error); // zeig mir die komplette Fehlermeldung
+  console.error(error); // <- zeigt vollständige Fehlermeldung im Render-Log an
 
   res.status(500).json({
     error: "Stripe session creation failed",
-    stripeError: error.message, // <-- das brauchen wir im curl-Ergebnis
+    message: error.message, // <- wird per curl sichtbar
+    type: error.type || null, // <- falls vorhanden
+    raw: error.raw || null,   // <- detaillierte Infos
   });
 }
 
